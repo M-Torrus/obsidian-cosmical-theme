@@ -1,7 +1,7 @@
  /* @settings
 
-name: Cosmical theme
-id: cosmical-theme
+name: Cosmical
+id: cosmical
 collapsed: false
 settings:
   -
@@ -265,7 +265,7 @@ settings:
       title: Use monospace font for note properties 
       title.es: Usar fuente monospace en las propiedades de la nota
       type: class-toggle
-      default: true
+      default: false
   -
       id: colored-text-tag-panel
       title: Use tag color for text in tag panel
