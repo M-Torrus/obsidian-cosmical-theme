@@ -160,6 +160,12 @@ settings:
         description.es: Restaura el estilo por defecto de obsidian para el titulo en una linea
         type: class-toggle
         default: false
+  - 
+        id: hide-inline-title-note-name
+        title: Hide note name in inline title
+        title.es: Oculta el titulo de la nota en el titulo en linea
+        type: class-toggle
+        default: false
   -
     id: Sidebars-settings-heading
     title: Sidebars
@@ -636,7 +642,8 @@ body {
   --file-header-justify: left;
   --file-header-font-size: .9rem;
 }
-.theme-dark:not(.default-inline-title) .view-header-title, .theme-light:not(.default-inline-title) .view-header-title {
+
+.hide-inline-title-note-name .view-header-title{
   display: none;
 }
 :not(.default-inline-title) .view-content > .markdown-source-view.mod-cm6 > .cm-editor > .cm-scroller {
