@@ -103,6 +103,12 @@ settings:
         type: class-toggle
         default: false
   -
+      id: hollow-tags
+      title: Hollow tags style
+      title.es: Estilo de etiquetas huecas
+      type: class-toggle
+      default: false
+  -
     id: Font-settings-heading
     title: Fonts and symbols
     title.es: Fuentes y símbolos
@@ -126,15 +132,27 @@ settings:
       type: variable-text
       default: 'var(--text-font)'
   -
-      id: font-properties
+      id: custom-font-properties
       title: Properties font family
       title.es: Fuente para las propiedades
       type: variable-text
       default: 'var(--text-font)'
   -
-      id: font-blockquote
-      title: Blockquote font family
+      id: custom-font-tags
+      title: Tags font family
+      title.es: Fuente para las tags
+      type: variable-text
+      default: 'var(--text-font)'
+  -
+      id: custom-font-quote
+      title: quote font family
       title.es: Fuente para los bloques de cita
+      type: variable-text
+      default: 'var(--text-font)'
+  -
+      id: custom-font-callout
+      title: callout font family
+      title.es: Fuente para los callout (anotaciones)
       type: variable-text
       default: 'var(--text-font)'
   -
@@ -311,7 +329,33 @@ settings:
       type: class-toggle
       default: false
   -  
+      id: increase-metadata-label-width
+      title: Adjust property label width
+      title.es: Ajustar la anchura en las etiquetas de las propiedades
+      type: class-toggle
+      default: false
+  -  
 */
+
+.theme-dark, .theme-light {
+  --color-red-rgb: 244, 114, 102;
+  --color-orange-rgb: 247, 159, 105;
+  --color-yellow-rgb: 228, 220, 129;
+  --color-green-rgb: 160, 223, 139;
+  --color-cyan-rgb: 132, 220, 210;
+  --color-blue-rgb: 108,153,255;  
+  --color-purple-rgb: 184, 157, 231;
+  --color-pink-rgb: 223, 170, 192;
+
+  --color-red: rgb(244, 114, 102);
+  --color-orange: hsl(23, 90%, 69%);
+  --color-yellow: hsl(55, 65%, 70%);
+  --color-green: hsl(105, 57%, 71%);
+  --color-cyan: hsl(173, 56%, 69%);
+  --color-blue: hsl(222, 100%, 71%);
+  --color-purple: hsl(262, 60%, 76%);
+  --color-pink: hsl(335, 45%, 77%);
+}
 
 .theme-dark {
   --color-base-00: #0F0F0F;
@@ -499,10 +543,14 @@ settings:
   }
   
   /* modal */
-  --modal-border-color: var(--ui-element-border);
+  .theme-dark {
+    --modal-border-color: var(--ui-element-border);
+  }
   
   /* prompt */
-  --prompt-border-color: var(--ui-element-border);
+  .theme-dark {
+    --prompt-border-color: var(--ui-element-border);
+  }
   .prompt {
     background-color: var(--pos-1-bg);
     .prompt-input-container .prompt-input {
@@ -516,8 +564,23 @@ settings:
   --editor-elements-border-color: hsla(0, 0%, 0%, 0.125);
 }
 
-
-
+.theme-dark {
+  --modal-border-color: var(--ui-element-border);
+  --prompt-border-color: var(--ui-element-border);
+  
+  /* prompt */
+  .prompt {
+    background-color: var(--pos-1-bg);
+    .prompt-input-container .prompt-input {
+      background-color: var(--pos-1-bg);
+      border-bottom: 1px var(--ui-element-border) solid;
+    }
+  }
+  
+}
+.theme-light {
+  --editor-elements-border-color: hsla(0, 0%, 0%, 0.125);
+}
 
 /* END OF UI ELEMENTS ---------------------------- */
 
@@ -554,15 +617,21 @@ settings:
   --blockquote-border-thickness: .2em;
 }
 .HyperMD-quote {
-  /* font-family: var(--font-blockquote); */
+  font-family: var(--custom-font-quote);
   --blockquote-style: italic;
 }
 
 /* Callout */
 .theme-dark,
 .theme-light {
+  
   --blockquote-border-thickness: .2em;
   --blockquote-style: italic;
+  .callout {
+    font-family: var(--custom-font-callout);
+    /* --callout-default: var(--pos-0-bg);
+    background-color: var(--pos-0-bg); */
+  }
 }
 
 /* hr divider */
@@ -808,15 +877,28 @@ body {
 /* STYLING */
 .theme-dark, .theme-light {
   --metadata-gap: 0;
-  /* --metadata-label-width: max(22.5%, 8rem); */
-  --metadata-input-font-size: .9em;
-  --metadata-label-font-size: .9em;
+  --metadata-input-font-size: max(var(--font-ui-small), .9em);
+  --metadata-label-font-size: max(var(--font-ui-small), .9em);
   .metadata-property-key .metadata-property-icon, .metadata-add-button {
     --icon-size: var(--icon-s);
   }
   .metadata-add-button {
     margin-top: 0.25rem !important;
   }
+  .collapse-indicator {
+    --collapse-icon-color-collapsed: var(--darker-property-color);
+    opacity: 1;
+  }
+  .metadata-properties-title {
+    font-size: max(var(--font-ui-small), .9em);
+    color: var(--text-muted);
+    color: var(--darker-property-color);
+    font-weight: 400;
+  }
+}
+/* increases teh width of the properties labels */
+.increase-metadata-label-width {
+  --metadata-label-width: max(22.5%, 8rem);
 }
 
 /* metadata-container styles */
@@ -846,7 +928,7 @@ body {
   .metadata-properties *, 
   .metadata-add-button, 
   .metadata-properties-heading {
-    font-family: var(--font-properties);
+    font-family: var(--custom-font-properties);
   }
 }
 
@@ -915,7 +997,7 @@ body {
 .properties-color-scheme-industrial-orange {
   --property-h: 22;
   --property-s: 0%;
-  --property-l: 95%;
+  --property-l: 90%;
   --darker-property-color: hsl(22, 90%, 64%);
   --property-input-color: hsl(22, 90%, 75%);
 }
@@ -1032,14 +1114,29 @@ body {
 
   --tag-color: hsl(var(--tag-hsl));
   --tag-color-hover: var(--tag-color);
+  --tag-color-hover: hsla(var(--tag-hsl), 0.8);
   --tag-background: hsla(var(--tag-hsl), 0.15);
   --tag-background-hover: hsla(var(--tag-hsl), 0.3);
-  
+
   --tag-padding-x: .75em;
   --tag-padding-y: .33em;
-  --tag-radius: var(--radius-s);
+  --tag-radius: var(--radius-l);
   --graph-node-tag: hsl(var(--tag-hsl));
 }
+.tag {
+  font-family: var(--custom-font-tag);
+}
+
+/* Hollow Tags */
+.hollow-tags {
+  --tag-background: none;
+  --tag-background-hover: none;
+  --tag-border-color: var(--tag-color);
+  --tag-border-color: hsla(var(--tag-hsl), 0.3);
+  --tag-border-color-hover: hsla(var(--tag-hsl), 0.2);
+  --tag-border-width: 1px;
+}
+
 .tags-ruby {
   --tag-h: 0;
   --tag-s: 100%;
