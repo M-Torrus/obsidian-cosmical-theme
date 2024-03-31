@@ -108,7 +108,15 @@ settings:
     title.es: Fuentes y símbolos
     type: heading
     level: 1
-    collapsed: true
+    collapsed: false
+  -
+      id: enable-custom-fonts
+      title: Enable the use of custom fonts options
+      title.es: Activar el uso de las opciones para fuentes personalizadas
+      description: fonts shouls be installed in the device
+      description.es: las fuentes deben estar instaladas en el dispositivo
+      type: class-toggle
+      default: false
   -
       id: font-headings
       title: Headings font family
@@ -116,7 +124,19 @@ settings:
       description: "Font family used for note headers: inline-title, h1, h2, h3, h4, h5, h6"
       description.es: "Fuente usada para los titulos de las notas: titulo en una linea, h1, h2, h3, h4, h5, h6"
       type: variable-text
-      default: 'Inter tight, Inter, sans-serif'
+      default: 'var(--text-font)'
+  -
+      id: font-properties
+      title: Properties font family
+      title.es: Fuente para las propiedades
+      type: variable-text
+      default: 'var(--text-font)'
+  -
+      id: font-blockquote
+      title: Blockquote font family
+      title.es: Fuente para los bloques de cita
+      type: variable-text
+      default: 'var(--text-font)'
   -
       id: Fonts-info-text
       description: The interface font, text font and monospace font are changed in Obsidian settings > Appearance
@@ -267,12 +287,6 @@ settings:
           label: Outline
           value: metadata-container-alt-outline
   -
-      id: monospace-properties
-      title: Use monospace font for note properties 
-      title.es: Usar fuente monospace en las propiedades de la nota
-      type: class-toggle
-      default: false
-  -
       id: colored-text-tag-panel
       title: Use tag color for text in tag panel
       title.es: Usar color de las tags para el texto en el panel lateral
@@ -288,6 +302,12 @@ settings:
       id: show-properties-label
       title: Show "Properties" label
       title.es: Mostrar la etiqueta "Propiedades"
+      type: class-toggle
+      default: false
+  -  
+      id: hide-properties-icons
+      title: Hide properties icon
+      title.es: Ocultar iconos de propiedades
       type: class-toggle
       default: false
   -  
@@ -536,6 +556,9 @@ settings:
 .theme-dark,
 .theme-light {
   --blockquote-border-thickness: .2em;
+}
+.HyperMD-quote {
+  /* font-family: var(--font-blockquote); */
   --blockquote-style: italic;
 }
 
@@ -579,7 +602,7 @@ tbody>tr>td {
 }
 
 /* fonts */
-body {
+.enable-custom-fonts {
   --font-headings: var(--font-text);
   --h1-font: var(--font-headings);
   --h2-font: var(--font-headings);
@@ -588,7 +611,9 @@ body {
   --h5-font: var(--font-headings);
   --h6-font: var(--font-headings);
   --inline-title-font: var(--font-headings) !important;
-  
+}
+
+body {
   --h1-line-height: 1.3;
   --h2-line-height: 1.3;
   --h3-line-height: 1.3;
@@ -607,14 +632,16 @@ body {
 }
 
 /* HEADINGS*/
-/* variants */
+
+/* Variants */
+
 /* lines and dashes */
 .headings-variant-lines-and-dashes {
-.HyperMD-header-1, .HyperMD-header-2, .HyperMD-header-3 {
+.HyperMD-header-1, .HyperMD-header-2 {
   border-bottom: 1px solid var(--editor-elements-border-color);
   padding-bottom: .1em !important;
 }
-.HyperMD-header-4, .HyperMD-header-5 {
+.HyperMD-header-3, .HyperMD-header-4 {
   border-bottom: 1px dashed var(--editor-elements-border-color);
   padding-bottom: .1em !important;
 }
@@ -785,7 +812,7 @@ body {
 /* STYLING */
 .theme-dark, .theme-light {
   --metadata-gap: 0;
-  --metadata-label-width: max(22.5%, 8rem);
+  /* --metadata-label-width: max(22.5%, 8rem); */
   --metadata-input-font-size: .9em;
   --metadata-label-font-size: .9em;
   .metadata-property-key .metadata-property-icon, .metadata-add-button {
@@ -810,13 +837,20 @@ body {
   margin-bottom: 1em;
 }
 
-/* MONOSPACE PROPETIES */
-.monospace-properties {
+/* Hide property icons */
+.hide-properties-icons {
+  .metadata-property-key .metadata-property-icon {
+    display: none;
+  }
+}
+
+/* FONT PROPETIES */
+.enable-custom-fonts {
   .metadata-properties, 
   .metadata-properties *, 
   .metadata-add-button, 
   .metadata-properties-heading {
-    font-family: var(--font-monospace);
+    font-family: var(--font-properties);
   }
 }
 
@@ -1005,6 +1039,8 @@ body {
   --tag-background: hsla(var(--tag-hsl), 0.15);
   --tag-background-hover: hsla(var(--tag-hsl), 0.3);
   
+  --tag-padding-x: .75em;
+  --tag-padding-y: .33em;
   --tag-radius: var(--radius-s);
   --graph-node-tag: hsl(var(--tag-hsl));
 }
