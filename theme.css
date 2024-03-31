@@ -499,14 +499,10 @@ settings:
   }
   
   /* modal */
-  .theme-dark {
-    --modal-border-color: var(--ui-element-border);
-  }
+  --modal-border-color: var(--ui-element-border);
   
   /* prompt */
-  .theme-dark {
-    --prompt-border-color: var(--ui-element-border);
-  }
+  --prompt-border-color: var(--ui-element-border);
   .prompt {
     background-color: var(--pos-1-bg);
     .prompt-input-container .prompt-input {
