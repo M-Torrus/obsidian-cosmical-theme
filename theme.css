@@ -1144,8 +1144,10 @@ body {
 }
 .tags-industrial-orange {
   --tag-h: 22;
-  --tag-s: 90%;
-  --tag-l: 68%;
+  --tag-s: 70%;
+  --tag-l: 70%;
+  /* --tag-s: 90%; */
+  /* --tag-l: 75%; */
 }
 .tags-mecha {
   --tag-h: 37;
