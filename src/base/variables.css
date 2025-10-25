@@ -6,8 +6,7 @@
 
 /* Base Color Variables */
 
-.theme-dark,
-.theme-light {
+body {
 	--color-red-rgb: 244, 114, 102;
 	--color-orange-rgb: 247, 159, 105;
 	--color-yellow-rgb: 228, 220, 129;

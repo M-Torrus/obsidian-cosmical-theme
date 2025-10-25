@@ -1,7 +1,6 @@
 /* Core Theme Variables */
 
-.theme-dark,
-.theme-light {
+body {
 	--background-primary: var(--pos-1-bg);
 	--background-primary-alt: var(--pos-0-bg);
 	--background-secondary: var(--pos-3-bg);

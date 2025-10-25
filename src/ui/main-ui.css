@@ -1,26 +1,42 @@
 /* MAIN UI ELEMENTS */
 
-.theme-dark {
-  --secondary-ui-bg: var(--pos-2-bg);
+body {
+	/* titlebar */
+	--titlebar-background-focused: var(--pos-2-bg);
+	--titlebar-background: var(--pos-3-bg);
+	--tab-divider-color: var(--divider-color);
 
-  /* titlebar */
-  --titlebar-background-focused: var(--secondary-ui-bg);
-  --titlebar-background: var(--pos-3-bg);
-  --tab-divider-color: var(--divider-color);
+	/* ribbon */
+	--ribbon-background: var(--pos-2-bg);
+	--ribbon-background-collapsed: var(--ribbon-background);
 
-  /* ribbon */
-  --ribbon-background: var(--secondary-ui-bg);
-  --ribbon-background-collapsed: var(--ribbon-background);
+	/* side panel */
+	.workspace-tabs .workspace-leaf {
+		background-color: var(--pos-2-bg);
+	}
 
-  /* side panel */
-  .workspace-tabs .workspace-leaf{
-    background-color: var(--secondary-ui-bg);
-  }
+	/* sidepanel tabs */
+	--tab-container-background: var(--pos-2-bg);
+	--tab-outline-color: var(--pos-0-bg);
 
-  /* sidepanel tabs */
-  --tab-container-background: var(--secondary-ui-bg);
-  --tab-outline-color: var(--pos-0-bg);
-
-  /* status bar */
-  --status-bar-background: var(--secondary-ui-bg);
+	/* status bar */
+	--status-bar-background: var(--pos-2-bg);
 }
+
+Quiero cambiar el sistema de varaibles que estoy usando para mi tema de obsidian, principalmente tratar de simplificar y clarificar todo lo que se pueda.
+
+El archivo principal de variables es @src/base/variables.css  manteniendo las variables esenciales de Obsidian que son estas:
+```
+--color-base-00
+--color-base-05
+--color-base-10
+--color-base-20
+--color-base-25
+--color-base-30
+--color-base-35
+--color-base-40
+--color-base-50
+--color-base-60
+--color-base-70
+--color-base-100
+```

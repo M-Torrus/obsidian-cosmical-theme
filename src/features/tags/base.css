@@ -1,46 +1,46 @@
 /* TAG SETTINGS - BASE */
 
-.theme-dark {
-  --tag-h: 0;
-  --tag-s: 0%;
-  --tag-l: 84%;
-  --tag-hsl: var(--tag-h), var(--tag-s), var(--tag-l);
+body {
+	--tag-h: 0;
+	--tag-s: 0%;
+	--tag-l: 84%;
+	--tag-hsl: var(--tag-h), var(--tag-s), var(--tag-l);
 
-  --tag-color: hsl(var(--tag-hsl));
-  --tag-color-hover: var(--tag-color);
-  --tag-color-hover: hsla(var(--tag-hsl), 0.8);
-  --tag-background: hsla(var(--tag-hsl), 0.15);
-  --tag-background-hover: hsla(var(--tag-hsl), 0.3);
+	--tag-color: hsl(var(--tag-hsl));
+	--tag-color-hover: var(--tag-color);
+	--tag-color-hover: hsla(var(--tag-hsl), 0.8);
+	--tag-background: hsla(var(--tag-hsl), 0.15);
+	--tag-background-hover: hsla(var(--tag-hsl), 0.3);
 
-  --tag-padding-x: .75em;
-  --tag-padding-y: .33em;
-  --tag-radius: var(--radius-l);
-  --graph-node-tag: hsl(var(--tag-hsl));
+	--tag-padding-x: 0.75em;
+	--tag-padding-y: 0.33em;
+	--tag-radius: var(--radius-l);
+	--graph-node-tag: hsl(var(--tag-hsl));
 }
 
 .tag {
-  font-family: var(--custom-font-tag);
+	font-family: var(--custom-font-tag);
 }
 
 /* Hollow Tags */
 .hollow-tags {
-  --tag-background: none;
-  --tag-background-hover: none;
-  --tag-border-color: var(--tag-color);
-  --tag-border-color: hsla(var(--tag-hsl), 0.3);
-  --tag-border-color-hover: hsla(var(--tag-hsl), 0.2);
-  --tag-border-width: 1px;
+	--tag-background: none;
+	--tag-background-hover: none;
+	--tag-border-color: var(--tag-color);
+	--tag-border-color: hsla(var(--tag-hsl), 0.3);
+	--tag-border-color-hover: hsla(var(--tag-hsl), 0.2);
+	--tag-border-width: 1px;
 }
 
 [data-type="tag"].is-active .workspace-tab-header-inner {
-  background-color: var(--tag-background);
+	background-color: var(--tag-background);
 }
 
 /* panel */
 .colored-text-tag-panel .tag-pane-tag {
-  --nav-item-color: var(--tag-color);
+	--nav-item-color: var(--tag-color);
 }
 
 [data-type="tag"] .workspace-tab-header-inner-icon svg {
-  color: var(--tag-color) !important;
+	color: var(--tag-color) !important;
 }
