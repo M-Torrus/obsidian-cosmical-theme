@@ -1,25 +1,24 @@
 /* Tables */
 
-.theme-dark,
-.theme-light {
-  --table-header-border-color: var(--color-base-35);
-  --table-header-font: var(--font-interface);
-  --table-border-color: var(--color-base-30);
-  --table-header-size: .9em;
-  --table-text-size: .85em;
+body {
+	--table-header-border-color: var(--color-base-35);
+	--table-header-font: var(--font-interface);
+	--table-border-color: var(--color-base-30);
+	--table-header-size: 0.9em;
+	--table-text-size: 0.85em;
 }
 
-.table-view-table>thead>tr>th {
-  border-bottom: solid .15rem var(--table-header-border-color);
-  font-weight: 400;
-  font-size: var(--table-header-size);
+.table-view-table > thead > tr > th {
+	border-bottom: solid 0.15rem var(--table-header-border-color);
+	font-weight: 400;
+	font-size: var(--table-header-size);
 }
 
-tbody>tr>td {
-  font-family: var(--font-interface);
+tbody > tr > td {
+	font-family: var(--font-interface);
 }
 
-/* Compensar el salto de linea que tiene que haber arriba de una tabla markdown */
+/* Compensar el salto de linea que tiene que haber siempre antes de una tabla markdown */
 .cm-table-widget {
-  padding-top: 0px !important;
+	padding-top: 0px !important;
 }

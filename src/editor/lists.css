@@ -1,10 +1,9 @@
 /* List */
 
-.theme-dark,
-.theme-light {
-  --list-marker-color: var(--text-muted);
+body {
+	--list-marker-color: var(--text-muted);
 }
 
 .cm-formatting-list {
-  font-size: 1rem;
+	font-size: 1rem;
 }

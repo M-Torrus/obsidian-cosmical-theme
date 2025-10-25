@@ -2,39 +2,41 @@
 
 /* embed */
 .markdown-embed {
-  --embed-padding: 1em;
-  border-radius: var(--editor-elements-border-radius);
-  --embed-border-left: var(--editor-elements-border-width) solid var(--editor-elements-border-color);
-  --embed-border-right: var(--editor-elements-border-width) solid var(--editor-elements-border-color);
-  --embed-border-top: var(--editor-elements-border-width) solid var(--editor-elements-border-color);
-  --embed-border-bottom: var(--editor-elements-border-width) solid var(--editor-elements-border-color);
+	--embed-padding: 1em;
+	border-radius: var(--editor-elements-border-radius);
+	--embed-border-left: var(--editor-elements-border-width) solid
+		var(--editor-elements-border-color);
+	--embed-border-right: var(--editor-elements-border-width) solid
+		var(--editor-elements-border-color);
+	--embed-border-top: var(--editor-elements-border-width) solid
+		var(--editor-elements-border-color);
+	--embed-border-bottom: var(--editor-elements-border-width) solid
+		var(--editor-elements-border-color);
 }
 
 /* Blockquote */
-.theme-dark,
-.theme-light {
-  --blockquote-border-thickness: .2em;
+body {
+	--blockquote-border-thickness: 0.2em;
+	--blockquote-border-color: red;
 }
 
 .HyperMD-quote {
-  font-family: var(--custom-font-quote);
-  --blockquote-style: italic;
+	font-family: var(--custom-font-quote);
+	--blockquote-style: italic;
 }
 
 /* Callout */
-.theme-dark,
-.theme-light {
-
-  --blockquote-border-thickness: .2em;
-  --blockquote-style: italic;
-  .callout {
-    font-family: var(--custom-font-callout);
-    /* --callout-default: var(--pos-0-bg);
+body {
+	--blockquote-border-thickness: 0.4em;
+	--blockquote-style: italic;
+	.callout {
+		font-family: var(--custom-font-callout);
+		/* --callout-default: var(--pos-0-bg);
     background-color: var(--pos-0-bg); */
-  }
+	}
 }
 
 /* hr divider */
 hr {
-  border-top: solid 2px var(--editor-elements-border-color);
+	border-top: solid 2px var(--editor-elements-border-color);
 }

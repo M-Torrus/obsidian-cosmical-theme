@@ -612,8 +612,7 @@ settings:
 }
 
 /* Blockquote */
-.theme-dark,
-.theme-light {
+body {
   --blockquote-border-thickness: .2em;
 }
 .HyperMD-quote {
@@ -622,8 +621,7 @@ settings:
 }
 
 /* Callout */
-.theme-dark,
-.theme-light {
+body {
   
   --blockquote-border-thickness: .2em;
   --blockquote-style: italic;
@@ -640,8 +638,7 @@ hr {
 }
 
 /* List */
-.theme-dark,
-.theme-light {
+body {
   --list-marker-color: var(--text-muted);
 }
 .cm-formatting-list {
@@ -649,8 +646,7 @@ hr {
 }
 
 /* Tables */
-.theme-dark,
-.theme-light {
+body {
   --table-header-border-color: var(--color-base-35);
   --table-header-font: var(--font-interface);
   --table-border-color: var(--color-base-30);
