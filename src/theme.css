@@ -14,15 +14,14 @@
 
 /* Editor */
 @import './editor/typography.css';
+@import './editor/css-classes.css';
 @import './editor/content-blocks.css';
 @import './editor/lists.css';
 @import './editor/tables.css';
+@import './editor/math.css';
 
 /* Panels */
 @import './panels/sidebars.css';
-@import './panels/file-explorer.css';
-@import './panels/ribbon-icons.css';
-@import './panels/hide-icons.css';
 
 /* Features */
 @import './features/properties/base.css';
