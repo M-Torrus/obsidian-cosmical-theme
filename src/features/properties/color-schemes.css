@@ -1,0 +1,98 @@
+/* PROPERTIES COLOR SCHEMES */
+
+.properties-color-scheme-industrial-orange {
+  --property-h: 22;
+  --property-s: 0%;
+  --property-l: 90%;
+  --darker-property-color: hsl(22, 90%, 64%);
+  --property-input-color: hsl(22, 90%, 75%);
+}
+
+.properties-color-scheme-racing-yellow {
+  --property-h: 50;
+  --property-s: 0%;
+  --property-l: 90%;
+  --darker-property-color: hsl(50, 90%, 54%);
+  --property-input-color: hsl(50, 90%, 74%);
+}
+
+.properties-color-scheme-ocean {
+  --property-h: 202;
+  --property-s: 100%;
+  --property-l: 85%;
+  --darker-property-color: hsl(211, 73%, 65%);
+  --property-input-color: hsl(35, 95%, 76%);
+}
+
+.properties-color-scheme-chromium {
+  --property-h: 210;
+  --property-s: 48%;
+  --property-l: 74%;
+  --darker-property-color: hsl(199, 60%, 60%);
+  --property-input-color: hsl(21, 62%, 68%);
+}
+
+.properties-color-scheme-space-adventure-1 {
+  --property-h: 276;
+  --property-s: 68%;
+  --property-l: 77%;
+  --darker-property-color: hsl(250, 81%, 78%);
+  --property-input-color: #85DBB0;
+}
+
+.properties-color-scheme-space-adventure-2 {
+  --property-h: 169;
+  --property-s: 56%;
+  --property-l: 68%;
+  --darker-property-color: #f78c6c;
+  --property-input-color: #c789d6;
+}
+
+.properties-color-scheme-ruby {
+  --property-h: 0;
+  --property-s: 0%;
+  --property-l: 90%;
+  --darker-property-color: hsl(0, 100%, 69%);
+  --property-input-color: hsl(0, 100%, 76%);
+}
+
+.properties-color-scheme-mecha {
+  --property-h: 171;
+  --property-s: 100%;
+  --property-l: 45%;
+  --darker-property-color: hsl(37, 90%, 51%);
+  --property-input-color: hsl(50, 100%, 71%);
+}
+
+.properties-color-scheme-riverrun {
+  --property-h: 120;
+  --property-s: 47%;
+  --property-l: 66%;
+  --darker-property-color: hsl(120, 43%, 55%);
+  --property-input-color: hsl(202, 100%, 85%);
+  --metadata-border-color: var(--darker-property-color);
+  --metadata-border-width: 2px
+}
+
+.properties-color-scheme-pine {
+  --property-h: 0;
+  --property-s: 0%;
+  --property-l: 90%;
+  --darker-property-color: hsl(120, 43%, 55%);
+  --property-input-color: hsl(120, 33%, 73%);
+}
+
+.properties-color-scheme-emerald {
+  --property-h: 125;
+  --property-s: 55%;
+  --property-l: 74%;
+  --darker-property-color: hsl(125, 45%, 54%);
+  --property-input-color: hsl(95, 55%, 74%);
+}
+
+.properties-color-scheme-sun {
+  --property-h: 20;
+  --property-s: 45%;
+  --property-l: 73%;
+  --darker-property-color: hsl(20, 50%, 60%);
+}

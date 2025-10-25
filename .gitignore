@@ -8,6 +8,9 @@
 # npm
 node_modules
 
+# Build outputs - snippets opcionales generados por `npm run build:snippets`
+dist/
+
 # Exclude sourcemaps
 *.map
 

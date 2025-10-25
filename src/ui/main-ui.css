@@ -1,0 +1,26 @@
+/* MAIN UI ELEMENTS */
+
+.theme-dark {
+  --secondary-ui-bg: var(--pos-2-bg);
+
+  /* titlebar */
+  --titlebar-background-focused: var(--secondary-ui-bg);
+  --titlebar-background: var(--pos-3-bg);
+  --tab-divider-color: var(--divider-color);
+
+  /* ribbon */
+  --ribbon-background: var(--secondary-ui-bg);
+  --ribbon-background-collapsed: var(--ribbon-background);
+
+  /* side panel */
+  .workspace-tabs .workspace-leaf{
+    background-color: var(--secondary-ui-bg);
+  }
+
+  /* sidepanel tabs */
+  --tab-container-background: var(--secondary-ui-bg);
+  --tab-outline-color: var(--pos-0-bg);
+
+  /* status bar */
+  --status-bar-background: var(--secondary-ui-bg);
+}

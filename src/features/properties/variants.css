@@ -1,0 +1,16 @@
+/* PROPERTIES CONTAINER VARIANTS */
+
+/* metadata-container styles */
+.metadata-container-alt-separator .metadata-container {
+  padding-bottom: .4em;
+  border-bottom: dashed 2px var(--divider-color);
+  margin-bottom: 1em;
+}
+
+.metadata-container-alt-outline .metadata-container {
+  padding: .75em;
+  padding-bottom: .5em;
+  border: solid var(--editor-elements-border-width) var(--editor-elements-border-color);
+  border-radius: var(--editor-elements-border-radius);
+  margin-bottom: 1em;
+}

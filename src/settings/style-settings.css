@@ -1,0 +1,338 @@
+/* @settings
+
+name: Cosmical
+id: cosmical
+collapsed: false
+settings:
+  -
+    id: Theme-color-settings-heading
+    title: Theme Colors
+    title.es: Colores del Tema
+    type: heading
+    level: 1
+    collapsed: false
+  -
+      id: properties-color-scheme
+      title: Properties color scheme
+      title.es: Esquema de color para las propiedades
+      description: Choose the color for the colorful properties options
+      type: class-select
+      allowEmpty: true
+      default: properties-color-scheme-ocean
+      options:
+        -
+          label: Base - Racing Yellow
+          value: properties-color-scheme-racing-yellow
+        -
+          label: Base - Pine
+          value: properties-color-scheme-pine
+        -
+          label: Base - Ruby
+          value: properties-color-scheme-ruby
+        -
+          label: Base - Industrial Orange
+          value: properties-color-scheme-industrial-orange
+        -
+          label: Ocean (Cosmical default)
+          value: properties-color-scheme-ocean
+        -
+          label: Space Adventure 1
+          value: properties-color-scheme-space-adventure-1
+        -
+          label: Space Adventure 2
+          value: properties-color-scheme-space-adventure-2
+        -
+          label: Riverrun
+          value: properties-color-scheme-riverrun
+        -
+          label: Chromium
+          value: properties-color-scheme-chromium
+        -
+          label: Emerald
+          value: properties-color-scheme-emerald
+        -
+          label: Mecha
+          value: properties-color-scheme-mecha
+        -
+          label: Sunny
+          value: properties-color-scheme-sun
+  -
+        id: tags-color
+        title: Tags color
+        title.es: Color de las etiquetas (tags)
+        description: Choose the accent color for tags
+        description.es: Color de énfasis para las etiquetas
+        type: class-select
+        allowEmpty: true
+        default: tags-ocean
+        options:
+          -
+            label: Industrial Orange
+            value: tags-industrial-orange
+          -
+            label: Racing Yellow
+            value: tags-racing-yellow
+          -
+            label: Emerald
+            value: tags-emerald
+          -
+            label: Pine
+            value: tags-pine
+          -
+            label: Ocean
+            value: tags-ocean
+          -
+            label: Space Adventure
+            value: tags-space-adventure
+          -
+            label: Saphire
+            value: tags-saphire
+          -
+            label: Amethyst
+            value: tags-amethyst
+          -
+            label: Ruby
+            value: tags-ruby
+          -
+            label: Mecha
+            value: tags-mecha
+  -
+        id: colored-ribbon-icons
+        title: Colored ribbon icons
+        title.es: Menú de cinta con iconos de colores
+        type: class-toggle
+        default: false
+  -
+      id: hollow-tags
+      title: Hollow tags style
+      title.es: Estilo de etiquetas huecas
+      type: class-toggle
+      default: false
+  -
+    id: Font-settings-heading
+    title: Fonts and symbols
+    title.es: Fuentes y símbolos
+    type: heading
+    level: 1
+    collapsed: false
+  -
+      id: enable-custom-fonts
+      title: Enable the use of custom fonts options
+      title.es: Activar el uso de las opciones para fuentes personalizadas
+      description: fonts shouls be installed in the device
+      description.es: las fuentes deben estar instaladas en el dispositivo
+      type: class-toggle
+      default: false
+  -
+      id: font-headings
+      title: Headings font family
+      title.es: Fuente para titulos
+      description: "Font family used for note headers: inline-title, h1, h2, h3, h4, h5, h6"
+      description.es: "Fuente usada para los titulos de las notas: titulo en una linea, h1, h2, h3, h4, h5, h6"
+      type: variable-text
+      default: 'var(--text-font)'
+  -
+      id: custom-font-properties
+      title: Properties font family
+      title.es: Fuente para las propiedades
+      type: variable-text
+      default: 'var(--text-font)'
+  -
+      id: custom-font-tags
+      title: Tags font family
+      title.es: Fuente para las tags
+      type: variable-text
+      default: 'var(--text-font)'
+  -
+      id: custom-font-quote
+      title: quote font family
+      title.es: Fuente para los bloques de cita
+      type: variable-text
+      default: 'var(--text-font)'
+  -
+      id: custom-font-callout
+      title: callout font family
+      title.es: Fuente para los callout (anotaciones)
+      type: variable-text
+      default: 'var(--text-font)'
+  -
+      id: Fonts-info-text
+      description: The interface font, text font and monospace font are changed in Obsidian settings > Appearance
+      description.es: La fuente de la interfaz, fuente del texto y fuente monospace se cambian desde Opciones > Apariencia
+      type: info-text
+  -
+      id: monospace-symbols
+      title: Monospace symbols
+      title.es: Símbolos monoespaciados
+      description: Changes markdown symbols (headers, lists, bold...) in live preview to use the monospace font
+      description.es: Cambia los símbolos de markdown (encabezados, listas, texto en negrita...) en modo "Vista previa" para usar la fuente monoespaciada
+      type: class-toggle
+  -
+    id: Headers-settings-heading
+    title: Headers
+    title.es: Encabezados
+    type: heading
+    level: 1
+    collapsed: false
+  -
+        id: headings-variants
+        title: headings variants
+        title.es: Estilos para encabezados
+        description: Alternates the looks of headings in live-preview mode
+        description.es: Cambia como se ven los encabezados en modo "vista previa"
+        type: class-select
+        allowEmpty: true
+        default: none
+        options:
+        -
+          label: Lines
+          value: headings-variant-lines
+        -
+          label: Lines and Dashes
+          value: headings-variant-lines-and-dashes
+  -
+        id: default-inline-title
+        title: Enable default inline title
+        title.es: Habilita el titulo en linea por defecto
+        description: Restores the inline title to obsidian defaults styling
+        description.es: Restaura el estilo por defecto de obsidian para el titulo en una linea
+        type: class-toggle
+        default: false
+  -
+        id: hide-inline-title-note-name
+        title: Hide note name in inline title
+        title.es: Oculta el titulo de la nota en el titulo en linea
+        type: class-toggle
+        default: false
+  -
+    id: Sidebars-settings-heading
+    title: Sidebars
+    title.es: Paneles laterales
+    type: heading
+    level: 1
+    collapsed: false
+  -
+      id: justify-icons-center
+      title: Justify sidepanels icons center
+      title.es: Iconos de los paneles laterales centrados
+      description: Restore Obsidian default icon position
+      description.es: Volver a la posición original de iconos en Obsidian
+      type: class-toggle
+      default: false
+  -
+      id: fs-tweaks-info-heading
+      title: File explorer
+      title.es: Explorador de archivos
+      type: heading
+      level: 2
+      collapsed: false
+  -
+        id: hide-vault-title
+        title: Hide vault title
+        title.es: Ocultar titulo de la bóveda (vault)
+        description: Hides the vault title on top of file explorer panel
+        description.es: Oculta el titulo de la bóveda encima del panel lateral explorador de archivos
+        type: class-toggle
+        default: false
+  -
+        id: better-tree-indent
+        title: Better file-explorer tree indent
+        title.es: Mejor indentación en el arbol de archivos
+        description: Changes indentation on the file explorer side panel so the file titles start on the same horizontal level as folders.
+        description.es: Cambia la identación en el panel lateral explorador de archivos para que las notas empiecen al mismo nivel horizontal que las carpetas y no confundirlas.
+        type: class-toggle
+        default: false
+  -
+      id: hide-icons-heading
+      title: Hide icons
+      title.es: Ocultar iconos
+      description: "¡WARNING! Some obsidian functionality depends on these icons"
+      description.es: "¡CUIDADO! algunas funcionalidades de obsidian dependen de estos iconos"
+      type: heading
+      level: 2
+      collapsed: false
+  -
+        id: hide-file-explorer-icons
+        title: Hide file-explorer icons
+        title.es: Ocultar iconos del explorador
+        type: class-toggle
+        default: false
+  -
+        id: hide-tag-icons
+        title: Hide tag icons
+        title.es: Ocultar iconos de tags
+        type: class-toggle
+        default: false
+  -
+        id: hide-backlink-icons
+        title: Hide backlink icons
+        title.es: Ocultar iconos de enlaces entrantes
+        type: class-toggle
+        default: false
+  -
+        id: hide-bookmarks-icons
+        title: Hide bookmarks icons
+        title.es: Ocultar iconos de marcadores
+        type: class-toggle
+        default: false
+  -
+        id: hide-all-properties-icons
+        title: Hide all-properties icons
+        title.es: Ocultar iconos de todas las propiedades
+        type: class-toggle
+        default: false
+  -
+    id: Properties-settings-heading
+    title: Properties settings (Metadata)
+    title.es: Ajustes de propiedades (Metadata)
+    type: heading
+    level: 1
+    collapsed: false
+  -
+      id: metadata-container-alt
+      title: Options for the metadata (properties) container
+      description: Alternative styles for properties
+      title.es: Estilos para el contenedor de propiedades
+      description.es: Estilos alternativos del tema para las propiedades o metadatos
+      type: class-select
+      allowEmpty: true
+      default: none
+      options:
+        -
+          label: Dashed Separator
+          value: metadata-container-alt-separator
+        -
+          label: Outline
+          value: metadata-container-alt-outline
+  -
+      id: colored-text-tag-panel
+      title: Use tag color for text in tag panel
+      title.es: Usar color de las tags para el texto en el panel lateral
+      type: class-toggle
+      default: false
+  -
+      id: enable-bold-font-label-properties
+      title: Enable bold for property labels
+      title.es: Habilitar texto en negrita para el nombre de las propiedades
+      type: class-toggle
+      default: true
+  -
+      id: show-properties-label
+      title: Show "Properties" label
+      title.es: Mostrar la etiqueta "Propiedades"
+      type: class-toggle
+      default: false
+  -
+      id: hide-properties-icons
+      title: Hide properties icon
+      title.es: Ocultar iconos de propiedades
+      type: class-toggle
+      default: false
+  -
+      id: increase-metadata-label-width
+      title: Adjust property label width
+      title.es: Ajustar la anchura en las etiquetas de las propiedades
+      type: class-toggle
+      default: false
+  -
+*/

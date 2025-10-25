@@ -1,0 +1,22 @@
+/* SETTINGS WINDOW */
+
+/* left panel */
+.horizontal-tab-nav-item.is-active,
+.vertical-tab-nav-item.is-active {
+  background-color: var(--pos-0-bg);
+  color: var(--text-normal);
+}
+
+.vertical-tab-nav-item {
+  color: var(--text-muted);
+}
+
+.horizontal-tab-nav-item:hover,
+.vertical-tab-nav-item:hover {
+  background-color: var(--color-base-20);
+}
+
+.horizontal-tab-nav-item.is-active:hover,
+.vertical-tab-nav-item.is-active:hover {
+  background-color: var(--color-base-30);
+}

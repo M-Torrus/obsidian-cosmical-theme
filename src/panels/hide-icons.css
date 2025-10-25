@@ -1,0 +1,14 @@
+/* HIDE ICONS IN SIDE PANEL */
+
+.hide-file-explorer-icons [data-type="file-explorer"] .nav-header,
+.hide-tag-icons [data-type="tag"] .nav-header,
+.hide-backlink-icons [data-type="backlink"] .nav-header,
+.hide-bookmarks-icons [data-type="bookmarks"] .nav-header,
+.hide-all-properties-icons [data-type="all-properties"] .nav-header {
+  display: none;
+}
+
+.hide-file-explorer-icons [data-type="file-explorer"].workspace-leaf-content,
+.hide-backlink-icons [data-type="backlink"].workspace-leaf-content {
+  padding-top: .5rem !important;
+}
