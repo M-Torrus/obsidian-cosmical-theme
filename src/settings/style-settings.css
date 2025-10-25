@@ -97,12 +97,6 @@ settings:
             label: Mecha
             value: tags-mecha
   -
-        id: colored-ribbon-icons
-        title: Colored ribbon icons
-        title.es: Menú de cinta con iconos de colores
-        type: class-toggle
-        default: false
-  -
       id: hollow-tags
       title: Hollow tags style
       title.es: Estilo de etiquetas huecas
@@ -219,68 +213,6 @@ settings:
       description.es: Volver a la posición original de iconos en Obsidian
       type: class-toggle
       default: false
-  -
-      id: fs-tweaks-info-heading
-      title: File explorer
-      title.es: Explorador de archivos
-      type: heading
-      level: 2
-      collapsed: false
-  -
-        id: hide-vault-title
-        title: Hide vault title
-        title.es: Ocultar titulo de la bóveda (vault)
-        description: Hides the vault title on top of file explorer panel
-        description.es: Oculta el titulo de la bóveda encima del panel lateral explorador de archivos
-        type: class-toggle
-        default: false
-  -
-        id: better-tree-indent
-        title: Better file-explorer tree indent
-        title.es: Mejor indentación en el arbol de archivos
-        description: Changes indentation on the file explorer side panel so the file titles start on the same horizontal level as folders.
-        description.es: Cambia la identación en el panel lateral explorador de archivos para que las notas empiecen al mismo nivel horizontal que las carpetas y no confundirlas.
-        type: class-toggle
-        default: false
-  -
-      id: hide-icons-heading
-      title: Hide icons
-      title.es: Ocultar iconos
-      description: "¡WARNING! Some obsidian functionality depends on these icons"
-      description.es: "¡CUIDADO! algunas funcionalidades de obsidian dependen de estos iconos"
-      type: heading
-      level: 2
-      collapsed: false
-  -
-        id: hide-file-explorer-icons
-        title: Hide file-explorer icons
-        title.es: Ocultar iconos del explorador
-        type: class-toggle
-        default: false
-  -
-        id: hide-tag-icons
-        title: Hide tag icons
-        title.es: Ocultar iconos de tags
-        type: class-toggle
-        default: false
-  -
-        id: hide-backlink-icons
-        title: Hide backlink icons
-        title.es: Ocultar iconos de enlaces entrantes
-        type: class-toggle
-        default: false
-  -
-        id: hide-bookmarks-icons
-        title: Hide bookmarks icons
-        title.es: Ocultar iconos de marcadores
-        type: class-toggle
-        default: false
-  -
-        id: hide-all-properties-icons
-        title: Hide all-properties icons
-        title.es: Ocultar iconos de todas las propiedades
-        type: class-toggle
-        default: false
   -
     id: Properties-settings-heading
     title: Properties settings (Metadata)
