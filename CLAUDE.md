@@ -4,27 +4,58 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Cosmical is an Obsidian theme with extensive customization options. The entire theme is contained in a single CSS file ([theme.css](theme.css)) with approximately 1200 lines of styles.
+Cosmical is an Obsidian theme with extensive customization options. The theme uses a **modular architecture** with source files in [src/](src/) that are compiled into [theme.css](theme.css) using Vite + PostCSS.
 
 ## Development Commands
 
+- **Development mode**: `npm run dev` - Watch mode with hot reload for development
+- **Build theme**: `npm run build` - Compile modular source into [theme.css](theme.css)
+- **Build snippets**: `npm run build:snippets` - Generate individual feature snippets in [dist/snippets/](dist/snippets/)
 - **Version bump**: `npm run version` - Automatically updates version numbers in [manifest.json](manifest.json) and [versions.json](versions.json) based on `package.json` version
 - **Testing**: Install the theme in an Obsidian vault by symlinking or copying this directory to `.obsidian/themes/Cosmical`, then enable it in Appearance settings
 
+**Important**: Always use `npm run dev` during development for hot reload. The source of truth is now [src/](src/), not [theme.css](theme.css).
+
 ## Theme Architecture
 
-### Structure
+### Modular Structure
 
-The [theme.css](theme.css) file is organized into distinct sections (in order):
+The theme source is organized into modules in [src/](src/):
 
-1. **@settings metadata** (lines 1-340): Style Settings plugin configuration defining all customizable options
-2. **Theme variables** (lines 340-468): CSS custom properties for both `.theme-dark` and `.theme-light`
-3. **Main UI elements** (lines 469-494): Core interface styling
-4. **Other UI elements** (lines 512-585): Secondary interface components
-5. **Editor elements** (lines 603-744): Content editing styles (blockquotes, callouts, lists, tables, headings)
-6. **Menus and panels** (lines 763-858): Settings, sidebars, file explorer, ribbon icons
-7. **Properties settings** (lines 876-1091): Metadata properties with multiple color schemes
-8. **Tag settings** (lines 1108-1205): Tag styling and color variants
+```
+src/
+├── settings/
+│   └── style-settings.css      # Style Settings plugin configuration
+├── base/
+│   ├── variables.css            # Base color variables (RGB, HSL, color-base-X)
+│   └── theme-core.css          # Core theme variables (backgrounds, borders, text)
+├── ui/
+│   ├── main-ui.css             # Titlebar, ribbon, sidepanel, status bar
+│   ├── secondary-ui.css        # Menus, forms, modals, code blocks
+│   └── settings-window.css     # Settings window styling
+├── editor/
+│   ├── typography.css          # Fonts, headings, inline-title
+│   ├── content-blocks.css      # Blockquotes, callouts, embeds, hr
+│   ├── lists.css               # List styles
+│   └── tables.css              # Table styles
+├── panels/
+│   ├── sidebars.css            # Sidebar configuration
+│   ├── file-explorer.css       # File explorer tweaks
+│   ├── ribbon-icons.css        # Colored ribbon icons
+│   └── hide-icons.css          # Icon hiding utilities
+├── features/
+│   ├── properties/
+│   │   ├── base.css            # Properties core styling
+│   │   ├── variants.css        # Container variants (separator, outline)
+│   │   └── color-schemes.css   # 11 color schemes
+│   ├── tags/
+│   │   ├── base.css            # Tags core styling
+│   │   └── color-schemes.css   # 10 color schemes
+│   └── headings-variants.css   # Heading variants (lines, dashes)
+└── theme.css                    # Main entry point with @imports
+```
+
+The compiled [theme.css](theme.css) in the root is generated from these modules via `npm run build`.
 
 ### Customization System
 
@@ -64,23 +95,38 @@ Each color scheme is implemented as a CSS class that modifies property or tag va
 
 1. Update version in [package.json](package.json)
 2. Run `npm run version` to sync version numbers
-3. Commit changes to [manifest.json](manifest.json) and [versions.json](versions.json)
-4. Create GitHub release with tag matching version number
-5. Upload `manifest.json` and `theme.css` to the release
-6. The `minAppVersion` in manifest.json determines Obsidian compatibility
+3. Run `npm run build` to generate final [theme.css](theme.css)
+4. Commit changes: `git add src/ theme.css manifest.json versions.json`
+5. Create git tag: `git tag v1.x.x && git push --tags`
+6. Create GitHub release with tag matching version number
+7. Upload [theme.css](theme.css) and [manifest.json](manifest.json) to the release
+8. The `minAppVersion` in manifest.json determines Obsidian compatibility
+
+See [DEVELOPMENT.md](DEVELOPMENT.md) for detailed workflow: development → GitHub → official release.
 
 ## Key Files
 
-- **[theme.css](theme.css)**: The entire theme - all styling and @settings configuration
+- **[src/](src/)**: Modular source files organized by feature/component (SOURCE - edit here!)
+- **[src/theme.css](src/theme.css)**: Main entry point with @imports (SOURCE)
+- **[theme.css](theme.css)**: Compiled theme in project root (OUTPUT - auto-generated, do not edit!)
+- **[theme.css.backup](theme.css.backup)**: Original monolithic theme (backup reference)
+- **dist/**: Optional snippets folder (OUTPUT from `npm run build:snippets`, ignored by git)
 - **[manifest.json](manifest.json)**: Theme metadata (name, version, author, minAppVersion)
 - **[versions.json](versions.json)**: Maps theme versions to minimum compatible Obsidian versions
 - **[version-bump.mjs](version-bump.mjs)**: Automation script for version updates
 - **[package.json](package.json)**: npm scripts and project metadata
+- **[vite.config.js](vite.config.js)**: Vite build configuration
+- **[postcss.config.js](postcss.config.js)**: PostCSS plugins configuration
+- **[DEVELOPMENT.md](DEVELOPMENT.md)**: Detailed development workflow documentation
 
 ## Editing Guidelines
 
-- When modifying theme.css, maintain the existing section structure
-- Keep @settings metadata in sync with actual CSS classes and variables
+- **NEVER edit [theme.css](theme.css) directly** - it's auto-generated. Edit files in [src/](src/) instead
+- Run `npm run dev` during development for hot reload
+- When modifying modules, maintain the existing structure and organization
+- Keep @settings metadata in [src/settings/style-settings.css](src/settings/style-settings.css) in sync with actual CSS classes
 - Test changes in both light and dark modes
 - Ensure color scheme modifications update all relevant variables in the scheme
 - When adding new customization options, include Spanish translations
+- After making changes, run `npm run build` to generate the final theme
+- See [DEVELOPMENT.md](DEVELOPMENT.md) for detailed development workflow

@@ -1,0 +1,11 @@
+/* SIDE PANEL */
+
+/* JUSTIFY ICONS CENTER */
+.theme-dark:not(.justify-icons-center) .nav-buttons-container {
+  justify-content: left;
+}
+
+/* Hide right sidebar toggle button */
+div.sidebar-toggle-button.mod-right {
+  display: none;
+}

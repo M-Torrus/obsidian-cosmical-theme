@@ -1,0 +1,9 @@
+/* FILE EXPLORER SIDEPANEL TWEAKS */
+
+.better-tree-indent [data-type="file-explorer"] .nav-file .nav-file-title .nav-file-title-content{
+  margin-left: -1rem !important;
+}
+
+.hide-vault-title [data-type="file-explorer"] [data-path="/"] {
+  display: none;
+}

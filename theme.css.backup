@@ -1,0 +1,1205 @@
+ /* @settings
+
+name: Cosmical
+id: cosmical
+collapsed: false
+settings:
+  -
+    id: Theme-color-settings-heading
+    title: Theme Colors
+    title.es: Colores del Tema
+    type: heading
+    level: 1
+    collapsed: false
+  -
+      id: properties-color-scheme
+      title: Properties color scheme
+      title.es: Esquema de color para las propiedades
+      description: Choose the color for the colorful properties options
+      type: class-select
+      allowEmpty: true
+      default: properties-color-scheme-ocean
+      options: 
+        - 
+          label: Base - Racing Yellow
+          value: properties-color-scheme-racing-yellow
+        - 
+          label: Base - Pine
+          value: properties-color-scheme-pine
+        - 
+          label: Base - Ruby
+          value: properties-color-scheme-ruby
+        - 
+          label: Base - Industrial Orange
+          value: properties-color-scheme-industrial-orange
+        - 
+          label: Ocean (Cosmical default)
+          value: properties-color-scheme-ocean
+        - 
+          label: Space Adventure 1
+          value: properties-color-scheme-space-adventure-1
+        - 
+          label: Space Adventure 2
+          value: properties-color-scheme-space-adventure-2
+        - 
+          label: Riverrun
+          value: properties-color-scheme-riverrun
+        - 
+          label: Chromium
+          value: properties-color-scheme-chromium
+        - 
+          label: Emerald
+          value: properties-color-scheme-emerald
+        - 
+          label: Mecha
+          value: properties-color-scheme-mecha
+        - 
+          label: Sunny
+          value: properties-color-scheme-sun
+  -
+        id: tags-color
+        title: Tags color
+        title.es: Color de las etiquetas (tags)
+        description: Choose the accent color for tags
+        description.es: Color de énfasis para las etiquetas
+        type: class-select
+        allowEmpty: true
+        default: tags-ocean
+        options: 
+          -
+            label: Industrial Orange
+            value: tags-industrial-orange
+          -
+            label: Racing Yellow
+            value: tags-racing-yellow
+          -
+            label: Emerald
+            value: tags-emerald
+          -
+            label: Pine
+            value: tags-pine
+          -
+            label: Ocean
+            value: tags-ocean
+          -
+            label: Space Adventure
+            value: tags-space-adventure
+          -
+            label: Saphire
+            value: tags-saphire
+          -
+            label: Amethyst
+            value: tags-amethyst
+          -
+            label: Ruby
+            value: tags-ruby
+          -
+            label: Mecha
+            value: tags-mecha
+  -
+        id: colored-ribbon-icons
+        title: Colored ribbon icons
+        title.es: Menú de cinta con iconos de colores
+        type: class-toggle
+        default: false
+  -
+      id: hollow-tags
+      title: Hollow tags style
+      title.es: Estilo de etiquetas huecas
+      type: class-toggle
+      default: false
+  -
+    id: Font-settings-heading
+    title: Fonts and symbols
+    title.es: Fuentes y símbolos
+    type: heading
+    level: 1
+    collapsed: false
+  -
+      id: enable-custom-fonts
+      title: Enable the use of custom fonts options
+      title.es: Activar el uso de las opciones para fuentes personalizadas
+      description: fonts shouls be installed in the device
+      description.es: las fuentes deben estar instaladas en el dispositivo
+      type: class-toggle
+      default: false
+  -
+      id: font-headings
+      title: Headings font family
+      title.es: Fuente para titulos
+      description: "Font family used for note headers: inline-title, h1, h2, h3, h4, h5, h6"
+      description.es: "Fuente usada para los titulos de las notas: titulo en una linea, h1, h2, h3, h4, h5, h6"
+      type: variable-text
+      default: 'var(--text-font)'
+  -
+      id: custom-font-properties
+      title: Properties font family
+      title.es: Fuente para las propiedades
+      type: variable-text
+      default: 'var(--text-font)'
+  -
+      id: custom-font-tags
+      title: Tags font family
+      title.es: Fuente para las tags
+      type: variable-text
+      default: 'var(--text-font)'
+  -
+      id: custom-font-quote
+      title: quote font family
+      title.es: Fuente para los bloques de cita
+      type: variable-text
+      default: 'var(--text-font)'
+  -
+      id: custom-font-callout
+      title: callout font family
+      title.es: Fuente para los callout (anotaciones)
+      type: variable-text
+      default: 'var(--text-font)'
+  -
+      id: Fonts-info-text
+      description: The interface font, text font and monospace font are changed in Obsidian settings > Appearance
+      description.es: La fuente de la interfaz, fuente del texto y fuente monospace se cambian desde Opciones > Apariencia
+      type: info-text
+  - 
+      id: monospace-symbols
+      title: Monospace symbols
+      title.es: Símbolos monoespaciados
+      description: Changes markdown symbols (headers, lists, bold...) in live preview to use the monospace font
+      description.es: Cambia los símbolos de markdown (encabezados, listas, texto en negrita...) en modo "Vista previa" para usar la fuente monoespaciada
+      type: class-toggle
+  -
+    id: Headers-settings-heading
+    title: Headers
+    title.es: Encabezados
+    type: heading
+    level: 1
+    collapsed: false
+  -
+        id: headings-variants
+        title: headings variants
+        title.es: Estilos para encabezados
+        description: Alternates the looks of headings in live-preview mode
+        description.es: Cambia como se ven los encabezados en modo "vista previa"
+        type: class-select
+        allowEmpty: true
+        default: none
+        options:
+        - 
+          label: Lines
+          value: headings-variant-lines
+        - 
+          label: Lines and Dashes
+          value: headings-variant-lines-and-dashes
+  - 
+        id: default-inline-title
+        title: Enable default inline title
+        title.es: Habilita el titulo en linea por defecto
+        description: Restores the inline title to obsidian defaults styling
+        description.es: Restaura el estilo por defecto de obsidian para el titulo en una linea
+        type: class-toggle
+        default: false
+  - 
+        id: hide-inline-title-note-name
+        title: Hide note name in inline title
+        title.es: Oculta el titulo de la nota en el titulo en linea
+        type: class-toggle
+        default: false
+  -
+    id: Sidebars-settings-heading
+    title: Sidebars
+    title.es: Paneles laterales
+    type: heading
+    level: 1
+    collapsed: false
+  -
+      id: justify-icons-center
+      title: Justify sidepanels icons center
+      title.es: Iconos de los paneles laterales centrados
+      description: Restore Obsidian default icon position
+      description.es: Volver a la posición original de iconos en Obsidian
+      type: class-toggle
+      default: false
+  -
+      id: fs-tweaks-info-heading
+      title: File explorer
+      title.es: Explorador de archivos
+      type: heading
+      level: 2
+      collapsed: false
+  -
+        id: hide-vault-title
+        title: Hide vault title
+        title.es: Ocultar titulo de la bóveda (vault)
+        description: Hides the vault title on top of file explorer panel
+        description.es: Oculta el titulo de la bóveda encima del panel lateral explorador de archivos
+        type: class-toggle
+        default: false
+  -
+        id: better-tree-indent
+        title: Better file-explorer tree indent
+        title.es: Mejor indentación en el arbol de archivos
+        description: Changes indentation on the file explorer side panel so the file titles start on the same horizontal level as folders.
+        description.es: Cambia la identación en el panel lateral explorador de archivos para que las notas empiecen al mismo nivel horizontal que las carpetas y no confundirlas.
+        type: class-toggle
+        default: false
+  -
+      id: hide-icons-heading
+      title: Hide icons
+      title.es: Ocultar iconos
+      description: "¡WARNING! Some obsidian functionality depends on these icons"
+      description.es: "¡CUIDADO! algunas funcionalidades de obsidian dependen de estos iconos"
+      type: heading
+      level: 2
+      collapsed: false
+  -
+        id: hide-file-explorer-icons
+        title: Hide file-explorer icons
+        title.es: Ocultar iconos del explorador
+        type: class-toggle
+        default: false
+  -
+        id: hide-tag-icons
+        title: Hide tag icons
+        title.es: Ocultar iconos de tags
+        type: class-toggle
+        default: false
+  -
+        id: hide-backlink-icons
+        title: Hide backlink icons
+        title.es: Ocultar iconos de enlaces entrantes
+        type: class-toggle
+        default: false
+  -
+        id: hide-bookmarks-icons
+        title: Hide bookmarks icons
+        title.es: Ocultar iconos de marcadores
+        type: class-toggle
+        default: false
+  -
+        id: hide-all-properties-icons
+        title: Hide all-properties icons
+        title.es: Ocultar iconos de todas las propiedades
+        type: class-toggle
+        default: false
+  -
+    id: Properties-settings-heading
+    title: Properties settings (Metadata)
+    title.es: Ajustes de propiedades (Metadata)
+    type: heading
+    level: 1
+    collapsed: false
+  - 
+      id: metadata-container-alt
+      title: Options for the metadata (properties) container
+      description: Alternative styles for properties
+      title.es: Estilos para el contenedor de propiedades
+      description.es: Estilos alternativos del tema para las propiedades o metadatos
+      type: class-select
+      allowEmpty: true
+      default: none
+      options:
+        - 
+          label: Dashed Separator
+          value: metadata-container-alt-separator
+        -
+          label: Outline
+          value: metadata-container-alt-outline
+  -
+      id: colored-text-tag-panel
+      title: Use tag color for text in tag panel
+      title.es: Usar color de las tags para el texto en el panel lateral
+      type: class-toggle
+      default: false
+  -  
+      id: enable-bold-font-label-properties
+      title: Enable bold for property labels
+      title.es: Habilitar texto en negrita para el nombre de las propiedades
+      type: class-toggle
+      default: true
+  -
+      id: show-properties-label
+      title: Show "Properties" label
+      title.es: Mostrar la etiqueta "Propiedades"
+      type: class-toggle
+      default: false
+  -  
+      id: hide-properties-icons
+      title: Hide properties icon
+      title.es: Ocultar iconos de propiedades
+      type: class-toggle
+      default: false
+  -  
+      id: increase-metadata-label-width
+      title: Adjust property label width
+      title.es: Ajustar la anchura en las etiquetas de las propiedades
+      type: class-toggle
+      default: false
+  -  
+*/
+
+.theme-dark, .theme-light {
+  --color-red-rgb: 244, 114, 102;
+  --color-orange-rgb: 247, 159, 105;
+  --color-yellow-rgb: 228, 220, 129;
+  --color-green-rgb: 160, 223, 139;
+  --color-cyan-rgb: 132, 220, 210;
+  --color-blue-rgb: 108,153,255;  
+  --color-purple-rgb: 184, 157, 231;
+  --color-pink-rgb: 223, 170, 192;
+
+  --color-red: rgb(244, 114, 102);
+  --color-orange: hsl(23, 90%, 69%);
+  --color-yellow: hsl(55, 65%, 70%);
+  --color-green: hsl(105, 57%, 71%);
+  --color-cyan: hsl(173, 56%, 69%);
+  --color-blue: hsl(222, 100%, 71%);
+  --color-purple: hsl(262, 60%, 76%);
+  --color-pink: hsl(335, 45%, 77%);
+}
+
+.theme-dark {
+  --color-base-00: #0F0F0F;
+  --color-base-05: #1B1B1B;
+  --color-base-10: #252525;
+  --color-base-15: #303030;
+  --color-base-20: #3C3C3C;
+  --color-base-25: #454545;
+  --color-base-30: #525252;
+  --color-base-35: #5E5E5E;
+  --color-base-40: #696969;
+  --color-base-45: #747474;
+  --color-base-50: #7F7F7F;
+  --color-base-55: #8A8A8A;
+  --color-base-60: #959595;
+  --color-base-65: #A0A0A0;
+  --color-base-70: #ACACAC;
+  --color-base-75: #B7B7B7;
+  --color-base-80: #C2C2C2;
+  --color-base-85: #CDCDCD;
+  --color-base-90: #D8D8D8;
+  --color-base-95: #E4E4E4;
+  --color-base-100: #EBEBEB;
+
+  --pos-0-bg: #303030;
+  --pos-1-bg: #2A2A2A;
+  --pos-2-bg: #252525;
+  --pos-3-bg: #202020;
+  --pos-4-bg: #1B1B1B;
+}
+.theme-light {
+  --color-base-100: #0F0F0F;
+  --color-base-95: #1B1B1B;
+  --color-base-90: #252525;
+  --color-base-85: #303030;
+  --color-base-80: #3C3C3C;
+  --color-base-75: #454545;
+  --color-base-70: #525252;
+  --color-base-65: #5E5E5E;
+  --color-base-60: #696969;
+  --color-base-55: #747474;
+  --color-base-50: #7F7F7F;
+  --color-base-45: #8A8A8A;
+  --color-base-40: #959595;
+  --color-base-35: #A0A0A0;
+  --color-base-30: #ACACAC;
+  --color-base-25: #B7B7B7;
+  --color-base-20: #C2C2C2;
+  --color-base-15: #CDCDCD;
+  --color-base-10: #D8D8D8;
+  --color-base-05: #E4E4E4;
+  --color-base-00: #EBEBEB;
+
+  --pos-0-bg: var(--color-base-00);
+  --pos-1-bg: var(--color-base-05);
+  --pos-2-bg: var(--color-base-10);
+  --pos-3-bg: var(--color-base-15);
+  --pos-4-bg: var(--color-base-20);
+}
+
+.theme-dark, .theme-light {
+  --background-primary: var(--pos-1-bg);
+  --background-primary-alt: var(--pos-0-bg);
+  --background-secondary: var(--pos-3-bg);
+  --background-secondary-alt: var(--pos-4-bg);
+
+  --custom-accent-soft: hsl(var(--accent-h), 24%, 26%);
+
+  /* border */
+  --divider-color: var(--color-base-20);
+  --ui-element-border: var(--color-base-25);
+  --ui-element-border-hover: var(--color-base-35);
+
+
+  /* text */
+  --text-normal: var(--color-base-100);
+  --text-muted: var(--color-base-70);
+  --text-faint: var(--color-base-50);
+  --text-selection: var(--custom-accent-soft);
+  
+  /* icons */
+  --icon-color: var(--text-muted);
+  --icon-color-hover: var(--text-normal);
+  --icon-color-active: var(--text-normal);
+  --icon-color-focused: var(--text-normal);
+  
+
+  /* editor elements with border */
+  /* --editor-elements-border-color: hsla(0, 0%, 100%, 0.125); */
+  --editor-elements-border-color: #454545;
+  --editor-elements-border-width: 1px;
+  --editor-elements-border-radius: var(--radius-m); 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MAIN UI ELEMENTS ---------------------------- */
+.theme-dark {
+  --secondary-ui-bg: var(--pos-2-bg);
+
+  /* titlebar */
+  --titlebar-background-focused: var(--secondary-ui-bg);
+  --titlebar-background: var(--pos-3-bg);
+  --tab-divider-color: var(--divider-color);
+
+  /* ribbon */
+  --ribbon-background: var(--secondary-ui-bg);
+  --ribbon-background-collapsed: var(--ribbon-background);
+
+  /* side panel */
+  .workspace-tabs .workspace-leaf{
+    background-color: var(--secondary-ui-bg);
+  }
+  
+  /* sidepanel tabs */
+  --tab-container-background: var(--secondary-ui-bg);
+  --tab-outline-color: var(--pos-0-bg);
+
+  /* status bar */
+  --status-bar-background: var(--secondary-ui-bg);
+}
+/* END OF MAIN UI ELEMENTS ---------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* OTHER UI ELEMENTS ---------------------------- */
+.theme-dark {
+  /* right-click context menu */
+  .menu {
+    background: var(--pos-2-bg);
+    border: 1px solid var(--ui-element-border);
+    .menu-separator {
+      margin: var(--size-2-1) calc(var(--size-2-1) * -1);
+    }
+  }
+
+  /* form field */
+  --background-modifier-form-field: var(--pos-1-bg);
+  --background-modifier-border: var(--color-base-20);
+  --background-modifier-border-hover: var(--ui-element-border);
+  --background-modifier-border-focus: var(--ui-element-border-hover);
+
+  --background-modifier-active-hover: var(--color-base-25);
+  --background-modifier-active-hover: var(--color-base-20);
+
+  /* buttons */
+  --interactive-normal: var(--color-base-20);
+  --interactive-hover: var(--color-base-25);
+
+  /* code */
+  .theme-dark {
+    --code-background: var(--pos-0-bg);
+    --code-radius: var(--radius-m);
+  }
+  .cm-s-obsidian span.cm-inline-code {
+    background-color: var(--pos-2-bg);  
+  }
+  
+  /* modal */
+  .theme-dark {
+    --modal-border-color: var(--ui-element-border);
+  }
+  
+  /* prompt */
+  .theme-dark {
+    --prompt-border-color: var(--ui-element-border);
+  }
+  .prompt {
+    background-color: var(--pos-1-bg);
+    .prompt-input-container .prompt-input {
+      background-color: var(--pos-1-bg);
+      border-bottom: 1px var(--ui-element-border) solid;
+    }
+  }
+  
+}
+.theme-light {
+  --editor-elements-border-color: hsla(0, 0%, 0%, 0.125);
+}
+
+.theme-dark {
+  --modal-border-color: var(--ui-element-border);
+  --prompt-border-color: var(--ui-element-border);
+  
+  /* prompt */
+  .prompt {
+    background-color: var(--pos-1-bg);
+    .prompt-input-container .prompt-input {
+      background-color: var(--pos-1-bg);
+      border-bottom: 1px var(--ui-element-border) solid;
+    }
+  }
+  
+}
+.theme-light {
+  --editor-elements-border-color: hsla(0, 0%, 0%, 0.125);
+}
+
+/* END OF UI ELEMENTS ---------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* EDITOR ELEMENTS ---------------------------- */
+/* embed */
+.markdown-embed {
+  --embed-padding: 1em;
+  border-radius: var(--editor-elements-border-radius);
+  --embed-border-left: var(--editor-elements-border-width) solid var(--editor-elements-border-color);
+  --embed-border-right: var(--editor-elements-border-width) solid var(--editor-elements-border-color);
+  --embed-border-top: var(--editor-elements-border-width) solid var(--editor-elements-border-color);
+  --embed-border-bottom: var(--editor-elements-border-width) solid var(--editor-elements-border-color);  
+}
+
+/* Blockquote */
+.theme-dark,
+.theme-light {
+  --blockquote-border-thickness: .2em;
+}
+.HyperMD-quote {
+  font-family: var(--custom-font-quote);
+  --blockquote-style: italic;
+}
+
+/* Callout */
+.theme-dark,
+.theme-light {
+  
+  --blockquote-border-thickness: .2em;
+  --blockquote-style: italic;
+  .callout {
+    font-family: var(--custom-font-callout);
+    /* --callout-default: var(--pos-0-bg);
+    background-color: var(--pos-0-bg); */
+  }
+}
+
+/* hr divider */
+hr {
+  border-top: solid 2px var(--editor-elements-border-color);
+}
+
+/* List */
+.theme-dark,
+.theme-light {
+  --list-marker-color: var(--text-muted);
+}
+.cm-formatting-list {
+  font-size: 1rem;
+}
+
+/* Tables */
+.theme-dark,
+.theme-light {
+  --table-header-border-color: var(--color-base-35);
+  --table-header-font: var(--font-interface);
+  --table-border-color: var(--color-base-30);
+  --table-header-size: .9em;
+  --table-text-size: .85em;
+}
+.table-view-table>thead>tr>th {
+  border-bottom: solid .15rem var(--table-header-border-color);
+  font-weight: 400;
+  font-size: var(--table-header-size);
+}
+tbody>tr>td {
+  font-family: var(--font-interface);
+}
+
+/* fonts */
+.enable-custom-fonts {
+  --font-headings: var(--font-text);
+  --h1-font: var(--font-headings);
+  --h2-font: var(--font-headings);
+  --h3-font: var(--font-headings);
+  --h4-font: var(--font-headings);
+  --h5-font: var(--font-headings);
+  --h6-font: var(--font-headings);
+  --inline-title-font: var(--font-headings) !important;
+}
+
+body {
+  --h1-line-height: 1.3;
+  --h2-line-height: 1.3;
+  --h3-line-height: 1.3;
+  --h4-line-height: 1.3;
+  --h5-line-height: 1.3;
+  --h6-line-height: 1.3;
+}
+/* monospace-symbols */
+.monospace-symbols .cm-formatting{
+  font-family: var(--font-monospace) !important;
+}
+
+/* bold */
+body {
+  --bold-weight: bolder;
+}
+
+/* HEADINGS*/
+
+/* Variants */
+
+/* lines and dashes */
+.headings-variant-lines-and-dashes {
+.HyperMD-header-1, .HyperMD-header-2 {
+  border-bottom: 1px solid var(--editor-elements-border-color);
+  padding-bottom: .1em !important;
+}
+.HyperMD-header-3, .HyperMD-header-4 {
+  border-bottom: 1px dashed var(--editor-elements-border-color);
+  padding-bottom: .1em !important;
+}
+.HyperMD-header + * {
+  padding-top: .4em !important;
+}
+}
+/* lines */
+.headings-variant-lines {
+.HyperMD-header-1, .HyperMD-header-2, .HyperMD-header-3, .HyperMD-header-4 {
+  border-bottom: 1px solid var(--editor-elements-border-color);
+  padding-bottom: .1em !important;
+}
+.HyperMD-header + * {
+  padding-top: .4em !important;
+}
+}
+
+/* inline-title  */
+.theme-dark:not(.default-inline-title), .theme-light:not(.default-inline-title) {
+  --inline-title-size: 1.8rem;
+  --inline-title-color: var(--text-normal);
+  --inline-title-weight: 600;
+  --inline-title-margin-bottom: 1.25rem;
+  --file-header-justify: left;
+  --file-header-font-size: .9rem;
+}
+
+.hide-inline-title-note-name .view-header-title{
+  display: none;
+}
+:not(.default-inline-title) .view-content > .markdown-source-view.mod-cm6 > .cm-editor > .cm-scroller {
+  padding-top: 1em;
+}
+/* END OF EDITOR ELEMENTS ---------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MENUS AND PANELS ------------------------ */
+/* SETTINGS WINDOW */
+/* left panel */
+.horizontal-tab-nav-item.is-active,
+.vertical-tab-nav-item.is-active {
+  background-color: var(--pos-0-bg);  
+  color: var(--text-normal);
+}
+.vertical-tab-nav-item {
+  color: var(--text-muted);
+}
+.horizontal-tab-nav-item:hover,
+.vertical-tab-nav-item:hover {
+  background-color: var(--color-base-20);
+}
+.horizontal-tab-nav-item.is-active:hover,
+.vertical-tab-nav-item.is-active:hover {
+  background-color: var(--color-base-30);
+}
+
+/* SIDE PANEL */
+/* Ribbon Icon Colors */
+.colored-ribbon-icons {
+  .side-dock-actions .clickable-icon:nth-of-type(1) {
+    --icon-color: #A899F4;
+    color: var(--icon-color) !important;
+  }
+  .side-dock-actions .clickable-icon:nth-of-type(2) {
+    --icon-color: #65A4E7;
+    color: var(--icon-color) !important;
+  }
+  .side-dock-actions .clickable-icon:nth-of-type(3) {
+    --icon-color: #99DCFF;
+    color: var(--icon-color) !important;
+  }
+  .side-dock-actions .clickable-icon:nth-of-type(4) {
+    --icon-color: #9BD180;
+    color: var(--icon-color) !important;
+  }
+  .side-dock-actions .clickable-icon:nth-of-type(5) {
+    --icon-color: #85DBB0;
+    color: var(--icon-color) !important;
+  }
+  .side-dock-actions .clickable-icon:nth-of-type(6) {
+    --icon-color: #E2D97E;
+    color: var(--icon-color) !important;
+  }
+  .side-dock-actions .clickable-icon:nth-of-type(7) {
+    --icon-color: #FCCB88;
+    color: var(--icon-color) !important;
+  }
+}
+/* .colored-ribbon-icons {
+  .side-dock-actions .clickable-icon:nth-child(1n) {
+    --icon-color: #A899F4;
+    color: var(--icon-color) !important;
+  }
+  .side-dock-actions .clickable-icon:nth-child(2n) {
+    --icon-color: #65A4E7;
+    color: var(--icon-color) !important;
+  }
+  .side-dock-actions .clickable-icon:nth-child(3n) {
+    --icon-color: #99DCFF;
+    color: var(--icon-color) !important;
+  }
+} */
+
+
+
+/* JUSTIFY ICONS CENTER */
+.theme-dark:not(.justify-icons-center) .nav-buttons-container {
+  justify-content: left;
+}
+
+/* FILE EXPLORER SIDEPANEL TWEAKS */
+.better-tree-indent [data-type="file-explorer"] .nav-file .nav-file-title .nav-file-title-content{
+  margin-left: -1rem !important;
+}
+
+.hide-vault-title [data-type="file-explorer"] [data-path="/"] {
+  display: none;  
+}
+
+/* HIDE ICONS IN SIDE PANEL */
+.hide-file-explorer-icons [data-type="file-explorer"] .nav-header, 
+.hide-tag-icons [data-type="tag"] .nav-header, 
+.hide-backlink-icons [data-type="backlink"] .nav-header, 
+.hide-bookmarks-icons [data-type="bookmarks"] .nav-header, 
+.hide-all-properties-icons [data-type="all-properties"] .nav-header {
+  display: none;
+} 
+.hide-file-explorer-icons [data-type="file-explorer"].workspace-leaf-content, 
+.hide-backlink-icons [data-type="backlink"].workspace-leaf-content {
+  padding-top: .5rem !important;
+} 
+/* END OF MENUS AND PANELS ------------------------ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* PROPERTIES SETTINGS ------------------------ */
+/* STYLING */
+.theme-dark, .theme-light {
+  --metadata-gap: 0;
+  --metadata-input-font-size: max(var(--font-ui-small), .9em);
+  --metadata-label-font-size: max(var(--font-ui-small), .9em);
+  .metadata-property-key .metadata-property-icon, .metadata-add-button {
+    --icon-size: var(--icon-s);
+  }
+  .metadata-add-button {
+    margin-top: 0.25rem !important;
+  }
+  .collapse-indicator {
+    --collapse-icon-color-collapsed: var(--darker-property-color);
+    opacity: 1;
+  }
+  .metadata-properties-title {
+    font-size: max(var(--font-ui-small), .9em);
+    color: var(--text-muted);
+    color: var(--darker-property-color);
+    font-weight: 400;
+  }
+}
+/* increases teh width of the properties labels */
+.increase-metadata-label-width {
+  --metadata-label-width: max(22.5%, 8rem);
+}
+
+/* metadata-container styles */
+.metadata-container-alt-separator .metadata-container {
+  padding-bottom: .4em;
+  border-bottom: dashed 2px var(--divider-color);
+  margin-bottom: 1em;
+}
+.metadata-container-alt-outline .metadata-container {
+  padding: .75em;
+  padding-bottom: .5em;
+  border: solid var(--editor-elements-border-width) var(--editor-elements-border-color);
+  border-radius: var(--editor-elements-border-radius);
+  margin-bottom: 1em;
+}
+
+/* Hide property icons */
+.hide-properties-icons {
+  .metadata-property-key .metadata-property-icon {
+    display: none;
+  }
+}
+
+/* FONT PROPETIES */
+.enable-custom-fonts {
+  .metadata-properties, 
+  .metadata-properties *, 
+  .metadata-add-button, 
+  .metadata-properties-heading {
+    font-family: var(--custom-font-properties);
+  }
+}
+
+/* BOLD PROPERTY LABEL */
+.enable-bold-font-label-properties, 
+.enable-bold-font-label-properties {
+  --metadata-label-font-weight: 600;
+}
+
+/* PROPERTIES COLOR VARIANTS */
+.theme-dark {
+  /* default color scheme */
+  --property-h: 22;
+  --property-s: 0%;
+  --property-l: 80%;
+  --metadata-label-text-color: var(--text-normal);
+  --darker-property-color: var(--text-muted);
+  
+  
+  /* Property elements */
+  
+  /* property icon */
+  .metadata-property-key .metadata-property-icon {
+    --icon-color: var(--darker-property-color);
+  }
+
+  /* property label */
+  --property-hsl: var(--property-h), var(--property-s), var(--property-l);
+  --metadata-label-text-color: hsl(var(--property-hsl));
+  
+  /* metadata input */
+  --metadata-input-text-color: var(--property-input-color);
+
+  .metadata-property .metadata-input-text, 
+  .metadata-property .metadata-input-number, 
+  .metadata-property .multi-select-container {
+    color: var(--metadata-input-text-color);
+  }
+  .metadata-container {
+    --checkbox-color: var(--property-input-color);
+    --link-color: var(--property-input-color);
+    --link-external-color: var(--property-input-color);
+  }
+
+  /* metadata add button */
+  .metadata-add-button {
+    color: var(--darker-property-color);
+    cursor: pointer;
+  }
+  .metadata-add-button:hover {
+      color: var(--property-label-color);
+  }
+
+
+  /* Sidepanel properties icon */
+  [data-type="file-properties"].is-active .workspace-tab-header-inner, 
+  [data-type="all-properties"].is-active .workspace-tab-header-inner {
+    background-color: hsla(var(--property-hsl), 0.15);
+  }
+  .mod-left-split .workspace-tab-header[data-type="all-properties"] .workspace-tab-header-inner-icon {
+    color: var(--property-label-color);
+  }
+}
+
+/* Color schemes */
+.properties-color-scheme-industrial-orange {
+  --property-h: 22;
+  --property-s: 0%;
+  --property-l: 90%;
+  --darker-property-color: hsl(22, 90%, 64%);
+  --property-input-color: hsl(22, 90%, 75%);
+}
+.properties-color-scheme-racing-yellow {
+  --property-h: 50;
+  --property-s: 0%;
+  --property-l: 90%;
+  --darker-property-color: hsl(50, 90%, 54%);
+  --property-input-color: hsl(50, 90%, 74%);
+}
+.properties-color-scheme-ocean {
+  --property-h: 202;
+  --property-s: 100%;
+  --property-l: 85%;
+  --darker-property-color: hsl(211, 73%, 65%);
+  --property-input-color: hsl(35, 95%, 76%);
+}
+.properties-color-scheme-chromium {
+  --property-h: 210;
+  --property-s: 48%;
+  --property-l: 74%;
+  --darker-property-color: hsl(199, 60%, 60%);
+  --property-input-color: hsl(21, 62%, 68%);
+}
+.properties-color-scheme-space-adventure-1 {
+  --property-h: 276;
+  --property-s: 68%;
+  --property-l: 77%;
+  --darker-property-color: hsl(250, 81%, 78%);
+  --property-input-color: #85DBB0;
+}
+.properties-color-scheme-space-adventure-2 {
+  --property-h: 169;
+  --property-s: 56%;
+  --property-l: 68%;
+  --darker-property-color: #f78c6c;
+  --property-input-color: #c789d6;
+}
+.properties-color-scheme-ruby {
+  --property-h: 0;
+  --property-s: 0%;
+  --property-l: 90%;
+  --darker-property-color: hsl(0, 100%, 69%);
+  --property-input-color: hsl(0, 100%, 76%);
+}
+.properties-color-scheme-mecha {
+  --property-h: 171;
+  --property-s: 100%;
+  --property-l: 45%;
+  --darker-property-color: hsl(37, 90%, 51%);
+  --property-input-color: hsl(50, 100%, 71%);
+}
+.properties-color-scheme-riverrun {
+  --property-h: 120;
+  --property-s: 47%;
+  --property-l: 66%;
+  --darker-property-color: hsl(120, 43%, 55%);
+  --property-input-color: hsl(202, 100%, 85%);
+  --metadata-border-color: var(--darker-property-color);
+  --metadata-border-width: 2px
+}
+.properties-color-scheme-pine {
+  --property-h: 0;
+  --property-s: 0%;
+  --property-l: 90%;
+  --darker-property-color: hsl(120, 43%, 55%);
+  --property-input-color: hsl(120, 33%, 73%);
+}
+.properties-color-scheme-emerald {
+  --property-h: 125;
+  --property-s: 55%;
+  --property-l: 74%;
+  --darker-property-color: hsl(125, 45%, 54%);
+  --property-input-color: hsl(95, 55%, 74%);
+}
+.properties-color-scheme-sun {
+  --property-h: 20;
+  --property-s: 45%;
+  --property-l: 73%;
+  --darker-property-color: hsl(20, 50%, 60%);
+}
+
+
+/* PROPERTIES LABEL */
+.metadata-properties-heading {
+  display: none;
+}
+.show-properties-label .metadata-properties-heading {
+  display: inline-block;
+}
+/* END OF PROPERTIES SETTINGS ------------------------ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* TAG SETTINGS ------------------------ */
+.theme-dark {
+  --tag-h: 0;
+  --tag-s: 0%;
+  --tag-l: 84%;
+  --tag-hsl: var(--tag-h), var(--tag-s), var(--tag-l);
+
+  --tag-color: hsl(var(--tag-hsl));
+  --tag-color-hover: var(--tag-color);
+  --tag-color-hover: hsla(var(--tag-hsl), 0.8);
+  --tag-background: hsla(var(--tag-hsl), 0.15);
+  --tag-background-hover: hsla(var(--tag-hsl), 0.3);
+
+  --tag-padding-x: .75em;
+  --tag-padding-y: .33em;
+  --tag-radius: var(--radius-l);
+  --graph-node-tag: hsl(var(--tag-hsl));
+}
+.tag {
+  font-family: var(--custom-font-tag);
+}
+
+/* Hollow Tags */
+.hollow-tags {
+  --tag-background: none;
+  --tag-background-hover: none;
+  --tag-border-color: var(--tag-color);
+  --tag-border-color: hsla(var(--tag-hsl), 0.3);
+  --tag-border-color-hover: hsla(var(--tag-hsl), 0.2);
+  --tag-border-width: 1px;
+}
+
+.tags-ruby {
+  --tag-h: 0;
+  --tag-s: 100%;
+  --tag-l: 76%;
+}
+.tags-industrial-orange {
+  --tag-h: 22;
+  --tag-s: 70%;
+  --tag-l: 70%;
+  /* --tag-s: 90%; */
+  /* --tag-l: 75%; */
+}
+.tags-mecha {
+  --tag-h: 37;
+  --tag-s: 90%;
+  --tag-l: 51%;
+}
+.tags-racing-yellow {
+  --tag-h: 50;
+  --tag-s: 90%;
+  --tag-l: 66%;
+}
+.tags-emerald {
+  --tag-h: 125;
+  --tag-s: 75%;
+  --tag-l: 74%;
+}
+.tags-pine {
+  --tag-h: 155;
+  --tag-s: 75%;
+  --tag-l: 69%;
+}
+.tags-ocean {
+  --tag-h: 202;
+  --tag-s: 100%;
+  --tag-l: 80%;
+}
+.tags-space-adventure {
+  --tag-h: 276;
+  --tag-s: 68%;
+  --tag-l: 77%;
+}
+.tags-saphire {
+  --tag-h: 216;
+  --tag-s: 100%;
+  --tag-l: 75%;
+}
+.tags-amethyst {
+  --tag-h: 280;
+  --tag-s: 85%;
+  --tag-l: 80%;
+}
+
+
+[data-type="tag"].is-active .workspace-tab-header-inner {
+  background-color: var(--tag-background);
+}
+
+/* panel */
+.colored-text-tag-panel .tag-pane-tag {
+  --nav-item-color: var(--tag-color);
+}
+[data-type="tag"] .workspace-tab-header-inner-icon svg {
+  color: var(--tag-color) !important;
+}
+/* END OF TAG SETTINGS ------------------------ */

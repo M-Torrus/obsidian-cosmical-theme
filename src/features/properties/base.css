@@ -1,0 +1,122 @@
+/* PROPERTIES BASE STYLING */
+
+.theme-dark, .theme-light {
+  --metadata-gap: 0;
+  --metadata-input-font-size: max(var(--font-ui-small), .9em);
+  --metadata-label-font-size: max(var(--font-ui-small), .9em);
+
+  .metadata-property-key .metadata-property-icon, .metadata-add-button {
+    --icon-size: var(--icon-s);
+  }
+
+  .metadata-add-button {
+    margin-top: 0.25rem !important;
+  }
+
+  .collapse-indicator {
+    --collapse-icon-color-collapsed: var(--darker-property-color);
+    opacity: 1;
+  }
+
+  .metadata-properties-title {
+    font-size: max(var(--font-ui-small), .9em);
+    color: var(--text-muted);
+    color: var(--darker-property-color);
+    font-weight: 400;
+  }
+}
+
+/* increases the width of the properties labels */
+.increase-metadata-label-width {
+  --metadata-label-width: max(22.5%, 8rem);
+}
+
+/* Hide property icons */
+.hide-properties-icons {
+  .metadata-property-key .metadata-property-icon {
+    display: none;
+  }
+}
+
+/* FONT PROPERTIES */
+.enable-custom-fonts {
+  .metadata-properties,
+  .metadata-properties *,
+  .metadata-add-button,
+  .metadata-properties-heading {
+    font-family: var(--custom-font-properties);
+  }
+}
+
+/* BOLD PROPERTY LABEL */
+.enable-bold-font-label-properties,
+.enable-bold-font-label-properties {
+  --metadata-label-font-weight: 600;
+}
+
+/* PROPERTIES COLOR VARIANTS */
+.theme-dark {
+  /* default color scheme */
+  --property-h: 22;
+  --property-s: 0%;
+  --property-l: 80%;
+  --metadata-label-text-color: var(--text-normal);
+  --darker-property-color: var(--text-muted);
+
+
+  /* Property elements */
+
+  /* property icon */
+  .metadata-property-key .metadata-property-icon {
+    --icon-color: var(--darker-property-color);
+  }
+
+  /* property label */
+  --property-hsl: var(--property-h), var(--property-s), var(--property-l);
+  --metadata-label-text-color: hsl(var(--property-hsl));
+
+  /* metadata input */
+  --metadata-input-text-color: var(--property-input-color);
+
+  .metadata-property .metadata-input-text,
+  .metadata-property .metadata-input-number,
+  .metadata-property .multi-select-container {
+    color: var(--metadata-input-text-color);
+  }
+
+  .metadata-container {
+    --checkbox-color: var(--property-input-color);
+    --link-color: var(--property-input-color);
+    --link-external-color: var(--property-input-color);
+  }
+
+  /* metadata add button */
+  .metadata-add-button {
+    color: var(--darker-property-color);
+    cursor: pointer;
+  }
+
+  .metadata-add-button:hover {
+      color: var(--property-label-color);
+  }
+
+
+  /* Sidepanel properties icon */
+  [data-type="file-properties"].is-active .workspace-tab-header-inner,
+  [data-type="all-properties"].is-active .workspace-tab-header-inner {
+    background-color: hsla(var(--property-hsl), 0.15);
+  }
+
+  .mod-left-split .workspace-tab-header[data-type="all-properties"] .workspace-tab-header-inner-icon {
+    color: var(--property-label-color);
+  }
+}
+
+/* PROPERTIES LABEL */
+.metadata-properties-heading {
+  display: none;
+}
+
+.show-properties-label .metadata-properties-heading {
+  display: inline-block;
+}
