@@ -32,9 +32,9 @@ body {
 
 /* Dark Mode: Adjusted colors for better contrast */
 .theme-dark {
-	/* Color 1 variants - normal is lighter for labels, darker is darker for icons */
+	/* Color 1 variants - normal is lighter for labels, darker is slightly darker for icons */
 	--subtheme-1-normal-l: calc(var(--subtheme-1-l) + 0.11);
-	--subtheme-1-darker-l: calc(var(--subtheme-1-l) - 0.09);
+	--subtheme-1-darker-l: calc(var(--subtheme-1-l) - 0.04);
 	--subtheme-1-normal-c: calc(var(--subtheme-1-c) + 0.08);
 	--subtheme-1-darker-c: calc(var(--subtheme-1-c) + 0.03);
 
