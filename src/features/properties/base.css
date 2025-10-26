@@ -56,25 +56,54 @@
 	--metadata-label-font-weight: 600;
 }
 
-/* PROPERTIES COLOR VARIANTS */
+/* PROPERTIES COLOR VARIANTS - OKLCH System */
 body {
-	/* default color scheme */
-	--property-h: 22;
-	--property-s: 0%;
-	--property-l: 80%;
-	--metadata-label-text-color: var(--text-normal);
-	--darker-property-color: var(--text-muted);
+	/* Default color scheme (neutral) */
+	--property-l: 0.75;
+	--property-c: 0.05;
+	--property-h: 50;
+}
+
+/* Theme-specific luminosity adjustments */
+.theme-dark {
+	/* Dark mode: brighter colors for contrast */
+	--property-label-l: calc(var(--property-l) + 0.05);
+	--property-input-l: calc(var(--property-l) + 0.12);
+	--property-icon-l: calc(var(--property-l) - 0.05);
+}
+
+.theme-light {
+	/* Light mode: darker colors for contrast */
+	--property-label-l: calc(var(--property-l) - 0.25);
+	--property-input-l: calc(var(--property-l) - 0.18);
+	--property-icon-l: calc(var(--property-l) - 0.30);
+}
+
+/* Chroma adjustments for label and input */
+body {
+	--property-label-c: var(--property-c);
+	--property-input-c: calc(var(--property-c) + 0.02);
+	--property-icon-c: calc(var(--property-c) - 0.01);
+}
+
+/* Color variables using OKLCH */
+body {
+	--property-label-color: oklch(var(--property-label-l) var(--property-label-c) var(--property-h));
+	--property-input-color: oklch(var(--property-input-l) var(--property-input-c) var(--property-h));
+	--property-icon-color: oklch(var(--property-icon-l) var(--property-icon-c) var(--property-h));
+
+	/* Legacy variable for compatibility */
+	--darker-property-color: var(--property-icon-color);
 
 	/* Property elements */
 
 	/* property icon */
 	.metadata-property-key .metadata-property-icon {
-		--icon-color: var(--darker-property-color);
+		--icon-color: var(--property-icon-color);
 	}
 
 	/* property label */
-	--property-hsl: var(--property-h), var(--property-s), var(--property-l);
-	--metadata-label-text-color: hsl(var(--property-hsl));
+	--metadata-label-text-color: var(--property-label-color);
 
 	/* metadata input */
 	--metadata-input-text-color: var(--property-input-color);
@@ -93,7 +122,7 @@ body {
 
 	/* metadata add button */
 	.metadata-add-button {
-		color: var(--darker-property-color);
+		color: var(--property-icon-color);
 		cursor: pointer;
 	}
 
@@ -104,7 +133,7 @@ body {
 	/* Sidepanel properties icon */
 	[data-type="file-properties"].is-active .workspace-tab-header-inner,
 	[data-type="all-properties"].is-active .workspace-tab-header-inner {
-		background-color: hsla(var(--property-hsl), 0.15);
+		background-color: oklch(var(--property-label-l) var(--property-label-c) var(--property-h) / 0.15);
 	}
 
 	.mod-left-split
