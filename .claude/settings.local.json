@@ -9,7 +9,9 @@
       "Bash(npm run dev:*)",
       "Bash(if [ ! -d \".vscode\" ])",
       "Bash(then mkdir .vscode)",
-      "Bash(fi)"
+      "Bash(fi)",
+      "Bash(if [ ! -d \"src/subthemes\" ])",
+      "Bash(then mkdir src/subthemes)"
     ],
     "deny": [],
     "ask": []

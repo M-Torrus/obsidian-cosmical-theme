@@ -1,0 +1,84 @@
+/* ================================================================
+   COSMICAL SUBTHEMES - Definitions
+   ================================================================ */
+
+/* ================================================================
+   OCEAN (Default) - Blue + Gold
+   Classic maritime palette with deep blue and warm gold accents
+   Original: label hsl(202, 100%, 85%), icon hsl(211, 73%, 65%), input hsl(35, 95%, 76%)
+   ================================================================ */
+.subtheme-ocean {
+	/* Color 1: Ocean Blue - hsl(202, 100%, 85%) for normal, hsl(211, 73%, 65%) for darker */
+	--subtheme-1-l: 0.74;
+	--subtheme-1-c: 0.10;
+	--subtheme-1-h: 238;
+
+	/* Color 2: Warm Gold - hsl(35, 95%, 76%) */
+	--subtheme-2-l: 0.80;
+	--subtheme-2-c: 0.13;
+	--subtheme-2-h: 68;
+}
+
+/* ================================================================
+   FOREST - Emerald + Copper
+   Natural palette with rich green and metallic copper tones
+   ================================================================ */
+.subtheme-forest {
+	/* Color 1: Emerald Green */
+	--subtheme-1-l: 0.65;
+	--subtheme-1-c: 0.15;
+	--subtheme-1-h: 155;
+
+	/* Color 2: Copper */
+	--subtheme-2-l: 0.68;
+	--subtheme-2-c: 0.14;
+	--subtheme-2-h: 40;
+}
+
+/* ================================================================
+   TWILIGHT - Purple + Cyan
+   Ethereal palette with lavender purple and bright cyan
+   ================================================================ */
+.subtheme-twilight {
+	/* Color 1: Lavender Purple */
+	--subtheme-1-l: 0.70;
+	--subtheme-1-c: 0.14;
+	--subtheme-1-h: 290;
+
+	/* Color 2: Bright Cyan */
+	--subtheme-2-l: 0.72;
+	--subtheme-2-c: 0.13;
+	--subtheme-2-h: 200;
+}
+
+/* ================================================================
+   SUNSET - Coral + Violet
+   Warm palette with peachy coral and deep violet tones
+   ================================================================ */
+.subtheme-sunset {
+	/* Color 1: Coral */
+	--subtheme-1-l: 0.72;
+	--subtheme-1-c: 0.15;
+	--subtheme-1-h: 30;
+
+	/* Color 2: Deep Violet */
+	--subtheme-2-l: 0.65;
+	--subtheme-2-c: 0.16;
+	--subtheme-2-h: 310;
+}
+
+/* ================================================================
+   MONOCHROME - Warm Gray + Cool Gray
+   Subtle palette with warm and cool gray tones
+   ================================================================ */
+.subtheme-monochrome {
+	/* Color 1: Warm Gray */
+	--subtheme-1-l: 0.68;
+	--subtheme-1-c: 0.04;
+	--subtheme-1-h: 50;
+
+	/* Color 2: Cool Gray */
+	--subtheme-2-l: 0.70;
+	--subtheme-2-c: 0.04;
+	--subtheme-2-h: 250;
+}

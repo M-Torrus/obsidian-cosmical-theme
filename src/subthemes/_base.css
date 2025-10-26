@@ -1,0 +1,75 @@
+/* ================================================================
+   COSMICAL SUBTHEMES SYSTEM - Base Configuration
+   ================================================================
+
+   This centralized subtheme system provides color schemes that can be
+   used across multiple features (properties, headings, etc.)
+
+   Each subtheme defines 2 base colors in OKLCH format that automatically
+   adapt to light/dark modes, generating 4 color variants total.
+
+   ================================================================ */
+
+/* ================================================================
+   BASE SYSTEM - Default Subtheme (Ocean)
+   ================================================================ */
+
+body {
+	/* Color 1: Blue (primary) */
+	--subtheme-1-l: 0.65;
+	--subtheme-1-c: 0.15;
+	--subtheme-1-h: 240;
+
+	/* Color 2: Gold (accent) */
+	--subtheme-2-l: 0.70;
+	--subtheme-2-c: 0.14;
+	--subtheme-2-h: 70;
+}
+
+/* ================================================================
+   DYNAMIC LUMINOSITY ADJUSTMENTS
+   ================================================================ */
+
+/* Dark Mode: Adjusted colors for better contrast */
+.theme-dark {
+	/* Color 1 variants - normal is lighter for labels, darker is darker for icons */
+	--subtheme-1-normal-l: calc(var(--subtheme-1-l) + 0.11);
+	--subtheme-1-darker-l: calc(var(--subtheme-1-l) - 0.09);
+	--subtheme-1-normal-c: calc(var(--subtheme-1-c) + 0.08);
+	--subtheme-1-darker-c: calc(var(--subtheme-1-c) + 0.03);
+
+	/* Color 2 variants */
+	--subtheme-2-normal-l: calc(var(--subtheme-2-l) - 0.04);
+	--subtheme-2-darker-l: calc(var(--subtheme-2-l) - 0.10);
+	--subtheme-2-normal-c: calc(var(--subtheme-2-c) + 0.03);
+	--subtheme-2-darker-c: var(--subtheme-2-c);
+}
+
+/* Light Mode: Darker colors for better readability */
+.theme-light {
+	/* Color 1 variants */
+	--subtheme-1-normal-l: calc(var(--subtheme-1-l) - 0.20);
+	--subtheme-1-darker-l: calc(var(--subtheme-1-l) - 0.30);
+	--subtheme-1-normal-c: var(--subtheme-1-c);
+	--subtheme-1-darker-c: calc(var(--subtheme-1-c) - 0.02);
+
+	/* Color 2 variants */
+	--subtheme-2-normal-l: calc(var(--subtheme-2-l) - 0.20);
+	--subtheme-2-darker-l: calc(var(--subtheme-2-l) - 0.30);
+	--subtheme-2-normal-c: var(--subtheme-2-c);
+	--subtheme-2-darker-c: calc(var(--subtheme-2-c) - 0.02);
+}
+
+/* ================================================================
+   COLOR VARIABLES (Final OKLCH colors)
+   ================================================================ */
+
+body {
+	/* Color 1: Primary */
+	--subtheme-color-1-normal: oklch(var(--subtheme-1-normal-l) var(--subtheme-1-normal-c) var(--subtheme-1-h));
+	--subtheme-color-1-darker: oklch(var(--subtheme-1-darker-l) var(--subtheme-1-darker-c) var(--subtheme-1-h));
+
+	/* Color 2: Accent */
+	--subtheme-color-2-normal: oklch(var(--subtheme-2-normal-l) var(--subtheme-2-normal-c) var(--subtheme-2-h));
+	--subtheme-color-2-darker: oklch(var(--subtheme-2-darker-l) var(--subtheme-2-darker-c) var(--subtheme-2-h));
+}

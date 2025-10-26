@@ -12,50 +12,35 @@ settings:
     level: 1
     collapsed: false
   -
-      id: properties-color-scheme
-      title: Properties color scheme
-      title.es: Esquema de color para las propiedades
-      description: Choose the color for the colorful properties options
+      id: subtheme
+      title: Subtheme
+      title.es: Subtema
+      description: Choose a color subtheme that affects properties and other features
+      description.es: Elige un subtema de color que afecta a las propiedades y otras características
       type: class-select
-      allowEmpty: true
-      default: properties-color-scheme-ocean
+      allowEmpty: false
+      default: subtheme-ocean
       options:
         -
-          label: Base - Racing Yellow
-          value: properties-color-scheme-racing-yellow
+          label: Ocean (default)
+          label.es: Océano (predeterminado)
+          value: subtheme-ocean
         -
-          label: Base - Pine
-          value: properties-color-scheme-pine
+          label: Forest
+          label.es: Bosque
+          value: subtheme-forest
         -
-          label: Base - Ruby
-          value: properties-color-scheme-ruby
+          label: Twilight
+          label.es: Crepúsculo
+          value: subtheme-twilight
         -
-          label: Base - Industrial Orange
-          value: properties-color-scheme-industrial-orange
+          label: Sunset
+          label.es: Atardecer
+          value: subtheme-sunset
         -
-          label: Ocean (Cosmical default)
-          value: properties-color-scheme-ocean
-        -
-          label: Space Adventure 1
-          value: properties-color-scheme-space-adventure-1
-        -
-          label: Space Adventure 2
-          value: properties-color-scheme-space-adventure-2
-        -
-          label: Riverrun
-          value: properties-color-scheme-riverrun
-        -
-          label: Chromium
-          value: properties-color-scheme-chromium
-        -
-          label: Emerald
-          value: properties-color-scheme-emerald
-        -
-          label: Mecha
-          value: properties-color-scheme-mecha
-        -
-          label: Sunny
-          value: properties-color-scheme-sun
+          label: Monochrome
+          label.es: Monocromo
+          value: subtheme-monochrome
   -
         id: tags-color
         title: Tags color
