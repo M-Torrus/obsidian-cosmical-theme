@@ -7,16 +7,17 @@
    Classic maritime palette with deep blue and warm gold accents
    Original: label hsl(202, 100%, 85%), icon hsl(211, 73%, 65%), input hsl(35, 95%, 76%)
    ================================================================ */
+body,
 .subtheme-ocean {
 	/* Color 1: Ocean Blue - hsl(202, 100%, 85%) for normal, hsl(211, 73%, 65%) for darker */
-	--subtheme-1-l: 0.74;
+	--subtheme-1-l: 0.84;
 	--subtheme-1-c: 0.07;
-	--subtheme-1-h: 238;
+	--subtheme-1-h: 250;
 
 	/* Color 2: Warm Gold - hsl(35, 95%, 76%) */
-	--subtheme-2-l: 0.80;
-	--subtheme-2-c: 0.10;
-	--subtheme-2-h: 68;
+	--subtheme-2-l: 0.89;
+	--subtheme-2-c: 0.07;
+	--subtheme-2-h: 70;
 }
 
 /* ================================================================
@@ -25,13 +26,13 @@
    ================================================================ */
 .subtheme-forest {
 	/* Color 1: Emerald Green */
-	--subtheme-1-l: 0.65;
-	--subtheme-1-c: 0.15;
+	--subtheme-1-l: 0.86;
+	--subtheme-1-c: 0.1;
 	--subtheme-1-h: 155;
 
 	/* Color 2: Copper */
-	--subtheme-2-l: 0.68;
-	--subtheme-2-c: 0.14;
+	--subtheme-2-l: 0.84;
+	--subtheme-2-c: 0.08;
 	--subtheme-2-h: 40;
 }
 
@@ -41,13 +42,13 @@
    ================================================================ */
 .subtheme-twilight {
 	/* Color 1: Lavender Purple */
-	--subtheme-1-l: 0.70;
+	--subtheme-1-l: 0.82;
 	--subtheme-1-c: 0.14;
 	--subtheme-1-h: 290;
 
 	/* Color 2: Bright Cyan */
-	--subtheme-2-l: 0.72;
-	--subtheme-2-c: 0.13;
+	--subtheme-2-l: 0.94;
+	--subtheme-2-c: 0.04;
 	--subtheme-2-h: 200;
 }
 
@@ -57,13 +58,13 @@
    ================================================================ */
 .subtheme-sunset {
 	/* Color 1: Coral */
-	--subtheme-1-l: 0.72;
-	--subtheme-1-c: 0.15;
+	--subtheme-1-l: 0.82;
+	--subtheme-1-c: 0.19;
 	--subtheme-1-h: 30;
 
 	/* Color 2: Deep Violet */
-	--subtheme-2-l: 0.65;
-	--subtheme-2-c: 0.16;
+	--subtheme-2-l: 0.86;
+	--subtheme-2-c: 0.13;
 	--subtheme-2-h: 310;
 }
 
@@ -73,12 +74,12 @@
    ================================================================ */
 .subtheme-monochrome {
 	/* Color 1: Warm Gray */
-	--subtheme-1-l: 0.68;
-	--subtheme-1-c: 0.04;
+	--subtheme-1-l: 0.85;
+	--subtheme-1-c: 0.02;
 	--subtheme-1-h: 50;
 
 	/* Color 2: Cool Gray */
-	--subtheme-2-l: 0.70;
-	--subtheme-2-c: 0.04;
+	--subtheme-2-l: 0.85;
+	--subtheme-2-c: 0.02;
 	--subtheme-2-h: 250;
 }
