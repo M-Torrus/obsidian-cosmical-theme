@@ -19,6 +19,6 @@
 }
 
 /* Hide right sidebar toggle button */
-div.sidebar-toggle-button.mod-right {
+.hide-right-sidebar-toggle div.sidebar-toggle-button.mod-right {
 	display: none;
 }

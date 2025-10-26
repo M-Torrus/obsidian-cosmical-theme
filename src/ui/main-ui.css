@@ -14,7 +14,7 @@ body {
 	--scrollbar-thumb-bg: #ffffff15;
 
 	/* Divider */
-	--divider-color: var(--color-base-20);
+	--divider-color: var(--color-base-10);
 
 	/* Borders */
 	--ui-element-border: var(--color-base-25);
