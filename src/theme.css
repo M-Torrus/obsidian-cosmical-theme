@@ -7,6 +7,10 @@
 @import "./base/variables.css";
 @import "./base/theme-core.css";
 
+/* Subthemes System */
+@import "./subthemes/_base.css";
+@import "./subthemes/definitions.css";
+
 /* Main UI */
 @import "./ui/main-ui.css";
 @import "./ui/secondary-ui.css";
@@ -29,7 +33,6 @@
 /* Features */
 @import "./features/properties/base.css";
 @import "./features/properties/variants.css";
-@import "./features/properties/color-schemes.css";
 @import "./features/tags/base.css";
 @import "./features/tags/color-schemes.css";
 @import "./features/headings-variants.css";

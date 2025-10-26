@@ -16,14 +16,13 @@
 	}
 
 	.collapse-indicator {
-		--collapse-icon-color-collapsed: var(--darker-property-color);
+		--collapse-icon-color-collapsed: var(--property-icon-color);
 		opacity: 1;
 	}
 
 	.metadata-properties-title {
 		font-size: max(var(--font-ui-small), 0.9em);
-		color: var(--text-muted);
-		color: var(--darker-property-color);
+		color: var(--property-icon-color);
 		font-weight: 400;
 	}
 }
@@ -56,44 +55,13 @@
 	--metadata-label-font-weight: 600;
 }
 
-/* PROPERTIES COLOR VARIANTS - OKLCH System */
+/* PROPERTIES COLOR VARIANTS - Using Centralized Subthemes */
+
 body {
-	/* Default color scheme (neutral) */
-	--property-l: 0.75;
-	--property-c: 0.05;
-	--property-h: 50;
-}
-
-/* Theme-specific luminosity adjustments */
-.theme-dark {
-	/* Dark mode: brighter colors for contrast */
-	--property-label-l: calc(var(--property-l) + 0.05);
-	--property-input-l: calc(var(--property-l) + 0.12);
-	--property-icon-l: calc(var(--property-l) - 0.05);
-}
-
-.theme-light {
-	/* Light mode: darker colors for contrast */
-	--property-label-l: calc(var(--property-l) - 0.25);
-	--property-input-l: calc(var(--property-l) - 0.18);
-	--property-icon-l: calc(var(--property-l) - 0.30);
-}
-
-/* Chroma adjustments for label and input */
-body {
-	--property-label-c: var(--property-c);
-	--property-input-c: calc(var(--property-c) + 0.02);
-	--property-icon-c: calc(var(--property-c) - 0.01);
-}
-
-/* Color variables using OKLCH */
-body {
-	--property-label-color: oklch(var(--property-label-l) var(--property-label-c) var(--property-h));
-	--property-input-color: oklch(var(--property-input-l) var(--property-input-c) var(--property-h));
-	--property-icon-color: oklch(var(--property-icon-l) var(--property-icon-c) var(--property-h));
-
-	/* Legacy variable for compatibility */
-	--darker-property-color: var(--property-icon-color);
+	/* Map subtheme colors to property variables */
+	--property-label-color: var(--subtheme-color-1-normal);
+	--property-input-color: var(--subtheme-color-2-normal);
+	--property-icon-color: var(--subtheme-color-1-darker);
 
 	/* Property elements */
 
@@ -133,7 +101,7 @@ body {
 	/* Sidepanel properties icon */
 	[data-type="file-properties"].is-active .workspace-tab-header-inner,
 	[data-type="all-properties"].is-active .workspace-tab-header-inner {
-		background-color: oklch(var(--property-label-l) var(--property-label-c) var(--property-h) / 0.15);
+		background-color: color-mix(in oklch, var(--property-label-color) 15%, transparent);
 	}
 
 	.mod-left-split
