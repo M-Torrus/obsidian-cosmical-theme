@@ -1,14 +1,15 @@
 /* Math Styling */
 
 .math {
-  background-color: var(--code-background);
-  color: var(--code-normal) !important;
-  font-size: calc(var(--code-size) + 0.2em);
+	background-color: var(--code-background);
+	border-radius: var(--code-radius);
+	color: var(--code-normal) !important;
+	font-size: calc(var(--code-size) + 0.2em);
 }
 
 mjx-math .TEX-I {
-  font-family: "STIX Two Text" !important;
-  transform: scale(1.125);
-  transform-origin: center;
-  display: inline-block;
+	font-family: "STIX Two Text" !important;
+	transform: scale(1.125);
+	transform-origin: center;
+	display: inline-block;
 }

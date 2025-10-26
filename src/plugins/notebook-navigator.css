@@ -1,0 +1,5 @@
+body {
+	--nn-theme-nav-bg: var(--background-secondary);
+	/* --nn-theme-nav-bg: var(--background-primary-alt); */
+	--nn-theme-list-bg: var(--background-primary-alt);
+}

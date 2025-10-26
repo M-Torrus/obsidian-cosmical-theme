@@ -25,63 +25,89 @@ body {
 	--color-purple: hsl(262, 60%, 76%);
 	--color-pink: hsl(335, 45%, 77%);
 }
+body {
+	/* Obsidian standard text */
+	--text-normal: var(--color-base-content);
+	--text-muted: var(--color-muted-content);
+	--text-faint: var(--color-faint-content);
+	--text-selection: var(--custom-accent-soft);
 
+	/* Obsidian icons */
+	--icon-color: var(--text-muted);
+	--icon-color-hover: var(--text-normal);
+	--icon-color-active: var(--text-normal);
+	--icon-color-focused: var(--text-normal);
+}
+
+/* Dark Theme - Obsidian Essential Variables */
 .theme-dark {
+	/* Obsidian base scale (essential for plugins) */
 	--color-base-00: #0f0f0f;
 	--color-base-05: #1b1b1b;
 	--color-base-10: #252525;
-	--color-base-15: #303030;
 	--color-base-20: #3c3c3c;
 	--color-base-25: #454545;
 	--color-base-30: #525252;
 	--color-base-35: #5e5e5e;
 	--color-base-40: #696969;
-	--color-base-45: #747474;
 	--color-base-50: #7f7f7f;
-	--color-base-55: #8a8a8a;
 	--color-base-60: #959595;
-	--color-base-65: #a0a0a0;
 	--color-base-70: #acacac;
-	--color-base-75: #b7b7b7;
-	--color-base-80: #c2c2c2;
-	--color-base-85: #cdcdcd;
-	--color-base-90: #d8d8d8;
-	--color-base-95: #e4e4e4;
 	--color-base-100: #ebebeb;
 
-	--pos-0-bg: #303030;
-	--pos-1-bg: #2a2a2a;
-	--pos-2-bg: #252525;
-	--pos-3-bg: #202020;
-	--pos-4-bg: #1b1b1b;
+	/* Custom background layers (lighter to darker) */
+	--color-base-100-bg: oklch(30% 0 0); /* lightest layer */
+	--color-base-200-bg: oklch(28% 0 0);
+	--color-base-300-bg: oklch(26% 0 0);
+	--color-base-400-bg: oklch(24% 0 0); /* darkest layer */
+
+	/* Custom content colors */
+	--color-base-content: oklch(100% 0 0); /* #ffffff - main text */
+	--color-muted-content: oklch(75% 0 0); /* #bfbfbf - secondary text */
+	--color-faint-content: oklch(55% 0 0); /* #8c8c8c - tertiary text */
+
+	/* Custom accent */
+	--custom-accent-soft: hsl(var(--accent-h), 24%, 26%);
+
+	/* Explicit background overrides to prevent Obsidian defaults */
+	--background-primary: var(--color-base-100-bg);
+	--background-primary-alt: var(--color-base-200-bg);
+	--background-secondary: var(--color-base-300-bg);
+	--background-secondary-alt: var(--color-base-400-bg);
 }
 
+/* Light Theme - Obsidian Essential Variables */
 .theme-light {
-	--color-base-100: #0f0f0f;
-	--color-base-95: #1b1b1b;
-	--color-base-90: #252525;
-	--color-base-85: #303030;
-	--color-base-80: #3c3c3c;
-	--color-base-75: #454545;
-	--color-base-70: #525252;
-	--color-base-65: #5e5e5e;
-	--color-base-60: #696969;
-	--color-base-55: #747474;
-	--color-base-50: #7f7f7f;
-	--color-base-45: #8a8a8a;
-	--color-base-40: #959595;
-	--color-base-35: #a0a0a0;
-	--color-base-30: #acacac;
-	--color-base-25: #b7b7b7;
-	--color-base-20: #c2c2c2;
-	--color-base-15: #cdcdcd;
-	--color-base-10: #d8d8d8;
-	--color-base-05: #e4e4e4;
 	--color-base-00: #ebebeb;
+	--color-base-05: #e4e4e4;
+	--color-base-10: #d8d8d8;
+	--color-base-20: #c2c2c2;
+	--color-base-25: #b7b7b7;
+	--color-base-30: #acacac;
+	--color-base-35: #a0a0a0;
+	--color-base-40: #959595;
+	--color-base-50: #7f7f7f;
+	--color-base-60: #696969;
+	--color-base-70: #525252;
+	--color-base-100: #0f0f0f;
 
-	--pos-0-bg: var(--color-base-00);
-	--pos-1-bg: var(--color-base-05);
-	--pos-2-bg: var(--color-base-10);
-	--pos-3-bg: var(--color-base-15);
-	--pos-4-bg: var(--color-base-20);
+	/* Custom background layers (darkest to lightest) */
+	--color-base-100-bg: oklch(100% 0 0); /* lightest layer */
+	--color-base-200-bg: oklch(97% 0 0);
+	--color-base-300-bg: oklch(94% 0 0);
+	--color-base-400-bg: oklch(91% 0 0); /* darkest layer */
+
+	/* Custom content colors */
+	--color-base-content: oklch(0% 0 0); /* #000000 - main text */
+	--color-muted-content: oklch(30% 0 0); /* #4d4d4d - secondary text */
+	--color-faint-content: oklch(45% 0 0); /* #737373 - tertiary text */
+
+	/* Custom accent */
+	--custom-accent-soft: hsl(var(--accent-h), 24%, 26%);
+
+	/* Explicit background overrides to prevent Obsidian defaults */
+	--background-primary: var(--color-base-100-bg);
+	--background-primary-alt: var(--color-base-200-bg);
+	--background-secondary: var(--color-base-300-bg);
+	--background-secondary-alt: var(--color-base-400-bg);
 }

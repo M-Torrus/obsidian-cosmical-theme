@@ -1,42 +1,28 @@
-/* MAIN UI ELEMENTS */
-
 body {
-	/* titlebar */
-	--titlebar-background-focused: var(--pos-2-bg);
-	--titlebar-background: var(--pos-3-bg);
-	--tab-divider-color: var(--divider-color);
+	/* Titlebar */
+	--titlebar-background-focused: var(--background-primary);
+	--titlebar-background: var(--background-primary);
 
-	/* ribbon */
-	--ribbon-background: var(--pos-2-bg);
+	/* Ribbon */
+	--ribbon-background: var(--background-secondary);
 	--ribbon-background-collapsed: var(--ribbon-background);
 
-	/* side panel */
-	.workspace-tabs .workspace-leaf {
-		background-color: var(--pos-2-bg);
-	}
+	/* Status bar */
+	--status-bar-background: var(--background-secondary);
 
-	/* sidepanel tabs */
-	--tab-container-background: var(--pos-2-bg);
-	--tab-outline-color: var(--pos-0-bg);
+	/* Scrollbar */
+	--scrollbar-thumb-bg: #ffffff15;
 
-	/* status bar */
-	--status-bar-background: var(--pos-2-bg);
+	/* Divider */
+	--divider-color: var(--color-base-20);
+
+	/* Borders */
+	--ui-element-border: var(--color-base-25);
+	--ui-element-border-hover: var(--color-base-35);
+	--editor-elements-border-color: var(--color-base-25);
+
+	/* Tabs */
+	--tab-divider-color: var(--divider-color);
+	--tab-outline-color: var(--divider-color);
+	--tab-container-background: var(--background-primary);
 }
-
-Quiero cambiar el sistema de varaibles que estoy usando para mi tema de obsidian, principalmente tratar de simplificar y clarificar todo lo que se pueda.
-
-El archivo principal de variables es @src/base/variables.css  manteniendo las variables esenciales de Obsidian que son estas:
-```
---color-base-00
---color-base-05
---color-base-10
---color-base-20
---color-base-25
---color-base-30
---color-base-35
---color-base-40
---color-base-50
---color-base-60
---color-base-70
---color-base-100
-```
