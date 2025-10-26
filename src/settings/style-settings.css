@@ -214,6 +214,14 @@ settings:
       type: class-toggle
       default: false
   -
+      id: hide-right-sidebar-toggle
+      title: Hide right sidebar toggle button
+      title.es: Ocultar botón de alternar panel lateral derecho
+      description: Hides the right sidebar toggle button
+      description.es: Oculta el botón de alternar del panel lateral derecho
+      type: class-toggle
+      default: false
+  -
     id: Properties-settings-heading
     title: Properties settings (Metadata)
     title.es: Ajustes de propiedades (Metadata)
