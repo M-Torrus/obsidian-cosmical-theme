@@ -1,5 +1,18 @@
 /* SIDE PANEL */
 
+.workspace-tabs .workspace-leaf {
+	background-color: var(--background-primary);
+}
+
+/* MAIN SIDEBAR */
+.workspace-split.mod-sidedock.mod-left-split {
+	--titlebar-background: var(--background-secondary);
+	--titlebar-background-focused: var(--background-secondary);
+	.workspace-tabs .workspace-leaf {
+		background-color: var(--background-secondary);
+	}
+}
+
 /* JUSTIFY ICONS CENTER */
 :not(.justify-icons-center) .nav-buttons-container {
 	justify-content: left;

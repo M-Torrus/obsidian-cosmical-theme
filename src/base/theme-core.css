@@ -1,33 +1,7 @@
-/* Core Theme Variables */
+/* Core Theme Variables - Theme-independent settings */
 
 body {
-	--background-primary: var(--pos-1-bg);
-	--background-primary-alt: var(--pos-0-bg);
-	--background-secondary: var(--pos-3-bg);
-	--background-secondary-alt: var(--pos-4-bg);
-
-	--custom-accent-soft: hsl(var(--accent-h), 24%, 26%);
-
-	/* border */
-	--divider-color: var(--color-base-20);
-	--ui-element-border: var(--color-base-25);
-	--ui-element-border-hover: var(--color-base-35);
-
-	/* text */
-	--text-normal: var(--color-base-100);
-	--text-muted: var(--color-base-70);
-	--text-faint: var(--color-base-50);
-	--text-selection: var(--custom-accent-soft);
-
-	/* icons */
-	--icon-color: var(--text-muted);
-	--icon-color-hover: var(--text-normal);
-	--icon-color-active: var(--text-normal);
-	--icon-color-focused: var(--text-normal);
-
-	/* editor elements with border */
-	/* --editor-elements-border-color: hsla(0, 0%, 100%, 0.125); */
-	--editor-elements-border-color: #454545;
+	/* Editor elements with border */
 	--editor-elements-border-width: 1px;
 	--editor-elements-border-radius: var(--radius-m);
 }

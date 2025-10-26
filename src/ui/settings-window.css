@@ -3,7 +3,7 @@
 /* left panel */
 .horizontal-tab-nav-item.is-active,
 .vertical-tab-nav-item.is-active {
-  background-color: var(--pos-0-bg);
+  background-color: var(--background-primary-alt);
   color: var(--text-normal);
 }
 

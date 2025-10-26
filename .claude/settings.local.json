@@ -4,7 +4,12 @@
       "Bash(npm run build:*)",
       "Bash(dir:*)",
       "Bash(npm run build:snippets:*)",
-      "Bash(npm install:*)"
+      "Bash(npm install:*)",
+      "Bash(git checkout:*)",
+      "Bash(npm run dev:*)",
+      "Bash(if [ ! -d \".vscode\" ])",
+      "Bash(then mkdir .vscode)",
+      "Bash(fi)"
     ],
     "deny": [],
     "ask": []

@@ -31,8 +31,8 @@ body {
 	--blockquote-style: italic;
 	.callout {
 		font-family: var(--custom-font-callout);
-		/* --callout-default: var(--pos-0-bg);
-    background-color: var(--pos-0-bg); */
+		/* --callout-default: var(--background-primary-alt);
+    background-color: var(--background-primary-alt); */
 	}
 }
 
