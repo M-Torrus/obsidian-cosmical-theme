@@ -3,7 +3,12 @@
 body {
 	--tag-h: 0;
 	--tag-s: 0%;
-	--tag-l: 84%;
+	&.theme-dark {
+		--tag-l: 84%;
+	}
+	&.theme-light {
+		--tag-l: 16%;
+	}
 	--tag-hsl: var(--tag-h), var(--tag-s), var(--tag-l);
 
 	--tag-color: hsl(var(--tag-hsl));
@@ -48,61 +53,61 @@ body {
 /* TAG COLOR SCHEMES */
 
 .tags-ruby {
-  --tag-h: 0;
-  --tag-s: 100%;
-  --tag-l: 76%;
+	--tag-h: 0;
+	--tag-s: 100%;
+	--tag-l: 76%;
 }
 
 .tags-industrial-orange {
-  --tag-h: 22;
-  --tag-s: 70%;
-  --tag-l: 70%;
+	--tag-h: 22;
+	--tag-s: 70%;
+	--tag-l: 70%;
 }
 
 .tags-mecha {
-  --tag-h: 37;
-  --tag-s: 90%;
-  --tag-l: 51%;
+	--tag-h: 37;
+	--tag-s: 90%;
+	--tag-l: 51%;
 }
 
 .tags-racing-yellow {
-  --tag-h: 50;
-  --tag-s: 90%;
-  --tag-l: 66%;
+	--tag-h: 50;
+	--tag-s: 90%;
+	--tag-l: 66%;
 }
 
 .tags-emerald {
-  --tag-h: 125;
-  --tag-s: 75%;
-  --tag-l: 74%;
+	--tag-h: 125;
+	--tag-s: 75%;
+	--tag-l: 74%;
 }
 
 .tags-pine {
-  --tag-h: 155;
-  --tag-s: 75%;
-  --tag-l: 69%;
+	--tag-h: 155;
+	--tag-s: 75%;
+	--tag-l: 69%;
 }
 
 .tags-ocean {
-  --tag-h: 202;
-  --tag-s: 100%;
-  --tag-l: 80%;
+	--tag-h: 202;
+	--tag-s: 100%;
+	--tag-l: 80%;
 }
 
 .tags-space-adventure {
-  --tag-h: 276;
-  --tag-s: 68%;
-  --tag-l: 77%;
+	--tag-h: 276;
+	--tag-s: 68%;
+	--tag-l: 77%;
 }
 
 .tags-saphire {
-  --tag-h: 216;
-  --tag-s: 100%;
-  --tag-l: 75%;
+	--tag-h: 216;
+	--tag-s: 100%;
+	--tag-l: 75%;
 }
 
 .tags-amethyst {
-  --tag-h: 280;
-  --tag-s: 85%;
-  --tag-l: 80%;
+	--tag-h: 280;
+	--tag-s: 85%;
+	--tag-l: 80%;
 }
