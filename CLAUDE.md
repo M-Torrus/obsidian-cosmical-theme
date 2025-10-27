@@ -4,139 +4,115 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Cosmical is an Obsidian theme with extensive customization options. The theme uses a **modular architecture** with source files in [src/](src/) that are compiled into [theme.css](theme.css) using Vite + PostCSS.
+Cosmical is an Obsidian theme that uses a modular CSS architecture with PostCSS for building. The theme features a sophisticated subtheme system for color customization and integrates with the Style Settings plugin for user configuration.
 
-## Development Commands
+## Build System
 
-- **Development mode**: `npm run dev` - Watch mode with hot reload for development (unminified CSS)
-- **Build theme**: `npm run build` - Compile modular source into minified [theme.css](theme.css) for production
-- **Build snippets**: `npm run build:snippets` - Generate individual feature snippets in [dist/snippets/](dist/snippets/)
-- **Version bump**: `npm run version` - Automatically updates version numbers in [manifest.json](manifest.json) and [versions.json](versions.json) based on `package.json` version
-- **Testing**: Install the theme in an Obsidian vault by symlinking or copying this directory to `.obsidian/themes/Cosmical`, then enable it in Appearance settings
+### Development Commands
 
-**Important**: Always use `npm run dev` during development for hot reload. The source of truth is now [src/](src/), not [theme.css](theme.css).
+- `npm run dev` - Watch mode with hot reload (development build)
+- `npm run build` - Production build (minified with cssnano)
+- `npm run build:snippets` - Build individual CSS snippets from features
+- `npm run version` - Bump version in manifest.json and versions.json
 
-**Build Process**: The production build uses `cssnano` for CSS minification while preserving @settings comments required by the Style Settings plugin.
+### Build Configuration
 
-## Theme Architecture
+The build system uses Vite with PostCSS:
 
-### Modular Structure
+- **vite.config.js**: Handles three build modes:
+  - `development`: Watch mode, outputs to root `theme.css`
+  - `production`: Minified build, outputs to root `theme.css`
+  - `snippets`: Builds each feature in `src/features/**/*.css` as separate files in `dist/snippets/`
 
-The theme source is organized into modules in [src/](src/):
+- **postcss.config.js**: Processes CSS with:
+  - `postcss-import` - Enables @import statements
+  - `postcss-nested` - Supports nested CSS syntax
+  - `postcss-custom-media` - Reusable media queries
+  - `cssnano` - Minification (production only, preserves @settings comments)
 
-```
-src/
-├── settings/
-│   └── style-settings.css      # Style Settings plugin configuration
-├── base/
-│   ├── variables.css            # Base variables (fonts, colors: RGB, HSL, color-base-X)
-│   └── theme-core.css          # Core theme variables (backgrounds, borders, text)
-├── ui/
-│   ├── main-ui.css             # Titlebar, ribbon, sidepanel, status bar
-│   ├── secondary-ui.css        # Menus, forms, modals, code blocks
-│   └── settings-window.css     # Settings window styling
-├── editor/
-│   ├── typography.css          # Fonts, headings, inline-title, view header
-│   ├── css-classes.css         # CSS class utilities (full-width, etc.)
-│   ├── content-blocks.css      # Blockquotes, callouts, embeds, hr
-│   ├── lists.css               # List styles
-│   ├── tables.css              # Table styles
-│   └── math.css                # Math/MathJax styling
-├── panels/
-│   └── sidebars.css            # Sidebar configuration
-├── features/
-│   ├── properties/
-│   │   ├── base.css            # Properties core styling
-│   │   ├── variants.css        # Container variants (separator, outline)
-│   │   └── color-schemes.css   # 11 color schemes
-│   ├── tags/
-│   │   ├── base.css            # Tags core styling
-│   │   └── color-schemes.css   # 10 color schemes
-│   └── headings-variants.css   # Heading variants (lines, dashes)
-└── theme.css                    # Main entry point with @imports
-```
+### Output Structure
 
-The compiled [theme.css](theme.css) in the root is generated from these modules via `npm run build`.
+- Main theme: `theme.css` (in root, required by Obsidian)
+- Development artifacts: Vite creates a `dist/` folder that should not be committed
+- Snippets: Built to `dist/snippets/` when using snippets mode
 
-### Customization System
+## CSS Architecture
 
-The theme uses Obsidian's Style Settings plugin for user customization:
+### Import Hierarchy (src/theme.css)
 
-- **@settings metadata**: YAML-like configuration at the top of theme.css defines all customizable options
-- **class-toggle options**: Applied to body when enabled (e.g., `.hollow-tags`, `.justify-icons-center`)
-- **class-select options**: Mutually exclusive choices (e.g., properties color schemes, tag colors)
-- **variable-text options**: Direct CSS variable overrides for fonts and other properties
-- **Localization**: Many settings include Spanish translations (`title.es`, `description.es`)
+The theme follows a strict import order:
 
-### Color Schemes
+1. **Style Settings** - Plugin configuration
+2. **Base** - Core variables and theme foundation
+3. **Subthemes System** - Color scheme infrastructure
+4. **UI Layers** - Main UI, secondary UI, settings
+5. **Editor** - Typography, content blocks, tables, math
+6. **Panels** - Sidebars and panel styling
+7. **Plugins** - Third-party plugin support
+8. **Features** - Properties, tags, heading variants
 
-The theme includes multiple predefined color schemes for:
+### Key Architectural Concepts
 
-- **Properties**: 11 color schemes (Ocean, Space Adventure, Riverrun, Chromium, Emerald, Mecha, etc.)
-- **Tags**: 10 color options (Industrial Orange, Racing Yellow, Emerald, Pine, Ocean, etc.)
+#### Subthemes System (src/subthemes/)
 
-Each color scheme is implemented as a CSS class that modifies property or tag variables.
+A centralized color system that provides reusable color schemes across multiple features:
 
-## Important Patterns
+- **theme-schema.css**: Defines the subtheme variable structure using OKLCH color space
+  - Creates 4 color variants (2 base colors × 2 variants each)
+  - Automatically adjusts luminosity and chroma for light/dark modes
+  - Variables: `--subtheme-color-1-normal`, `--subtheme-color-1-darker`, `--subtheme-color-2-normal`, `--subtheme-color-2-darker`
 
-### CSS Class Structure
+- **definitions.css**: Defines 5 concrete subthemes (ocean, forest, twilight, sunset, monochrome)
+  - Each subtheme sets base OKLCH values: `--subtheme-1-l`, `--subtheme-1-c`, `--subtheme-1-h` (and same for color 2)
+  - The schema automatically generates all variants from these base values
 
-- Theme variants use `.theme-dark` and `.theme-light` selectors
-- User preferences apply CSS classes to the body element
-- Negative selectors (`:not(.classname)`) handle opt-out behavior
-- Color schemes use descendant selectors (`.theme-dark.properties-color-scheme-ocean`)
+Features like properties and headings can reference subtheme colors to maintain visual consistency.
 
-### Variable Naming
+#### Style Settings Integration
 
-- Core theme variables use `--` prefix (e.g., `--background-primary`)
-- Custom fonts reference `var(--text-font)` as default
-- Color scheme variables follow patterns like `--property-[name]-color`
+The theme integrates with Obsidian's Style Settings plugin via `src/settings/style-settings.css`:
 
-## Release Process
+- Uses `/* @settings ... */` comment syntax
+- Supports bilingual labels (English/Spanish)
+- Controls: class-select, class-toggle, variable-text, heading, info-text
+- Manages: subtheme selection, font families, heading styles, sidebar options, property appearance
 
-1. Update version in [package.json](package.json)
-2. Run `npm run version` to sync version numbers
-3. Run `npm run build` to generate final [theme.css](theme.css)
-4. Commit changes: `git add src/ theme.css manifest.json versions.json`
-5. Create git tag: `git tag v1.x.x && git push --tags`
-6. Create GitHub release with tag matching version number
-7. Upload [theme.css](theme.css) and [manifest.json](manifest.json) to the release
-8. The `minAppVersion` in manifest.json determines Obsidian compatibility
+### Directory Structure
 
-See [DEVELOPMENT.md](DEVELOPMENT.md) for detailed workflow: development → GitHub → official release.
+- `src/base/` - Core variables and theme foundation
+- `src/editor/` - Editor-specific styles (typography, lists, tables, math)
+- `src/features/` - Modular features (properties variants, tags, heading variants)
+- `src/panels/` - Sidebar and panel layouts
+- `src/plugins/` - Third-party plugin styling (e.g., notebook-navigator)
+- `src/settings/` - Style Settings plugin configuration
+- `src/subthemes/` - Centralized color scheme system
+- `src/ui/` - General UI components (main, secondary, settings window)
 
-## Key Files
+## Theme Development Notes
 
-- **[src/](src/)**: Modular source files organized by feature/component (SOURCE - edit here!)
-- **[src/theme.css](src/theme.css)**: Main entry point with @imports (SOURCE)
-- **[theme.css](theme.css)**: Compiled & minified theme in project root (OUTPUT - auto-generated, do not edit!)
-- **[theme.css.backup](theme.css.backup)**: Original monolithic theme (backup reference)
-- **dist/**: Optional snippets folder (OUTPUT from `npm run build:snippets`, ignored by git)
-- **[manifest.json](manifest.json)**: Theme metadata (name, version, author, minAppVersion)
-- **[versions.json](versions.json)**: Maps theme versions to minimum compatible Obsidian versions
-- **[version-bump.mjs](version-bump.mjs)**: Automation script for version updates
-- **[package.json](package.json)**: npm scripts, project metadata, and dependencies (includes cssnano, cross-env)
-- **[vite.config.js](vite.config.js)**: Vite build configuration (output directories, watch mode)
-- **[postcss.config.js](postcss.config.js)**: PostCSS plugins configuration (cssnano minification, nested CSS, imports)
-- **[DEVELOPMENT.md](DEVELOPMENT.md)**: Detailed development workflow documentation
+### Color System
 
-## Editing Guidelines
+- Primary colors defined as RGB and HSL in `src/base/variables.css`
+- Subtheme system uses OKLCH for perceptually uniform color adjustments
+- Light/dark mode adaptations are handled automatically via CSS custom properties
 
-- **NEVER edit [theme.css](theme.css) directly** - it's auto-generated and minified. Edit files in [src/](src/) instead
-- Run `npm run dev` during development for hot reload (unminified output)
-- Run `npm run build` for production to generate minified CSS
-- When modifying modules, maintain the existing structure and organization
-- Keep @settings metadata in [src/settings/style-settings.css](src/settings/style-settings.css) in sync with actual CSS classes
-- Test changes in both light and dark modes
-- Ensure color scheme modifications update all relevant variables in the scheme
-- When adding new customization options, include Spanish translations
-- After making changes, run `npm run build` to generate the final minified theme
-- See [DEVELOPMENT.md](DEVELOPMENT.md) for detailed development workflow
+### Obsidian Integration
 
-### Adding New Features
+- `manifest.json` defines theme metadata (name, version, minAppVersion, author)
+- `versions.json` maps theme versions to minimum Obsidian versions
+- Theme must output `theme.css` to repository root for Obsidian to detect it
 
-When adding new styles or features:
-- Create dedicated CSS files for significant features (e.g., [src/editor/math.css](src/editor/math.css) for math styling)
-- Add utility classes to [src/editor/css-classes.css](src/editor/css-classes.css)
-- Update [src/theme.css](src/theme.css) to import new files
-- Add corresponding Style Settings options if needed
+### Version Management
+
+When updating versions:
+1. Update version in `package.json`
+2. Run `npm run version` (uses `version-bump.mjs`)
+3. This automatically updates `manifest.json` and `versions.json`
+4. Commit changes and create GitHub release with `manifest.json` and `theme.css`
+
+## File Conventions
+
+- Use PostCSS nested syntax for better organization
+- Preserve `@settings` comments (cssnano configured to keep them)
+- Import order in `src/theme.css` must be maintained for proper cascade
+- Feature CSS files should be self-contained and importable as snippets
