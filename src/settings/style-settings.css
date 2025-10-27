@@ -45,6 +45,8 @@ settings:
       id: colored-headings
       title: Use subtheme colors for headings
       title.es: Usar colores de subtema en los encabezados
+      description: Applies subtheme colors to heading levels (h1-h6)
+      description.es: Aplica los colores del subtema a los niveles de encabezados (h1-h6)
       type: class-toggle
       default: false
   -
@@ -74,7 +76,7 @@ settings:
       id: custom-caret
       title: Custom caret color
       title.es: Color personalizado del cursor
-      description: Use subtheme color for the text cursor in the editor
+      description: Uses the subtheme color for the text cursor in the editor
       description.es: Usa el color del subtema para el cursor de texto en el editor
       type: class-toggle
       default: false
@@ -88,31 +90,33 @@ settings:
   -
       id: font-headings
       title: Headings font family
-      title.es: Fuente para titulos
+      title.es: Fuente para títulos
       description: "Font family used for note headers: inline-title, h1, h2, h3, h4, h5, h6"
-      description.es: "Fuente usada para los titulos de las notas: titulo en una linea, h1, h2, h3, h4, h5, h6"
+      description.es: "Fuente usada para los títulos de las notas: título en una línea, h1, h2, h3, h4, h5, h6"
       type: variable-text
       default: 'var(--text-font)'
   -
       id: headings-underline
       title: Underline headings
       title.es: Subrayar encabezados
-      description: Adds underline decoration to headings
-      description.es: Añade subrayaado a los encabezados
+      description: Adds underline decoration to all heading levels
+      description.es: Añade subrayado a todos los niveles de encabezados
       type: class-toggle
       default: false
   -
       id: default-file-title
       title: Use default file title
-      title.es: Usar el titulo de archivo por defecto
-      description: Restores the file title to obsidian defaults styling
-      description.es: Restaura el estilo por defecto de obsidian para el titulo en archivo
+      title.es: Usar el título de archivo por defecto
+      description: Restores the file title to Obsidian's default styling
+      description.es: Restaura el estilo por defecto de Obsidian para el título del archivo
       type: class-toggle
       default: false
   -
       id: hide-file-title
       title: Hide file title in topbar
-      title.es: Ocultar titulo de archivo en la barra superior
+      title.es: Ocultar título de archivo en la barra superior
+      description: Completely hides the file title from the topbar
+      description.es: Oculta completamente el título del archivo de la barra superior
       type: class-toggle
       default: false
   -
@@ -140,41 +144,43 @@ settings:
   -
       id: metadata-container-alt
       title: Options for the metadata (properties) container
-      description: Alternative styles for properties
       title.es: Estilos para el contenedor de propiedades
-      description.es: Estilos alternativos del tema para las propiedades o metadatos
+      description: Alternative visual styles for the properties container
+      description.es: Estilos visuales alternativos para el contenedor de propiedades o metadatos
       type: class-select
       allowEmpty: true
       default: none
       options:
         -
           label: Dashed Separator
+          label.es: Separador de línea discontinua
           value: metadata-container-alt-separator
         -
           label: Outline
+          label.es: Contorno
           value: metadata-container-alt-outline
-  -
-      id: colored-text-tag-panel
-      title: Use tag color for text in tag panel
-      title.es: Usar color de las tags para el texto en el panel lateral
-      type: class-toggle
-      default: false
   -
       id: enable-bold-font-label-properties
       title: Enable bold for property labels
       title.es: Habilitar texto en negrita para el nombre de las propiedades
+      description: Makes property names display in bold font weight
+      description.es: Muestra los nombres de las propiedades en negrita
       type: class-toggle
       default: true
   -
       id: show-properties-label
       title: Show "Properties" label
       title.es: Mostrar la etiqueta "Propiedades"
+      description: Displays the "Properties" header above the properties section
+      description.es: Muestra el encabezado "Propiedades" sobre la sección de propiedades
       type: class-toggle
       default: false
   -
       id: hide-properties-icons
       title: Hide properties icon
       title.es: Ocultar iconos de propiedades
+      description: Hides the type icons next to property names
+      description.es: Oculta los iconos de tipo junto a los nombres de las propiedades
       type: class-toggle
       default: false
   -

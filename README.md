@@ -1,95 +1,148 @@
-This is a sample theme for Obsidian ([https://obsidian.md](https://obsidian.md/)).
+# Cosmical
 
-## First Time publishing a theme?
+A carefully crafted Obsidian theme that balances visual appeal with functional clarity. Born from a VSCode theme of the same name, Cosmical brings a neutral, GNOME-inspired aesthetic with vibrant colors and balanced contrasts designed to be eye-catching without being distracting.
 
-### Quick start
+## Philosophy
 
-<img width="244" alt="Pasted image 20220822135601" src="https://user-images.githubusercontent.com/693981/186000386-4f4da987-fcaf-4aa5-aed4-e34b5901255d.png">
+Cosmical is built on three core principles:
 
-First, choose **Use this template**. That will create a copy of this repository (repo) under your Github profile. Then, you will want to _clone_ your new repository to your computer.
+- **Neutral Foundation**: A clean, neutral background free from blue tints, providing a calm canvas for your thoughts
+- **Vibrant Accents**: Rich, carefully selected colors that bring life to your notes while maintaining excellent readability
+- **Work-Focused Design**: Beautiful enough to enjoy, subtle enough to fade into the background when you're deep in focus
 
-Once you have the repo locally on your computer, there are a couple of placeholder fields you will need to fill in.
+## Features
 
-1. Inside the `manifest.json` file, change the "name" field to whatever you want the name of your theme to be. For example:
+### Dynamic Subtheme System
 
-  ```json
-  {
-    "name": "Moonstone",
-    "version": "0.0.0",
-    "minAppVersion": "1.0.0"
-  }
-  ```
+Choose from five distinct color schemes that adapt intelligently to both light and dark modes:
 
-2. Also inside the manifest.json file, you can include your name under next to the "author" field.
+- **Ocean** (default): Classic maritime palette with deep blue and warm gold accents
+- **Forest**: Natural emerald green paired with copper tones
+- **Twilight**: Inspired by Obsidian's signature purple with complementary cyan
+- **Sunset**: Warm coral and deep violet combination
+- **Monochrome**: Uses your Obsidian accent color with neutral grays
 
-After you have those fields configured, all that's left to do is add your styles! All of your CSS needs to be inside the file `theme.css` which is located at root of your repository.
+All subthemes use the OKLCH color space for perceptually uniform luminosity adjustments, ensuring perfect readability in any mode.
 
-## Adding your theme to the Theme Gallery
+### Extensive Customization
 
-### Add a screenshot thumbnail
+Powered by the [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) plugin, Cosmical offers granular control over:
 
-Inside the repository, include a screenshot thumbnail of your theme. You can name the file anything, for example `screenshot.png`. This image will be used for the small preview in the theme list.
+#### Theme Colors
+- Subtheme selection
+- Colored headings option
+- Colored tags with optional hollow style
+- Custom caret color matching your subtheme
 
-Your screenshot file should be `16:9` aspect ratio.
-The recommended size is 512x288.
+#### Editor
+- Custom font family for headings
+- Optional heading underlines
+- File title customization (default style or hidden)
 
-### Submit your theme for review
+#### Sidebars
+- Sidebar toggle button visibility controls
 
-To have your theme included in the Theme Gallery, you will need to submit a Pull Request to [`obsidianmd/obsidian-releases`](https://github.com/obsidianmd/obsidian-releases#community-theme).
+#### Properties (Metadata)
+- Alternative container styles (dashed separator, outline)
+- Bold property labels toggle
+- Property header visibility
+- Icon visibility control
+- Improved multi-select list UX
 
-## Releasing Versions _(Optional)_
+### Modern CSS Architecture
 
-If your theme is getting more and more complex, you might want to start thinking about how your theme will stay compatible with different versions of Obsidian. Introduced in v0.16 of Obsidian, themes support [Github Releases](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). This means that you can specify which versions of your theme are compatible with which versions of Obsidian.
+Built with a modular PostCSS workflow:
 
-### Steps for releasing the initial version of your theme (1.0.0)
+- Automatic light/dark mode adaptation
+- OKLCH color space for perceptual uniformity
+- Clean, maintainable source structure
+- CSS nesting support
+- Snippet-ready features (build individual features as standalone CSS snippets)
 
-1. From your theme's repository, click on "Releases".
-   
-<img width="235" alt="Pasted image 20220822145001" src="https://user-images.githubusercontent.com/693981/186000441-287a1a97-65f6-4b5f-ba66-810ceae91cd3.png">
+### Bilingual Support
 
-2. On the Releases page, there should be a button to **Draft a new Release**. Press it.
+All Style Settings options include English and Spanish (Español) translations.
 
-<img width="202" alt="Pasted image 20220822145048" src="https://user-images.githubusercontent.com/693981/186000664-6c63ae14-f685-4d39-bfe6-324f95cd9669.png">
+## Installation
 
-3. Fill out the Release information form.
-	- **Choose a Tag**: Type in the name of the version number here. At the bottom of the dropdown should be a button to create a new tag with your latest theme changes. Choose this option.
-		<img width="340" alt="Pasted image 20220822145648" src="https://user-images.githubusercontent.com/693981/186000848-bd1c2619-ea09-4e70-a886-40769cda6921.png">
-	- **Release Title**: This can be the version number.
-	- **Description** _Optional_: Anything that changed
-	- **Files:** The most important part of this form is uploading the files. You can do this by dragging 'n dropping the `manifest.json` file and the `theme.css` file your for theme inside the file upload field.
+### From Obsidian Community Themes (Coming Soon)
 
-<img width="946" alt="Pasted image 20220822145356" src="https://user-images.githubusercontent.com/693981/186000772-e689ecea-c3b7-4e9d-9204-7ad62c0123aa.png">
+1. Open Obsidian Settings
+2. Navigate to **Appearance** → **Themes**
+3. Click **Browse** and search for "Cosmical"
+4. Click **Install and use**
 
-4. Click "Publish Release."
-5. Make sure that `versions.json` is set up correctly. This file is a map.
-  ```json
-  {
-    "1.0.0": "0.16.0"
-  }
-  ```
-  
-  This means that version 1.0.0 of your theme is compatible with version 0.16.0 of Obsidian. For the initial release of your theme, you shouldn't need to make any changes to this file.
- 
-### Steps for releasing new versions
+## Recommended Setup
 
-Releasing a new version of your theme is the same as releasing the initial version.
+For the best experience, install these community plugins:
 
-1. From your theme's repository, click on "Releases."
-2. On the Releases page, there should be a button to **Draft a new Release**. Press it.
-3. Fill out the Release information form.
-	- **Choose a Tag**: Type in the name of the version number here. At the bottom of the dropdown should be a button to create a new tag with your latest theme changes. Choose this option.
-		<img width="333" alt="Pasted image 20220822145812" src="https://user-images.githubusercontent.com/693981/186000912-f494def9-0f67-4662-92bf-bd278082455f.png">
-	- **Release Title**: This can be the version number.
-	- **Description** _Optional_: Anything that changed
-	- **Files:** The most important part of this form is uploading the files. You can do this by dragging 'n dropping the `manifest.json` file and the `theme.css` file your for theme inside the file upload field.
+- **[Style Settings](https://github.com/mgmeyers/obsidian-style-settings)**: Unlock all customization options
+- **Notebook Navigator** (optional): Additional theme compatibility included
 
-4. Click "Publish Release."
-5. Update the `versions.json` file in your repository. For the initial release of your theme, you probably didn't need to make any changes to the `versions.json` file. When you release subsequent versions of your theme; however, it's best practice to include the new version as entry in the versions.json file. So this might look like:
-  ```json
-  {  
-		"1.0.0": "0.16.0",
-		"1.0.1": "0.16.0"
-  }
-  ```
+## Screenshots
 
-  What's important to note here is: the new version is included as the "key" and the "value" is the minimum version of Obsidian that your theme compatible with. So if the new version of your theme is only compatible with an Insider version of Obsidian, it's important to set this value accordingly. This will prevent users on older versions of Obsidian from updating to the newer version of your theme.
+_Screenshots coming soon_
+
+## Development
+
+Cosmical uses Vite + PostCSS for a modern development workflow.
+
+### Setup
+
+```bash
+npm install
+```
+
+### Development Mode
+
+```bash
+npm run dev
+```
+
+Watches for changes and automatically rebuilds the theme.
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+Creates a minified `theme.css` ready for distribution.
+
+### Build CSS Snippets
+
+```bash
+npm run build:snippets
+```
+
+Generates individual CSS snippets from features in `src/features/`.
+
+## Roadmap
+
+Cosmical is designed to grow organically. Planned improvements include:
+
+- Expanded plugin compatibility
+- Additional subthemes
+- More customization options
+- Enhanced UI refinements
+
+Future projects may include custom Obsidian plugins that complement the Cosmical aesthetic, though these are in early conceptual stages.
+
+## Contributing
+
+Found a bug or have a suggestion? Feel free to [open an issue](https://github.com/M-Torrus/cosmical-obsidian/issues).
+
+## Credits
+
+**Author**: Torrus
+**Inspired by**: The Cosmical VSCode theme
+
+## License
+
+This theme is released under the MIT License. See [LICENSE](LICENSE) for details.
+
+---
+
+<p align="center">
+  <i>Made with ☕ for focused, beautiful note-taking</i>
+</p>

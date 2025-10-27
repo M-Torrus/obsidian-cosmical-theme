@@ -12,38 +12,44 @@ Cosmical is an Obsidian theme that uses a modular CSS architecture with PostCSS 
 ```bash
 npm run dev
 ```
-Runs Vite in watch mode with development settings. Automatically rebuilds `theme.css` in the root directory when source files change. PostCSS plugins run without minification.
+Runs Vite in watch mode with development settings. Automatically rebuilds `theme.css` in the root directory when source files change. PostCSS plugins run without minification. This is the primary command for active development.
 
 ### Production Build
 ```bash
 npm run build
 ```
-Creates minified production `theme.css` with cssnano compression. Preserves `@settings` comments for Style Settings plugin compatibility.
+Creates minified production `theme.css` with cssnano compression. The PostCSS config explicitly preserves `@settings` comments for Style Settings plugin compatibility by filtering the cssnano discard comments option (see [postcss.config.js](postcss.config.js:9-13)).
 
 ### Snippets Build
 ```bash
 npm run build:snippets
 ```
-Builds individual CSS feature files from `src/features/` into separate snippet files in `dist/snippets/`. Each feature becomes a standalone CSS snippet.
+Builds individual CSS feature files from `src/features/` into separate snippet files in `dist/snippets/`. Each feature becomes a standalone CSS snippet. The Vite config uses glob patterns to discover all feature files and creates individual entry points (see [vite.config.js](vite.config.js:6-34)).
 
 ### Version Management
 ```bash
 npm run version
 ```
-Automatically updates `manifest.json` and `versions.json` with the current package version from `package.json`. Run before creating GitHub releases.
+Automatically updates `manifest.json` and `versions.json` with the current package version from `package.json`. Uses [version-bump.mjs](version-bump.mjs) script. Run before creating GitHub releases.
 
 ## Architecture
 
 ### Build System
 
-The theme uses Vite + PostCSS with three key plugins:
+The theme uses Vite + PostCSS with a multi-mode configuration:
 
+**PostCSS plugins** ([postcss.config.js](postcss.config.js)):
 1. **postcss-import**: Processes `@import` statements to combine CSS modules
 2. **postcss-nested**: Enables SCSS-like nesting syntax
 3. **postcss-custom-media**: Allows reusable media query definitions
-4. **cssnano** (production only): Minifies CSS while preserving `@settings` comments
+4. **cssnano** (production only): Minifies CSS while preserving `@settings` comments via custom comment filter
 
-The build outputs `theme.css` to the repository root (where Obsidian expects it), not to `dist/`.
+**Vite modes** ([vite.config.js](vite.config.js)):
+- **development**: Watch mode, outputs `theme.css` to root, no minification
+- **production**: Minified output via cssnano, outputs `theme.css` to root
+- **snippets**: Separate build mode that generates individual snippet files in `dist/snippets/`
+
+**Critical build detail**: The main theme build outputs `theme.css` directly to the repository root (not to `dist/`), as this is where Obsidian expects to find the theme file. The `dist/` directory is only used for snippet builds.
 
 ### Source Structure
 
@@ -79,6 +85,8 @@ src/
     └── editor.css         # Editor-specific features
 ```
 
+**Import order matters**: The sequence in [src/theme.css](src/theme.css) must be preserved (settings → base → subthemes → UI → editor → panels → plugins → features) because CSS variables need to be defined before they're used, and later styles may override earlier ones.
+
 ### Subtheme System (Key Architecture)
 
 The most complex part of the theme is the **subtheme system** in `src/subthemes/`, which provides theme-wide color schemes:
@@ -89,35 +97,47 @@ The most complex part of the theme is the **subtheme system** in `src/subthemes/
    - `--subtheme-1-l`, `--subtheme-1-c`, `--subtheme-1-h` (primary color)
    - `--subtheme-2-l`, `--subtheme-2-c`, `--subtheme-2-h` (accent color)
 
-2. **Schema** ([src/subthemes/theme-schema.css](src/subthemes/theme-schema.css)): Calculates luminosity variants automatically:
-   - Dark mode: Uses base luminosity values with small adjustments (±0.1)
-   - Light mode: Darkens colors significantly (-0.45) for readability
+   These are defined as CSS classes (`.subtheme-ocean`, `.subtheme-forest`, etc.) that get applied to the `body` element when users select a subtheme.
+
+2. **Schema** ([src/subthemes/theme-schema.css](src/subthemes/theme-schema.css)): Calculates luminosity variants automatically using CSS calc():
+   - Dark mode (`.theme-dark`): Uses base luminosity values with small adjustments (±0.1 via `--luminosity-diff-alt`)
+   - Light mode (`.theme-light`): Darkens colors significantly (-0.45 via `--luminosity-diff-light`) for readability on light backgrounds
    - Generates 3 variants per color: `normal`, `alt`, `high`
 
-3. **Output**: Creates 6 final color variables per subtheme:
+   The schema applies different calculation logic based on `.theme-dark` vs `.theme-light` classes.
+
+3. **Output**: Creates 6 final OKLCH color variables per subtheme:
    - `--subtheme-color-1-normal`, `--subtheme-color-1-alt`, `--subtheme-color-1-high`
    - `--subtheme-color-2-normal`, `--subtheme-color-2-alt`, `--subtheme-color-2-high`
 
+   These are constructed using `oklch(L C H)` syntax with the calculated luminosity values.
+
 4. **Usage**: Features like properties, headings, and tags reference these subtheme color variables, automatically adapting when users switch subthemes or light/dark mode.
 
-**Why this matters:** When adding new features that should support subthemes, use the `--subtheme-color-*` variables instead of hardcoded colors. The system handles light/dark mode adaptation automatically.
+**Why this matters:** When adding new features that should support subthemes, use the `--subtheme-color-*` variables instead of hardcoded colors. The system handles light/dark mode adaptation automatically through the luminosity calculations in theme-schema.css.
+
+**Special case - Monochrome subtheme**: Uses the user's Obsidian accent color (`--accent-h`) with a +40° hue offset to convert from HSL to OKLCH color space (see [src/subthemes/definitions.css](src/subthemes/definitions.css:75-86)).
 
 ### Style Settings Integration
 
 [src/settings/style-settings.css](src/settings/style-settings.css) contains the `@settings` comment block that defines user-facing customization options. The format follows the [Style Settings plugin specification](https://github.com/mgmeyers/obsidian-style-settings).
 
-**Important:** The `@settings` comments must be preserved during minification. The PostCSS config handles this by filtering comments in cssnano.
+**Critical build requirement:** The `@settings` comments must be preserved during minification. The PostCSS config ([postcss.config.js](postcss.config.js)) handles this by checking if comments contain `@settings` before allowing cssnano to remove them:
 
-Available settings include:
-- Subtheme selection (class-select)
-- Feature toggles (class-toggle) for colored headings, tags, hollow tags, custom caret, etc.
-- Font family overrides (variable-text)
-- Container style variants (class-select with allowEmpty)
+```javascript
+discardComments: {
+  remove: (comment) => !comment.includes('@settings')
+}
+```
 
-Settings use either:
-- **class-toggle**: Adds/removes a CSS class on `body` element
-- **class-select**: Switches between predefined CSS classes
-- **variable-text**: Modifies a CSS custom property value
+Available setting types:
+- **class-toggle**: Adds/removes a CSS class on `body` element (e.g., `colored-headings`, `hollow-tags`)
+- **class-select**: Switches between predefined CSS classes (e.g., `subtheme`, `metadata-container-alt`)
+  - Can use `allowEmpty: true` to allow deselecting all options
+- **variable-text**: Modifies a CSS custom property value (e.g., `font-headings`)
+- **heading**: Organizational UI element with collapse functionality
+
+The settings support localization with `title.es` and `description.es` properties for Spanish translations.
 
 ## Common Tasks
 
@@ -143,14 +163,32 @@ Settings use either:
      value: subtheme-yourname
    ```
 
-3. Test in both light and dark modes to ensure readability.
+3. Test in both light and dark modes to ensure readability. The schema will automatically generate all 6 color variants.
 
 ### Adding a New Feature
 
 1. Create CSS file in `src/features/your-feature.css`
-2. Add import to [src/theme.css](src/theme.css) in the Features section
+2. Add import to [src/theme.css](src/theme.css) in the Features section (after existing feature imports)
 3. If user-configurable, add a setting in [src/settings/style-settings.css](src/settings/style-settings.css)
 4. Use `--subtheme-color-*` variables if the feature should adapt to subtheme selection
+5. If the feature should be available as a CSS snippet, it will automatically be included in `npm run build:snippets`
+
+### Adding a Style Settings Option
+
+1. Locate the appropriate heading section in [src/settings/style-settings.css](src/settings/style-settings.css)
+2. Add a new setting entry following the YAML-in-comments format:
+   ```yaml
+   -
+       id: your-setting-id
+       title: Your Setting Title
+       title.es: Tu Título de Configuración
+       description: Description of what this does
+       description.es: Descripción de lo que hace
+       type: class-toggle
+       default: false
+   ```
+3. For `class-toggle` settings, the CSS class name will match the `id` field
+4. Create corresponding CSS in the appropriate feature/ui file that targets the class
 
 ### Modifying UI Components
 
@@ -167,16 +205,18 @@ After making changes:
 1. Run `npm run dev` to watch for changes
 2. Open Obsidian and enable the theme (Settings > Appearance > Themes)
 3. Reload Obsidian (Ctrl/Cmd + R) to see updates
-4. Test in both light and dark modes
-5. If Style Settings options were added, verify they appear correctly
+4. Test in both light and dark modes (Appearance > Base color scheme)
+5. If Style Settings options were added, verify they appear correctly in Settings > Style Settings > Cosmical
+6. Test with different subthemes if changes affect subtheme colors
 
 ### Preparing a Release
 
 1. Update version in [package.json](package.json)
 2. Run `npm run version` to sync manifest and versions files
 3. Run `npm run build` to create production build
-4. Commit changes including `manifest.json`, `versions.json`, and `theme.css`
-5. Create GitHub release with the version tag, attaching `manifest.json` and `theme.css`
+4. Test the minified `theme.css` in Obsidian to ensure nothing broke
+5. Commit changes including `manifest.json`, `versions.json`, and `theme.css`
+6. Create GitHub release with the version tag, attaching `manifest.json` and `theme.css`
 
 ## Color System Reference
 
@@ -186,13 +226,14 @@ Defined in [src/base/variables.css](src/base/variables.css):
 - Named colors: `--color-{red,orange,yellow,green,cyan,blue,purple,pink}`
 
 ### Theme-Specific Colors
-- Dark: `--color-base-{00,05,10,20,30,40,50,60,70,100}` using OKLCH
-- Light: Same variable names with inverted luminosity scale
+Defined in [src/base/variables.css](src/base/variables.css) with separate values for `.theme-dark` and `.theme-light`:
+- Grayscale: `--color-base-{00,05,10,20,30,40,50,60,70,100}` using OKLCH (inverted scale between themes)
 - Background layers: `--background-{primary,primary-alt,secondary,secondary-alt}`
 - Text hierarchy: `--text-{normal,muted,faint}`
+- Icons: `--icon-color`, `--icon-color-hover`, `--icon-color-active`, `--icon-color-focused`
 
 ### Subtheme Colors
-Six dynamically generated colors per active subtheme:
+Six dynamically generated OKLCH colors per active subtheme:
 - `--subtheme-color-1-{normal,alt,high}`: Primary color variants
 - `--subtheme-color-2-{normal,alt,high}`: Accent color variants
 
@@ -204,4 +245,12 @@ Use these for features that should adapt to user's subtheme selection.
 - Group related styles in single files by component/feature
 - Use CSS nesting sparingly - prefer flat selectors for maintainability
 - Add comments for complex color calculations or non-obvious selectors
-- Preserve the import order in [src/theme.css](src/theme.css) (base → subthemes → UI → editor → features)
+- Preserve the import order in [src/theme.css](src/theme.css) (settings → base → subthemes → UI → editor → panels → plugins → features)
+- When adding new features that support snippets, place them in `src/features/` so they're automatically discovered by the snippets build
+
+## Development Environment
+
+This repository is tracked with Git. The main branch is `main`. When making significant changes, test thoroughly before committing, especially:
+- Changes to the subtheme system affect all features using subtheme colors
+- Changes to Style Settings format must be tested with the plugin installed
+- Build configuration changes should be verified with all three build modes (dev, production, snippets)
