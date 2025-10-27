@@ -8,7 +8,7 @@
 @import "./base/theme-core.css";
 
 /* Subthemes System */
-@import "./subthemes/_base.css";
+@import "./subthemes/theme-schema.css";
 @import "./subthemes/definitions.css";
 
 /* Main UI */
