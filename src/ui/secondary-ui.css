@@ -4,8 +4,8 @@ body.theme-light,
 body.theme-dark {
 	/* right-click context menu */
 	.menu {
-		background: var(--background-secondary);
-		border: 1px solid var(--ui-element-border);
+		background: var(--background-primary-alt);
+		border: 1px solid var(--color-base-30);
 		.menu-separator {
 			margin: var(--size-2-1) calc(var(--size-2-1) * -1);
 		}
@@ -13,12 +13,7 @@ body.theme-dark {
 
 	/* form field */
 	--background-modifier-form-field: var(--background-primary);
-	--background-modifier-border: var(--color-base-20);
-	--background-modifier-border-hover: var(--ui-element-border);
-	--background-modifier-border-focus: var(--ui-element-border-hover);
-
-	--background-modifier-active-hover: var(--color-base-25);
-	--background-modifier-active-hover: var(--color-base-20);
+	
 
 	/* buttons */
 	--interactive-normal: var(--background-primary-alt);
@@ -33,15 +28,15 @@ body.theme-dark {
 	}
 
 	/* modal */
-	--modal-border-color: var(--ui-element-border);
+	--modal-border-color: var(--background-modifier-border);
 
 	/* prompt */
-	--prompt-border-color: var(--ui-element-border);
+	--prompt-border-color: var(--background-modifier-border);
 	.prompt {
 		background-color: var(--background-primary);
 		.prompt-input-container .prompt-input {
 			background-color: var(--background-primary);
-			border-bottom: 1px var(--ui-element-border) solid;
+			border-bottom: 1px var(--prompt-border-color) solid;
 		}
 	}
 }

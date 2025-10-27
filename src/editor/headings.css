@@ -1,0 +1,64 @@
+/* inline-title  */
+body:not(.default-file-title) {
+	--inline-title-size: 1.625rem;
+
+	--inline-title-weight: 600;
+	--inline-title-margin-bottom: 1.25rem;
+	--file-header-justify: left;
+	--file-header-font-size: 0.9rem;
+}
+
+/* FEATURE: CUSTOM FONTS */
+.enable-custom-fonts {
+	--font-headings: var(--font-text);
+	--h1-font: var(--font-headings);
+	--h2-font: var(--font-headings);
+	--h3-font: var(--font-headings);
+	--h4-font: var(--font-headings);
+	--h5-font: var(--font-headings);
+	--h6-font: var(--font-headings);
+	--inline-title-font: var(--font-headings) !important;
+}
+
+/* FEATURE: HEADINGS UNDERLINE */
+
+/* lines */
+.headings-underline {
+	.HyperMD-header-1,
+	h1,
+	.HyperMD-header-2,
+	h2,
+	.HyperMD-header-3,
+	h3,
+	.HyperMD-header-4,
+	h4 {
+		text-decoration: underline;
+		text-decoration-color: var(--heading-underline-color);
+	}
+	.HyperMD-header + * {
+		padding-top: var(--size-2-2) !important;
+	}
+}
+
+/* FEATURE: colored headings */
+body {
+	--heading-underline-color: var(--color-base-40);
+}
+.colored-headings {
+	.HyperMD-header-1,
+	.HyperMD-header-2,
+	.HyperMD-header-3,
+	.HyperMD-header-4,
+	.HyperMD-header-5,
+	.HyperMD-header-6,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		color: var(--subtheme-color-1-high);
+	}
+	--inline-title-color: var(--subtheme-color-1-high);
+	--heading-underline-color: var(--subtheme-color-1-alt);
+}

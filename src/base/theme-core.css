@@ -2,6 +2,5 @@
 
 body {
 	/* Editor elements with border */
-	--editor-elements-border-width: 1px;
-	--editor-elements-border-radius: var(--radius-m);
+	--editor-elements-border-width: 2px;
 }

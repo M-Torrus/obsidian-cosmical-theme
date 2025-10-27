@@ -16,13 +16,35 @@ body {
 	/* Divider */
 	--divider-color: var(--color-base-10);
 
-	/* Borders */
-	--ui-element-border: var(--color-base-25);
-	--ui-element-border-hover: var(--color-base-35);
-	--editor-elements-border-color: var(--color-base-25);
-
 	/* Tabs */
 	--tab-divider-color: var(--divider-color);
 	--tab-outline-color: var(--divider-color);
 	--tab-container-background: var(--background-primary);
+
+	/* Semantic colors */
+	--background-modifier-border: var(--color-base-20);
+	--background-modifier-border-hover: var(--color-base-30);
+	--background-modifier-border-focus: var(--color-base-30);
+
+	--background-modifier-active-hover: var(--color-base-25);
+	--background-modifier-active-hover: var(--color-base-20);
+}
+
+/* FEATURE: File Name */
+/* Hide file path/name */
+.hide-file-title .view-header-title {
+	display: none;
+}
+
+:not(.default-file-title) {
+	/* Center file path/name */
+	.view-header-title-container {
+		display: flex;
+		.view-header-title-parent {
+			display: none;
+		}
+		.view-header-title {
+			margin: 0 auto;
+		}
+	}
 }
