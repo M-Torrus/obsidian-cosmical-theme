@@ -5,7 +5,6 @@
 
 /* Base Variables */
 @import "./base/variables.css";
-@import "./base/theme-core.css";
 
 /* Subthemes System */
 @import "./subthemes/theme-schema.css";
@@ -17,7 +16,6 @@
 @import "./ui/settings-window.css";
 
 /* Editor */
-@import "./editor/css-classes.css";
 @import "./editor/content-blocks.css";
 @import "./editor/lists.css";
 @import "./editor/tables.css";
@@ -31,6 +29,7 @@
 @import "./plugins/notebook-navigator.css";
 
 /* Features */
+@import "./features/css-classes.css";
 @import "./features/properties.css";
 @import "./features/tags.css";
 @import "./features/editor.css";

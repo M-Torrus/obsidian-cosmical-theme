@@ -18,18 +18,22 @@ body {
 		--divider-color: var(--color-base-50);
 		--tab-divider-color: var(--color-base-50);
 		--tab-outline-color: var(--color-base-50);
+		--background-modifier-border: var(--color-base-50);
+		--background-modifier-border-hover: var(--color-base-40);
+		--background-modifier-border-focus: var(--color-base-50);
+		--background-modifier-active-hover: var(--color-base-50);
 	}
 	&.theme-light {
 		--divider-color: var(--color-base-40);
 		--tab-divider-color: var(--color-base-30);
 		--tab-outline-color: var(--color-base-30);
+
+		--background-modifier-border: var(--color-base-30);
+		--background-modifier-border-hover: var(--color-base-20);
+		--background-modifier-border-focus: var(--color-base-30);
+		--background-modifier-active-hover: var(--color-base-30);
 	}
 	--tab-container-background: var(--background-primary);
 
 	/* Semantic colors */
-	--background-modifier-border: var(--color-base-20);
-	--background-modifier-border-hover: var(--color-base-30);
-	--background-modifier-border-focus: var(--color-base-30);
-
-	--background-modifier-active-hover: var(--color-base-20);
 }
