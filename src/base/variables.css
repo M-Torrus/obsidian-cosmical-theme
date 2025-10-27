@@ -31,26 +31,26 @@ body.theme-light {
 	--icon-color-hover: var(--text-normal);
 	--icon-color-active: var(--text-normal);
 	--icon-color-focused: var(--text-normal);
-	/* Background mappings */
-	--background-primary: var(--color-base-00);        /* Editor */
-	--background-primary-alt: var(--color-base-10);    /* Popups, modals */
-	--background-secondary: var(--color-base-30);      /* Sidebars */
-	--background-secondary-alt: var(--color-base-50);  /* Darker elements */
 }
 
 /* Dark Theme - Obsidian Essential Variables */
 .theme-dark {
-	/* Background layers (lightest to darkest) */
-	--color-base-00: oklch(30% 0 0);    /* Editor background (primary) */
-	--color-base-05: oklch(28.5% 0 0);  /* Subtle hover on editor */
-	--color-base-10: oklch(27% 0 0);    /* Popups, modals */
-	--color-base-20: oklch(25% 0 0);    /* Transition layer */
-	--color-base-30: oklch(24% 0 0);    /* Sidebars */
-	--color-base-40: oklch(22.5% 0 0);  /* Transition layer */
-	--color-base-50: oklch(21% 0 0);    /* Darker elements */
-	--color-base-60: oklch(19% 0 0);    /* Disabled, strong shadows */
-	--color-base-70: oklch(17% 0 0);    /* Maximum contrast (borders, dividers) */
-	--color-base-100: oklch(100% 0 0);  /* Text color */
+	/* Background layers (darkest to lightest) */
+	--color-base-00: oklch(17% 0 0);
+	--color-base-10: oklch(21% 0 0);
+	--color-base-20: oklch(24% 0 0);
+	--color-base-30: oklch(27% 0 0);
+	--color-base-40: oklch(30% 0 0);
+	--color-base-50: oklch(33% 0 0);
+	--color-base-60: oklch(36% 0 0);
+	--color-base-70: oklch(40% 0 0);
+	--color-base-100: oklch(100% 0 0);
+
+	/* Background mappings for dark mode */
+	--background-primary: var(--color-base-30); /* Editor: 27% */
+	--background-primary-alt: var(--color-base-20); /* Popups: 30% (lighter) */
+	--background-secondary: var(--color-base-10); /* Sidebar: 24% (darker) */
+	--background-secondary-alt: var(--color-base-05); /* Darkest: 21% */
 
 	/* Text */
 	--text-normal: oklch(100% 0 0);
@@ -61,16 +61,22 @@ body.theme-light {
 /* Light Theme - Obsidian Essential Variables */
 .theme-light {
 	/* Background layers (lightest to darkest) */
-	--color-base-00: oklch(100% 0 0);   /* Editor background (primary) */
-	--color-base-05: oklch(99% 0 0);    /* Subtle hover on editor */
-	--color-base-10: oklch(97% 0 0);    /* Popups, modals */
-	--color-base-20: oklch(95% 0 0);    /* Transition layer */
-	--color-base-30: oklch(94% 0 0);    /* Sidebars */
-	--color-base-40: oklch(92% 0 0);    /* Transition layer */
-	--color-base-50: oklch(91% 0 0);    /* Darker elements */
-	--color-base-60: oklch(88% 0 0);    /* Disabled elements */
-	--color-base-70: oklch(85% 0 0);    /* Maximum contrast (borders, dividers) */
-	--color-base-100: oklch(0% 0 0);    /* Text color */
+	--color-base-00: oklch(100% 0 0); /* Lightest - editor background */
+	--color-base-05: oklch(97% 0 0);
+	--color-base-10: oklch(94% 0 0);
+	--color-base-20: oklch(91% 0 0);
+	--color-base-30: oklch(88% 0 0);
+	--color-base-40: oklch(85% 0 0);
+	--color-base-50: oklch(82% 0 0);
+	--color-base-60: oklch(78% 0 0);
+	--color-base-70: oklch(73% 0 0);
+	--color-base-100: oklch(0% 0 0);
+
+	/* Background mappings for light mode */
+	--background-primary: var(--color-base-00); /* Editor: 100% */
+	--background-primary-alt: var(--color-base-10); /* Popups */
+	--background-secondary: var(--color-base-20); /* Sidebar */
+	--background-secondary-alt: var(--color-base-30); /* Darkest */
 
 	/* Text */
 	--text-normal: oklch(0% 0 0);
