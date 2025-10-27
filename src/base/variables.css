@@ -26,6 +26,7 @@ body.theme-light {
 	--color-blue: hsl(222, 100%, 71%);
 	--color-purple: hsl(262, 60%, 76%);
 	--color-pink: hsl(335, 45%, 77%);
+
 	/* Obsidian icons */
 	--icon-color: var(--text-muted);
 	--icon-color-hover: var(--text-normal);
@@ -35,24 +36,22 @@ body.theme-light {
 
 /* Dark Theme - Obsidian Essential Variables */
 .theme-dark {
-	/* Background layers (darkest to lightest) */
-	--color-base-00: oklch(17% 0 0);
-	--color-base-10: oklch(21% 0 0);
-	--color-base-20: oklch(24% 0 0);
-	--color-base-30: oklch(27% 0 0);
-	--color-base-40: oklch(30% 0 0);
-	--color-base-50: oklch(33% 0 0);
-	--color-base-60: oklch(36% 0 0);
-	--color-base-70: oklch(40% 0 0);
+	--color-base-00: oklch(18% 0 0);
+	--color-base-05: oklch(21% 0 0);
+	--color-base-10: oklch(24% 0 0);
+	--color-base-20: oklch(27% 0 0);
+	--color-base-30: oklch(30% 0 0);
+	--color-base-40: oklch(33% 0 0);
+	--color-base-50: oklch(36% 0 0);
+	--color-base-60: oklch(39% 0 0);
+	--color-base-70: oklch(42% 0 0);
 	--color-base-100: oklch(100% 0 0);
 
-	/* Background mappings for dark mode */
-	--background-primary: var(--color-base-30); /* Editor: 27% */
-	--background-primary-alt: var(--color-base-20); /* Popups: 30% (lighter) */
-	--background-secondary: var(--color-base-10); /* Sidebar: 24% (darker) */
-	--background-secondary-alt: var(--color-base-05); /* Darkest: 21% */
+	--background-primary: var(--color-base-30);
+	--background-primary-alt: var(--color-base-20);
+	--background-secondary: var(--color-base-10);
+	--background-secondary-alt: var(--color-base-05);
 
-	/* Text */
 	--text-normal: oklch(100% 0 0);
 	--text-muted: oklch(77.5% 0 0);
 	--text-faint: oklch(55% 0 0);
@@ -60,8 +59,7 @@ body.theme-light {
 
 /* Light Theme - Obsidian Essential Variables */
 .theme-light {
-	/* Background layers (lightest to darkest) */
-	--color-base-00: oklch(100% 0 0); /* Lightest - editor background */
+	--color-base-00: oklch(100% 0 0);
 	--color-base-05: oklch(97% 0 0);
 	--color-base-10: oklch(94% 0 0);
 	--color-base-20: oklch(91% 0 0);
@@ -72,13 +70,11 @@ body.theme-light {
 	--color-base-70: oklch(73% 0 0);
 	--color-base-100: oklch(0% 0 0);
 
-	/* Background mappings for light mode */
-	--background-primary: var(--color-base-00); /* Editor: 100% */
-	--background-primary-alt: var(--color-base-10); /* Popups */
-	--background-secondary: var(--color-base-20); /* Sidebar */
-	--background-secondary-alt: var(--color-base-30); /* Darkest */
+	--background-primary: var(--color-base-00);
+	--background-primary-alt: var(--color-base-10);
+	--background-secondary: var(--color-base-20);
+	--background-secondary-alt: var(--color-base-30);
 
-	/* Text */
 	--text-normal: oklch(0% 0 0);
 	--text-muted: oklch(27.5% 0 0);
 	--text-faint: oklch(45% 0 0);

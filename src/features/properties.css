@@ -124,7 +124,7 @@ body {
 	padding: var(--size-4-3) var(--size-4-4);
 	margin-bottom: var(--size-4-2);
 
-	border: solid var(--editor-elements-border-width) var(--color-base-30);
+	border: solid 2px var(--color-base-30);
 	border-radius: var(--radius-l);
 }
 

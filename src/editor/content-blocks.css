@@ -3,7 +3,13 @@
 /* Blockquote */
 body {
 	--blockquote-border-thickness: 0.2em;
-	--blockquote-border-color: red;
+
+	&.theme-dark {
+		--code-background: var(--color-base-40);
+	}
+	&.theme-light {
+		--code-background: var(--color-base-10);
+	}
 }
 
 .HyperMD-quote {
