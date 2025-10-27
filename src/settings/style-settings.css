@@ -206,12 +206,6 @@ settings:
       type: class-toggle
       default: false
   -
-      id: increase-metadata-label-width
-      title: Adjust property label width
-      title.es: Ajustar la anchura en las etiquetas de las propiedades
-      type: class-toggle
-      default: false
-  -
       id: improve-multilist-ux
       title: Improve multi-select list UX
       title.es: Mejorar UX de listas multi-selección

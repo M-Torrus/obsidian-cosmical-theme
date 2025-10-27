@@ -11,4 +11,8 @@ body {
 			border: 1px solid var(--tag-color);
 		}
 	}
+
+	&.colored-headings {
+		--nn-theme-file-selected-name-color: var(--subtheme-color-1-high);
+	}
 }
