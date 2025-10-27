@@ -13,12 +13,17 @@ body {
 	/* Scrollbar */
 	--scrollbar-thumb-bg: #ffffff15;
 
-	/* Divider */
-	--divider-color: var(--color-base-10);
-
-	/* Tabs */
-	--tab-divider-color: var(--color-base-30);
-	--tab-outline-color: var(--color-base-30);
+	/* Divider, Outlines, tabs */
+	&.theme-dark {
+		--divider-color: var(--color-base-50);
+		--tab-divider-color: var(--color-base-50);
+		--tab-outline-color: var(--color-base-50);
+	}
+	&.theme-light {
+		--divider-color: var(--color-base-40);
+		--tab-divider-color: var(--color-base-30);
+		--tab-outline-color: var(--color-base-30);
+	}
 	--tab-container-background: var(--background-primary);
 
 	/* Semantic colors */
