@@ -1,6 +1,7 @@
 /* OTHER UI ELEMENTS */
 
-body {
+body.theme-light,
+body.theme-dark {
 	/* right-click context menu */
 	.menu {
 		background: var(--background-secondary);
@@ -20,8 +21,8 @@ body {
 	--background-modifier-active-hover: var(--color-base-20);
 
 	/* buttons */
-	--interactive-normal: var(--color-base-20);
-	--interactive-hover: var(--color-base-25);
+	--interactive-normal: var(--background-primary-alt);
+	--interactive-hover: var(--background-secondary);
 
 	/* code */
 	--code-background: var(--background-primary-alt);
