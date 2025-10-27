@@ -6,6 +6,8 @@
 	--metadata-input-font-size: max(var(--font-ui-small), 0.9em);
 	--metadata-label-font-size: max(var(--font-ui-small), 0.9em);
 
+	--metadata-label-width: max(22.5%, 8rem);
+
 	.metadata-property-key .metadata-property-icon,
 	.metadata-add-button {
 		--icon-size: var(--icon-s);
@@ -25,11 +27,6 @@
 		color: var(--property-icon-color);
 		font-weight: 400;
 	}
-}
-
-/* increases the width of the properties labels */
-.increase-metadata-label-width {
-	--metadata-label-width: max(22.5%, 8rem);
 }
 
 /* Hide property icons */
