@@ -147,6 +147,21 @@ settings:
       description.es: Cambia los símbolos de markdown (encabezados, listas, texto en negrita...) en modo "Vista previa" para usar la fuente monoespaciada
       type: class-toggle
   -
+    id: Editor-settings-heading
+    title: Editor
+    title.es: Editor
+    type: heading
+    level: 1
+    collapsed: false
+  -
+      id: custom-caret
+      title: Custom caret color
+      title.es: Color personalizado del cursor
+      description: Use subtheme color for the text cursor in the editor
+      description.es: Usa el color del subtema para el cursor de texto en el editor
+      type: class-toggle
+      default: false
+  -
     id: Headers-settings-heading
     title: Headers
     title.es: Encabezados

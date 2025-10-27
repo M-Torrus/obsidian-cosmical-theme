@@ -44,3 +44,65 @@ body {
 [data-type="tag"] .workspace-tab-header-inner-icon svg {
 	color: var(--tag-color) !important;
 }
+
+/* TAG COLOR SCHEMES */
+
+.tags-ruby {
+  --tag-h: 0;
+  --tag-s: 100%;
+  --tag-l: 76%;
+}
+
+.tags-industrial-orange {
+  --tag-h: 22;
+  --tag-s: 70%;
+  --tag-l: 70%;
+}
+
+.tags-mecha {
+  --tag-h: 37;
+  --tag-s: 90%;
+  --tag-l: 51%;
+}
+
+.tags-racing-yellow {
+  --tag-h: 50;
+  --tag-s: 90%;
+  --tag-l: 66%;
+}
+
+.tags-emerald {
+  --tag-h: 125;
+  --tag-s: 75%;
+  --tag-l: 74%;
+}
+
+.tags-pine {
+  --tag-h: 155;
+  --tag-s: 75%;
+  --tag-l: 69%;
+}
+
+.tags-ocean {
+  --tag-h: 202;
+  --tag-s: 100%;
+  --tag-l: 80%;
+}
+
+.tags-space-adventure {
+  --tag-h: 276;
+  --tag-s: 68%;
+  --tag-l: 77%;
+}
+
+.tags-saphire {
+  --tag-h: 216;
+  --tag-s: 100%;
+  --tag-l: 75%;
+}
+
+.tags-amethyst {
+  --tag-h: 280;
+  --tag-s: 85%;
+  --tag-l: 80%;
+}
