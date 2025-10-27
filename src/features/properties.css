@@ -39,16 +39,6 @@
 	}
 }
 
-/* FONT PROPERTIES */
-.enable-custom-fonts {
-	.metadata-properties,
-	.metadata-properties *,
-	.metadata-add-button,
-	.metadata-properties-heading {
-		font-family: var(--custom-font-properties);
-	}
-}
-
 /* BOLD PROPERTY LABEL */
 .enable-bold-font-label-properties,
 .enable-bold-font-label-properties {
@@ -128,15 +118,15 @@ body {
 
 /* metadata-container styles */
 .metadata-container-alt-separator .metadata-container {
-  padding-bottom: .4em;
-  border-bottom: dashed 2px var(--divider-color);
-  margin-bottom: 1em;
+	padding-bottom: var(--size-4-4);
+	margin-bottom: var(--size-4-2);
+	border-bottom: dashed 2px var(--color-base-30);
 }
 
 .metadata-container-alt-outline .metadata-container {
-  padding: .75em;
-  padding-bottom: .5em;
-  border: solid var(--editor-elements-border-width) var(--editor-elements-border-color);
-  border-radius: var(--editor-elements-border-radius);
-  margin-bottom: 1em;
+	padding: var(--size-4-3) var(--size-4-4);
+	margin-bottom: var(--size-4-2);
+
+	border: solid var(--editor-elements-border-width) var(--color-base-30);
+	border-radius: var(--radius-l);
 }

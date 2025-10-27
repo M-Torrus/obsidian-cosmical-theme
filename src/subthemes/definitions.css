@@ -72,11 +72,12 @@ body,
    MONOCHROME - Use accent color + Gray
    ================================================================ */
 .subtheme-monochrome {
-	/* Color 1: User accent - uses Obsidian's --accent-h for hue */
-	/* Fixed L/C values that work well for typical accent colors (HSL ~68% lightness, ~80% saturation) */
-	--subtheme-1-l: 0.72;
-	--subtheme-1-c: 0.17;
-	--subtheme-1-h: var(--accent-h);
+	/* Color 1: User accent - convert HSL hue to OKLCH hue with offset adjustment */
+	/* HSL yellow (~60°) needs +30-50° offset to map to OKLCH yellow (~90-110°) */
+	/* HSL blues/purples need less adjustment, reds/oranges need slight adjustment */
+	--subtheme-1-l: 0.88;
+	--subtheme-1-c: 0.11;
+	--subtheme-1-h: calc(var(--accent-h) + 40);
 
 	/* Color 2: Gray */
 	--subtheme-2-l: 0.88;

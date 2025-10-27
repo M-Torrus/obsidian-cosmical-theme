@@ -19,7 +19,7 @@ settings:
       description.es: Elige un subtema de color que afecta a las propiedades y otras características
       type: class-select
       allowEmpty: false
-      default: subtheme-ocean
+      default: Ocean
       options:
         -
           label: Ocean (default)
@@ -82,6 +82,12 @@ settings:
             label: Mecha
             value: tags-mecha
   -
+      id: colored-headings
+      title: Use subtheme colors for headings
+      title.es: Usar colores de subtema en los encabezados
+      type: class-toggle
+      default: false
+  -
       id: hollow-tags
       title: Hollow tags style
       title.es: Estilo de etiquetas huecas
@@ -111,41 +117,10 @@ settings:
       type: variable-text
       default: 'var(--text-font)'
   -
-      id: custom-font-properties
-      title: Properties font family
-      title.es: Fuente para las propiedades
-      type: variable-text
-      default: 'var(--text-font)'
-  -
-      id: custom-font-tags
-      title: Tags font family
-      title.es: Fuente para las tags
-      type: variable-text
-      default: 'var(--text-font)'
-  -
-      id: custom-font-quote
-      title: quote font family
-      title.es: Fuente para los bloques de cita
-      type: variable-text
-      default: 'var(--text-font)'
-  -
-      id: custom-font-callout
-      title: callout font family
-      title.es: Fuente para los callout (anotaciones)
-      type: variable-text
-      default: 'var(--text-font)'
-  -
       id: Fonts-info-text
       description: The interface font, text font and monospace font are changed in Obsidian settings > Appearance
       description.es: La fuente de la interfaz, fuente del texto y fuente monospace se cambian desde Opciones > Apariencia
       type: info-text
-  -
-      id: monospace-symbols
-      title: Monospace symbols
-      title.es: Símbolos monoespaciados
-      description: Changes markdown symbols (headers, lists, bold...) in live preview to use the monospace font
-      description.es: Cambia los símbolos de markdown (encabezados, listas, texto en negrita...) en modo "Vista previa" para usar la fuente monoespaciada
-      type: class-toggle
   -
     id: Editor-settings-heading
     title: Editor
@@ -169,35 +144,35 @@ settings:
     level: 1
     collapsed: false
   -
-        id: headings-variants
-        title: headings variants
-        title.es: Estilos para encabezados
-        description: Alternates the looks of headings in live-preview mode
-        description.es: Cambia como se ven los encabezados en modo "vista previa"
-        type: class-select
-        allowEmpty: true
-        default: none
-        options:
-        -
-          label: Lines
-          value: headings-variant-lines
-        -
-          label: Lines and Dashes
-          value: headings-variant-lines-and-dashes
+      id: custom-caret
+      title: Custom caret color
+      title.es: Color personalizado del cursor
+      description: Use subtheme color for the text cursor in the editor
+      description.es: Usa el color del subtema para el cursor de texto en el editor
+      type: class-toggle
+      default: false
+  - 
+      id: headings-underline
+      title: Underline headings
+      title.es: Subrayar encabezados
+      description: Adds underline decoration to headings
+      description.es: Añade subrayaado a los encabezados
+      type: class-toogle
+      default: false
   -
-        id: default-inline-title
-        title: Enable default inline title
-        title.es: Habilita el titulo en linea por defecto
-        description: Restores the inline title to obsidian defaults styling
-        description.es: Restaura el estilo por defecto de obsidian para el titulo en una linea
-        type: class-toggle
-        default: false
+      id: default-file-title
+      title: Use default file title
+      title.es: Usar el titulo de archivo por defecto
+      description: Restores the file title to obsidian defaults styling
+      description.es: Restaura el estilo por defecto de obsidian para el titulo en archivo
+      type: class-toggle
+      default: false
   -
-        id: hide-inline-title-note-name
-        title: Hide note name in inline title
-        title.es: Oculta el titulo de la nota en el titulo en linea
-        type: class-toggle
-        default: false
+      id: hide-file-title
+      title: Hide file title in topbar
+      title.es: Ocultar titulo de archivo en la barra superior
+      type: class-toggle
+      default: false
   -
     id: Sidebars-settings-heading
     title: Sidebars
