@@ -31,37 +31,28 @@ body.theme-light {
 	--icon-color-hover: var(--text-normal);
 	--icon-color-active: var(--text-normal);
 	--icon-color-focused: var(--text-normal);
-	/* background */
-	--background-primary: var(--color-base-100-bg);
-	--background-primary-alt: var(--color-base-200-bg);
-	--background-secondary: var(--color-base-300-bg);
-	--background-secondary-alt: var(--color-base-400-bg);
+	/* Background mappings */
+	--background-primary: var(--color-base-00);        /* Editor */
+	--background-primary-alt: var(--color-base-10);    /* Popups, modals */
+	--background-secondary: var(--color-base-30);      /* Sidebars */
+	--background-secondary-alt: var(--color-base-50);  /* Darker elements */
 }
 
 /* Dark Theme - Obsidian Essential Variables */
 .theme-dark {
-	/* Obsidian base scale (essential for plugins) */
-	--color-base-00: #0f0f0f;
-	--color-base-00: #0f0f0f;
-	--color-base-05: #1b1b1b;
-	--color-base-10: #252525;
-	--color-base-20: #3c3c3c;
-	--color-base-25: #454545;
-	--color-base-30: #525252;
-	--color-base-35: #5e5e5e;
-	--color-base-40: #696969;
-	--color-base-50: #7f7f7f;
-	--color-base-60: #959595;
-	--color-base-70: #acacac;
-	--color-base-100: #ebebeb;
+	/* Background layers (lightest to darkest) */
+	--color-base-00: oklch(30% 0 0);    /* Editor background (primary) */
+	--color-base-05: oklch(28.5% 0 0);  /* Subtle hover on editor */
+	--color-base-10: oklch(27% 0 0);    /* Popups, modals */
+	--color-base-20: oklch(25% 0 0);    /* Transition layer */
+	--color-base-30: oklch(24% 0 0);    /* Sidebars */
+	--color-base-40: oklch(22.5% 0 0);  /* Transition layer */
+	--color-base-50: oklch(21% 0 0);    /* Darker elements */
+	--color-base-60: oklch(19% 0 0);    /* Disabled, strong shadows */
+	--color-base-70: oklch(17% 0 0);    /* Maximum contrast (borders, dividers) */
+	--color-base-100: oklch(100% 0 0);  /* Text color */
 
-	/* Custom background layers (lighter to darker) */
-	--color-base-100-bg: oklch(30% 0 0); /* lightest layer */
-	--color-base-200-bg: oklch(27% 0 0);
-	--color-base-300-bg: oklch(24% 0 0);
-	--color-base-400-bg: oklch(21% 0 0); /* darkest layer */
-
-	/* text */
+	/* Text */
 	--text-normal: oklch(100% 0 0);
 	--text-muted: oklch(77.5% 0 0);
 	--text-faint: oklch(55% 0 0);
@@ -69,26 +60,19 @@ body.theme-light {
 
 /* Light Theme - Obsidian Essential Variables */
 .theme-light {
-	--color-base-00: #ebebeb;
-	--color-base-05: #e4e4e4;
-	--color-base-10: #d8d8d8;
-	--color-base-20: #c2c2c2;
-	--color-base-25: #b7b7b7;
-	--color-base-30: #acacac;
-	--color-base-35: #a0a0a0;
-	--color-base-40: #959595;
-	--color-base-50: #7f7f7f;
-	--color-base-60: #696969;
-	--color-base-70: #525252;
-	--color-base-100: #0f0f0f;
+	/* Background layers (lightest to darkest) */
+	--color-base-00: oklch(100% 0 0);   /* Editor background (primary) */
+	--color-base-05: oklch(99% 0 0);    /* Subtle hover on editor */
+	--color-base-10: oklch(97% 0 0);    /* Popups, modals */
+	--color-base-20: oklch(95% 0 0);    /* Transition layer */
+	--color-base-30: oklch(94% 0 0);    /* Sidebars */
+	--color-base-40: oklch(92% 0 0);    /* Transition layer */
+	--color-base-50: oklch(91% 0 0);    /* Darker elements */
+	--color-base-60: oklch(88% 0 0);    /* Disabled elements */
+	--color-base-70: oklch(85% 0 0);    /* Maximum contrast (borders, dividers) */
+	--color-base-100: oklch(0% 0 0);    /* Text color */
 
-	/* Custom background layers (darkest to lightest) */
-	--color-base-100-bg: oklch(100% 0 0); /* lightest layer */
-	--color-base-200-bg: oklch(97% 0 0);
-	--color-base-300-bg: oklch(94% 0 0);
-	--color-base-400-bg: oklch(91% 0 0); /* darkest layer */
-
-	/* text */
+	/* Text */
 	--text-normal: oklch(0% 0 0);
 	--text-muted: oklch(27.5% 0 0);
 	--text-faint: oklch(45% 0 0);
