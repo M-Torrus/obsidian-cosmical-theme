@@ -12,7 +12,8 @@
       "Bash(fi)",
       "Bash(if [ ! -d \"src/subthemes\" ])",
       "Bash(then mkdir src/subthemes)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Bash(findstr:*)"
     ],
     "deny": [],
     "ask": []

@@ -3,6 +3,7 @@
 /* Blockquote */
 body {
 	--blockquote-border-thickness: 0.2em;
+	--blockquote-border-color: var(--subtheme-color-1-alt);
 
 	&.theme-dark {
 		--code-background: var(--color-base-40);

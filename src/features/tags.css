@@ -46,11 +46,6 @@ body {
 	background-color: var(--tag-background);
 }
 
-/* panel */
-.colored-text-tag-panel .tag-pane-tag {
-	--nav-item-color: var(--tag-color);
-}
-
 [data-type="tag"] .workspace-tab-header-inner-icon svg {
 	color: var(--tag-color) !important;
 }
