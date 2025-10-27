@@ -17,8 +17,8 @@ body {
 	--divider-color: var(--color-base-10);
 
 	/* Tabs */
-	--tab-divider-color: var(--divider-color);
-	--tab-outline-color: var(--divider-color);
+	--tab-divider-color: var(--color-base-30);
+	--tab-outline-color: var(--color-base-30);
 	--tab-container-background: var(--background-primary);
 
 	/* Semantic colors */

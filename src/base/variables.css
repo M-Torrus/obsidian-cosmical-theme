@@ -88,10 +88,6 @@ body.theme-light {
 	--color-base-300-bg: oklch(94% 0 0);
 	--color-base-400-bg: oklch(91% 0 0); /* darkest layer */
 
-	/* Custom content colors */
-	--color-base-content: oklch(0% 0 0); /* #000000 - main text */
-	--color-muted-content: oklch(30% 0 0); /* #4d4d4d - secondary text */
-	--color-faint-content: oklch(45% 0 0); /* #737373 - tertiary text */
 	/* text */
 	--text-normal: oklch(0% 0 0);
 	--text-muted: oklch(27.5% 0 0);

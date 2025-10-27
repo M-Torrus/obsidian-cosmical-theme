@@ -64,34 +64,6 @@ settings:
       type: class-toggle
       default: false
   -
-    id: Font-settings-heading
-    title: Fonts and symbols
-    title.es: Fuentes y símbolos
-    type: heading
-    level: 1
-    collapsed: false
-  -
-      id: enable-custom-fonts
-      title: Enable the use of custom fonts options
-      title.es: Activar el uso de las opciones para fuentes personalizadas
-      description: fonts shouls be installed in the device
-      description.es: las fuentes deben estar instaladas en el dispositivo
-      type: class-toggle
-      default: false
-  -
-      id: font-headings
-      title: Headings font family
-      title.es: Fuente para titulos
-      description: "Font family used for note headers: inline-title, h1, h2, h3, h4, h5, h6"
-      description.es: "Fuente usada para los titulos de las notas: titulo en una linea, h1, h2, h3, h4, h5, h6"
-      type: variable-text
-      default: 'var(--text-font)'
-  -
-      id: Fonts-info-text
-      description: The interface font, text font and monospace font are changed in Obsidian settings > Appearance
-      description.es: La fuente de la interfaz, fuente del texto y fuente monospace se cambian desde Opciones > Apariencia
-      type: info-text
-  -
     id: Editor-settings-heading
     title: Editor
     title.es: Editor
@@ -113,6 +85,14 @@ settings:
     type: heading
     level: 1
     collapsed: false
+  -
+      id: font-headings
+      title: Headings font family
+      title.es: Fuente para titulos
+      description: "Font family used for note headers: inline-title, h1, h2, h3, h4, h5, h6"
+      description.es: "Fuente usada para los titulos de las notas: titulo en una linea, h1, h2, h3, h4, h5, h6"
+      type: variable-text
+      default: 'var(--text-font)'
   -
       id: headings-underline
       title: Underline headings
@@ -142,14 +122,6 @@ settings:
     type: heading
     level: 1
     collapsed: false
-  -
-      id: justify-icons-center
-      title: Justify sidepanels icons center
-      title.es: Iconos de los paneles laterales centrados
-      description: Restore Obsidian default icon position
-      description.es: Volver a la posición original de iconos en Obsidian
-      type: class-toggle
-      default: false
   -
       id: hide-right-sidebar-toggle
       title: Hide right sidebar toggle button

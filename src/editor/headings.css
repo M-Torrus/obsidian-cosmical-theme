@@ -1,5 +1,5 @@
 /* FEATURE: CUSTOM FONTS */
-.enable-custom-fonts {
+body {
 	--font-headings: var(--font-text);
 	--h1-font: var(--font-headings);
 	--h2-font: var(--font-headings);

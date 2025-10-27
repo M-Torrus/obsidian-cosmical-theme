@@ -13,8 +13,7 @@
 	}
 }
 
-/* JUSTIFY ICONS CENTER */
-:not(.justify-icons-center) .nav-buttons-container {
+.nav-buttons-container {
 	justify-content: left;
 }
 
