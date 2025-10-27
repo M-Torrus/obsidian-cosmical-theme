@@ -61,7 +61,7 @@ body {
 	/* Map subtheme colors to property variables */
 	--property-label-color: var(--subtheme-color-1-normal);
 	--property-input-color: var(--subtheme-color-2-normal);
-	--property-icon-color: var(--subtheme-color-1-darker);
+	--property-icon-color: var(--subtheme-color-1-alt);
 
 	/* Property elements */
 
@@ -101,7 +101,11 @@ body {
 	/* Sidepanel properties icon */
 	[data-type="file-properties"].is-active .workspace-tab-header-inner,
 	[data-type="all-properties"].is-active .workspace-tab-header-inner {
-		background-color: color-mix(in oklch, var(--property-label-color) 15%, transparent);
+		background-color: color-mix(
+			in oklch,
+			var(--property-label-color) 15%,
+			transparent
+		);
 	}
 
 	.mod-left-split

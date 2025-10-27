@@ -21,8 +21,8 @@ body {
 	--subtheme-2-normal-c: var(--subtheme-2-c);
 	--subtheme-2-alt-c: var(--subtheme-2-c);
 
-	--luminosity-diff-normal: 0.5;
-	--luminosity-diff-alt: 0.5;
+	--luminosity-diff-alt: 0.1;
+	--luminosity-diff-light: 0.45;
 }
 
 /* ================================================================
@@ -33,22 +33,34 @@ body {
 .theme-dark {
 	/* Color 1 variants - normal uses base, darker is slightly dimmer */
 	--subtheme-1-normal-l: var(--subtheme-1-l);
-	--subtheme-1-alt-l: calc(var(--subtheme-1-l) - 0.1);
+	--subtheme-1-alt-l: calc(
+		var(--subtheme-1-normal-l) - var(--luminosity-diff-alt)
+	);
 
 	/* Color 2 variants - normal uses base, darker is slightly dimmer */
 	--subtheme-2-normal-l: var(--subtheme-2-l);
-	--subtheme-2-alt-l: calc(var(--subtheme-2-l) - 0.08);
+	--subtheme-2-alt-l: calc(
+		var(--subtheme-2-normal-l) - var(--luminosity-diff-alt)
+	);
 }
 
 /* Light Mode: Darker colors for better readability */
 .theme-light {
 	/* Color 1 variants - Darken significantly for readability */
-	--subtheme-1-normal-l: calc(var(--subtheme-1-l) - 0.5);
-	--subtheme-1-alt-l: calc(var(--subtheme-1-l) - 0.4);
+	--subtheme-1-normal-l: calc(
+		var(--subtheme-1-l) - var(--luminosity-diff-light)
+	);
+	--subtheme-1-alt-l: calc(
+		var(--subtheme-1-normal-l) + var(--luminosity-diff-alt)
+	);
 
 	/* Color 2 variants - Darken significantly for readability */
-	--subtheme-2-normal-l: calc(var(--subtheme-2-l) - 0.4);
-	--subtheme-2-alt-l: calc(var(--subtheme-2-l) - 0.5);
+	--subtheme-2-normal-l: calc(
+		var(--subtheme-2-l) - var(--luminosity-diff-light)
+	);
+	--subtheme-2-alt-l: calc(
+		var(--subtheme-2-normal-l) + var(--luminosity-diff-alt)
+	);
 }
 
 /* ================================================================
@@ -61,7 +73,7 @@ body {
 		var(--subtheme-1-normal-l) var(--subtheme-1-normal-c)
 			var(--subtheme-1-h)
 	);
-	--subtheme-color-1-darker: oklch(
+	--subtheme-color-1-alt: oklch(
 		var(--subtheme-1-alt-l) var(--subtheme-1-alt-c) var(--subtheme-1-h)
 	);
 
@@ -70,7 +82,7 @@ body {
 		var(--subtheme-2-normal-l) var(--subtheme-2-normal-c)
 			var(--subtheme-2-h)
 	);
-	--subtheme-color-2-darker: oklch(
+	--subtheme-color-2-alt: oklch(
 		var(--subtheme-2-alt-l) var(--subtheme-2-alt-c) var(--subtheme-2-h)
 	);
 }
