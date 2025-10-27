@@ -11,12 +11,12 @@ body,
 .subtheme-ocean {
 	/* Color 1: Ocean Blue - hsl(202, 100%, 85%) for normal, hsl(211, 73%, 65%) for darker */
 	--subtheme-1-l: 0.89;
-	--subtheme-1-c: 0.09;
+	--subtheme-1-c: 0.1;
 	--subtheme-1-h: 262;
 
 	/* Color 2: Warm Gold - hsl(35, 95%, 76%) */
 	--subtheme-2-l: 0.89;
-	--subtheme-2-c: 0.08;
+	--subtheme-2-c: 0.09;
 	--subtheme-2-h: 70;
 }
 
@@ -69,17 +69,17 @@ body,
 }
 
 /* ================================================================
-   MONOCHROME - Warm Gray + Cool Gray
-   Subtle palette with warm and cool gray tones
+   MONOCHROME - Use accent color + Gray
    ================================================================ */
 .subtheme-monochrome {
-	/* Color 1: Warm Gray */
-	--subtheme-1-l: 0.85;
-	--subtheme-1-c: 0.02;
-	--subtheme-1-h: 50;
+	/* Color 1: User accent - uses Obsidian's --accent-h for hue */
+	/* Fixed L/C values that work well for typical accent colors (HSL ~68% lightness, ~80% saturation) */
+	--subtheme-1-l: 0.72;
+	--subtheme-1-c: 0.17;
+	--subtheme-1-h: var(--accent-h);
 
-	/* Color 2: Cool Gray */
-	--subtheme-2-l: 0.85;
-	--subtheme-2-c: 0.02;
-	--subtheme-2-h: 250;
+	/* Color 2: Gray */
+	--subtheme-2-l: 0.88;
+	--subtheme-2-c: 0;
+	--subtheme-2-h: 50;
 }

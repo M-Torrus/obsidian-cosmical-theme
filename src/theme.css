@@ -31,8 +31,7 @@
 @import "./plugins/notebook-navigator.css";
 
 /* Features */
-@import "./features/properties/base.css";
-@import "./features/properties/variants.css";
-@import "./features/tags/base.css";
-@import "./features/tags/color-schemes.css";
+@import "./features/properties.css";
+@import "./features/tags.css";
 @import "./features/headings-variants.css";
+@import "./features/editor.css";

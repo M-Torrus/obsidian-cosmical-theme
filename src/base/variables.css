@@ -6,7 +6,9 @@
 
 /* Base Color Variables */
 
-body {
+body,
+body.theme-dark,
+body.theme-light {
 	--color-red-rgb: 244, 114, 102;
 	--color-orange-rgb: 247, 159, 105;
 	--color-yellow-rgb: 228, 220, 129;
@@ -24,24 +26,22 @@ body {
 	--color-blue: hsl(222, 100%, 71%);
 	--color-purple: hsl(262, 60%, 76%);
 	--color-pink: hsl(335, 45%, 77%);
-}
-body {
-	/* Obsidian standard text */
-	--text-normal: var(--color-base-content);
-	--text-muted: var(--color-muted-content);
-	--text-faint: var(--color-faint-content);
-	--text-selection: var(--custom-accent-soft);
-
 	/* Obsidian icons */
 	--icon-color: var(--text-muted);
 	--icon-color-hover: var(--text-normal);
 	--icon-color-active: var(--text-normal);
 	--icon-color-focused: var(--text-normal);
+	/* background */
+	--background-primary: var(--color-base-100-bg);
+	--background-primary-alt: var(--color-base-200-bg);
+	--background-secondary: var(--color-base-300-bg);
+	--background-secondary-alt: var(--color-base-400-bg);
 }
 
 /* Dark Theme - Obsidian Essential Variables */
 .theme-dark {
 	/* Obsidian base scale (essential for plugins) */
+	--color-base-00: #0f0f0f;
 	--color-base-00: #0f0f0f;
 	--color-base-05: #1b1b1b;
 	--color-base-10: #252525;
@@ -57,23 +57,14 @@ body {
 
 	/* Custom background layers (lighter to darker) */
 	--color-base-100-bg: oklch(30% 0 0); /* lightest layer */
-	--color-base-200-bg: oklch(28% 0 0);
-	--color-base-300-bg: oklch(26% 0 0);
-	--color-base-400-bg: oklch(24% 0 0); /* darkest layer */
+	--color-base-200-bg: oklch(27% 0 0);
+	--color-base-300-bg: oklch(24% 0 0);
+	--color-base-400-bg: oklch(21% 0 0); /* darkest layer */
 
-	/* Custom content colors */
-	--color-base-content: oklch(100% 0 0); /* #ffffff - main text */
-	--color-muted-content: oklch(75% 0 0); /* #bfbfbf - secondary text */
-	--color-faint-content: oklch(55% 0 0); /* #8c8c8c - tertiary text */
-
-	/* Custom accent */
-	--custom-accent-soft: hsl(var(--accent-h), 24%, 26%);
-
-	/* Explicit background overrides to prevent Obsidian defaults */
-	--background-primary: var(--color-base-100-bg);
-	--background-primary-alt: var(--color-base-200-bg);
-	--background-secondary: var(--color-base-300-bg);
-	--background-secondary-alt: var(--color-base-400-bg);
+	/* text */
+	--text-normal: oklch(100% 0 0);
+	--text-muted: oklch(77.5% 0 0);
+	--text-faint: oklch(55% 0 0);
 }
 
 /* Light Theme - Obsidian Essential Variables */
@@ -101,13 +92,8 @@ body {
 	--color-base-content: oklch(0% 0 0); /* #000000 - main text */
 	--color-muted-content: oklch(30% 0 0); /* #4d4d4d - secondary text */
 	--color-faint-content: oklch(45% 0 0); /* #737373 - tertiary text */
-
-	/* Custom accent */
-	--custom-accent-soft: hsl(var(--accent-h), 24%, 26%);
-
-	/* Explicit background overrides to prevent Obsidian defaults */
-	--background-primary: var(--color-base-100-bg);
-	--background-primary-alt: var(--color-base-200-bg);
-	--background-secondary: var(--color-base-300-bg);
-	--background-secondary-alt: var(--color-base-400-bg);
+	/* text */
+	--text-normal: oklch(0% 0 0);
+	--text-muted: oklch(27.5% 0 0);
+	--text-faint: oklch(45% 0 0);
 }
