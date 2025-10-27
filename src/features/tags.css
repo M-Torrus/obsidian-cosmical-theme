@@ -1,39 +1,44 @@
 /* TAG SETTINGS - BASE */
 
 body {
-	--tag-h: 0;
-	--tag-s: 0%;
-	&.theme-dark {
-		--tag-l: 84%;
-	}
-	&.theme-light {
-		--tag-l: 16%;
-	}
-	--tag-hsl: var(--tag-h), var(--tag-s), var(--tag-l);
-
-	--tag-color: hsl(var(--tag-hsl));
-	--tag-color-hover: var(--tag-color);
-	--tag-color-hover: hsla(var(--tag-hsl), 0.8);
-	--tag-background: hsla(var(--tag-hsl), 0.15);
-	--tag-background-hover: hsla(var(--tag-hsl), 0.3);
+	/* Default: neutral tags (monochrome) */
+	--tag-color: var(--text-muted);
+	--tag-color-hover: var(--text-normal);
+	--tag-background: var(--background-modifier-border);
+	--tag-background-hover: var(--background-modifier-hover);
 
 	--tag-padding-x: 0.75em;
 	--tag-padding-y: 0.33em;
 	--tag-radius: var(--radius-l);
-	--graph-node-tag: hsl(var(--tag-hsl));
 }
 
-.tag {
-	font-family: var(--custom-font-tag);
+/* Colored Tags - Uses subtheme color 1 */
+.colored-tags {
+	--tag-color: var(--subtheme-color-1-normal);
+	--tag-color-hover: var(--subtheme-color-1-high);
+	--tag-background: color-mix(
+		in oklch,
+		var(--subtheme-color-1-normal) 15%,
+		transparent
+	);
+	--tag-background-hover: color-mix(
+		in oklch,
+		var(--subtheme-color-1-normal) 30%,
+		transparent
+	);
+	--graph-node-tag: var(--subtheme-color-1-normal);
 }
 
 /* Hollow Tags */
 .hollow-tags {
-	--tag-background: none;
-	--tag-background-hover: none;
-	--tag-border-color: var(--tag-color);
-	--tag-border-color: hsla(var(--tag-hsl), 0.3);
-	--tag-border-color-hover: hsla(var(--tag-hsl), 0.2);
+	--tag-background: transparent;
+	--tag-background-hover: transparent;
+	--tag-border-color: color-mix(in oklch, var(--tag-color) 40%, transparent);
+	--tag-border-color-hover: color-mix(
+		in oklch,
+		var(--tag-color) 60%,
+		transparent
+	);
 	--tag-border-width: 1px;
 }
 
@@ -48,66 +53,4 @@ body {
 
 [data-type="tag"] .workspace-tab-header-inner-icon svg {
 	color: var(--tag-color) !important;
-}
-
-/* TAG COLOR SCHEMES */
-
-.tags-ruby {
-	--tag-h: 0;
-	--tag-s: 100%;
-	--tag-l: 76%;
-}
-
-.tags-industrial-orange {
-	--tag-h: 22;
-	--tag-s: 70%;
-	--tag-l: 70%;
-}
-
-.tags-mecha {
-	--tag-h: 37;
-	--tag-s: 90%;
-	--tag-l: 51%;
-}
-
-.tags-racing-yellow {
-	--tag-h: 50;
-	--tag-s: 90%;
-	--tag-l: 66%;
-}
-
-.tags-emerald {
-	--tag-h: 125;
-	--tag-s: 75%;
-	--tag-l: 74%;
-}
-
-.tags-pine {
-	--tag-h: 155;
-	--tag-s: 75%;
-	--tag-l: 69%;
-}
-
-.tags-ocean {
-	--tag-h: 202;
-	--tag-s: 100%;
-	--tag-l: 80%;
-}
-
-.tags-space-adventure {
-	--tag-h: 276;
-	--tag-s: 68%;
-	--tag-l: 77%;
-}
-
-.tags-saphire {
-	--tag-h: 216;
-	--tag-s: 100%;
-	--tag-l: 75%;
-}
-
-.tags-amethyst {
-	--tag-h: 280;
-	--tag-s: 85%;
-	--tag-l: 80%;
 }

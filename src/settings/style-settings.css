@@ -42,55 +42,25 @@ settings:
           label.es: Monocromo
           value: subtheme-monochrome
   -
-        id: tags-color
-        title: Tags color
-        title.es: Color de las etiquetas (tags)
-        description: Choose the accent color for tags
-        description.es: Color de énfasis para las etiquetas
-        type: class-select
-        allowEmpty: true
-        default: tags-ocean
-        options:
-          -
-            label: Industrial Orange
-            value: tags-industrial-orange
-          -
-            label: Racing Yellow
-            value: tags-racing-yellow
-          -
-            label: Emerald
-            value: tags-emerald
-          -
-            label: Pine
-            value: tags-pine
-          -
-            label: Ocean
-            value: tags-ocean
-          -
-            label: Space Adventure
-            value: tags-space-adventure
-          -
-            label: Saphire
-            value: tags-saphire
-          -
-            label: Amethyst
-            value: tags-amethyst
-          -
-            label: Ruby
-            value: tags-ruby
-          -
-            label: Mecha
-            value: tags-mecha
-  -
       id: colored-headings
       title: Use subtheme colors for headings
       title.es: Usar colores de subtema en los encabezados
       type: class-toggle
       default: false
   -
+      id: colored-tags
+      title: Use subtheme colors for tags
+      title.es: Usar colores de subtema en las etiquetas
+      description: Tags will use the primary color (color 1) from the active subtheme
+      description.es: Las etiquetas usarán el color primario (color 1) del subtema activo
+      type: class-toggle
+      default: false
+  -
       id: hollow-tags
       title: Hollow tags style
       title.es: Estilo de etiquetas huecas
+      description: Makes tags transparent with only an outline border
+      description.es: Hace las etiquetas transparentes con solo un borde
       type: class-toggle
       default: false
   -
@@ -241,5 +211,13 @@ settings:
       title.es: Ajustar la anchura en las etiquetas de las propiedades
       type: class-toggle
       default: false
+  -
+      id: improve-multilist-ux
+      title: Improve multi-select list UX
+      title.es: Mejorar UX de listas multi-selección
+      description: Hides the remove button on multi-select pills until focused for a cleaner appearance
+      description.es: Oculta el botón de eliminar en las píldoras de multi-selección hasta que se enfoquen para una apariencia más limpia
+      type: class-toggle
+      default: true
   -
 */

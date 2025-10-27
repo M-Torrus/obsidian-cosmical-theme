@@ -1,5 +1,14 @@
 body {
 	--nn-theme-nav-bg: var(--background-secondary);
-	/* --nn-theme-nav-bg: var(--background-primary-alt); */
 	--nn-theme-list-bg: var(--background-primary-alt);
+
+	/* tags */
+	--nn-theme-file-tag-bg: var(--tag-background);
+	--nn-theme-file-tag-color: var(--tag-color);
+
+	&.hollow-tags {
+		.nn-file-tag {
+			border: 1px solid var(--tag-color);
+		}
+	}
 }

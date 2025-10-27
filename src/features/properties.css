@@ -130,3 +130,23 @@ body {
 	border: solid var(--editor-elements-border-width) var(--color-base-30);
 	border-radius: var(--radius-l);
 }
+
+/* Feature: remove icon UX improvement */
+.improve-multilist-ux {
+	.multi-select-pill {
+		.multi-select-pill-remove-button {
+			visibility: hidden;
+			width: 0;
+		}
+	}
+	.metadata-property-value {
+		/* &:hover, */
+		&:focus,
+		&:focus-within {
+			.multi-select-pill-remove-button {
+				visibility: visible;
+				width: auto;
+			}
+		}
+	}
+}
