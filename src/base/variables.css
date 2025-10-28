@@ -78,4 +78,7 @@ body.theme-light {
 	--text-normal: oklch(0% 0 0);
 	--text-muted: oklch(27.5% 0 0);
 	--text-faint: oklch(45% 0 0);
+
+	--text-accent: hsl(var(--accent-h), var(--accent-s), 40%);
+	--text-accent-hover: hsl(var(--accent-h), var(--accent-s), 42.5%);
 }

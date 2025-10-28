@@ -1,0 +1,24 @@
+body {
+	--bases-embed-border-color: var(--divider-color);
+	--bases-embed-border-radius: var(--radius-s);
+}
+.bases-thead {
+	background-color: var(--background-primary-alt);
+}
+.theme-dark {
+	--base-row-even-bg: var(--color-base-30);
+	--base-row-odd-bg: var(--color-base-40);
+}
+.theme-light {
+	--base-row-even-bg: var(--color-base-05);
+	--base-row-odd-bg: var(--color-base-00);
+}
+
+.bases-tbody {
+	.bases-tr {
+		background-color: var(--base-row-odd-bg);
+	}
+	.bases-tr:nth-child(even) {
+		background-color: var(--base-row-even-bg);
+	}
+}
