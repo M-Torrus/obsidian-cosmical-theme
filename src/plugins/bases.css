@@ -1,7 +1,14 @@
 body {
 	--bases-embed-border-color: var(--divider-color);
 	--bases-embed-border-radius: var(--radius-s);
-	--bases-table-header-color: var(--subtheme-color-1-normal);
+}
+
+.colorful-bases {
+	--bases-table-header-color: var(--subtheme-color-1-alt);
+	.bases-table .bases-tbody {
+		--metadata-input-text-color: var(--property-input-color);
+		color: var(--subtheme-color-2-normal);
+	}
 }
 .theme-dark {
 	--base-row-even-bg: var(--color-base-30);
@@ -15,13 +22,13 @@ body {
 }
 
 .bases-table {
+	--metadata-input-text-color: var(--text-normal);
 	.bases-thead {
 		background-color: var(--background-primary-alt);
-		width: 100% !important;
 	}
 	.bases-tbody {
-		color: var(--subtheme-color-2-normal);
 		.bases-tr {
+			color: var(--text-normal) !important;
 			background-color: var(--base-row-odd-bg);
 		}
 		.bases-tr:nth-child(even) {
