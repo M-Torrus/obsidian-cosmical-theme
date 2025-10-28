@@ -27,6 +27,7 @@
 
 /* Plugins */
 @import "./plugins/notebook-navigator.css";
+@import "./plugins/bases.css";
 
 /* Features */
 @import "./features/css-classes.css";
