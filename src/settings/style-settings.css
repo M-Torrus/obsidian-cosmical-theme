@@ -192,4 +192,19 @@ settings:
       type: class-toggle
       default: true
   -
+    id: Plugins-settings-heading
+    title: Community Plugins
+    title.es: Plugins Comunitarios
+    type: heading
+    level: 1
+    collapsed: false
+  -
+      id: colorful-bases
+      title: Colorful Bases tables
+      title.es: Tablas Bases con color
+      description: Applies subtheme colors to Bases plugin tables for better visual hierarchy
+      description.es: Aplica colores del subtema a las tablas del plugin Bases para mejor jerarquía visual
+      type: class-toggle
+      default: true
+  -
 */
