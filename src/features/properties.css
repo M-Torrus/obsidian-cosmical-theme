@@ -117,14 +117,14 @@ body {
 .metadata-container-alt-separator .metadata-container {
 	padding-bottom: var(--size-4-4);
 	margin-bottom: var(--size-4-2);
-	border-bottom: dashed 2px var(--color-base-30);
+	border-bottom: dashed 2px var(--background-modifier-border);
 }
 
 .metadata-container-alt-outline .metadata-container {
 	padding: var(--size-4-3) var(--size-4-4);
 	margin-bottom: var(--size-4-2);
 
-	border: solid 2px var(--color-base-30);
+	border: solid 2px var(--background-modifier-border);
 	border-radius: var(--radius-l);
 }
 
