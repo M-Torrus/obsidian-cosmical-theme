@@ -53,19 +53,19 @@ body,
 }
 
 /* ================================================================
-   SUNSET - Coral + Violet
-   Warm palette with peachy coral and deep violet tones
+   SUNSET
+   Warm palette with peachy coral and pink tones
    ================================================================ */
 .subtheme-sunset {
-	/* Color 1: Coral */
+	/* Color 1: */
 	--subtheme-1-l: 0.82;
-	--subtheme-1-c: 0.19;
+	--subtheme-1-c: 0.13;
 	--subtheme-1-h: 30;
 
-	/* Color 2: Deep Violet */
-	--subtheme-2-l: 0.86;
-	--subtheme-2-c: 0.13;
-	--subtheme-2-h: 310;
+	/* Color 2 */
+	--subtheme-2-l: 0.84;
+	--subtheme-2-c: 0.09;
+	--subtheme-2-h: 355;
 }
 
 /* ================================================================
