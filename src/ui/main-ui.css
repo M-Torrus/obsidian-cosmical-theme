@@ -33,6 +33,7 @@ body {
 		--background-modifier-border-focus: var(--color-base-30);
 		--background-modifier-active-hover: var(--color-base-30);
 	}
+	--hr-color: var(--divider-color)
 	--tab-container-background: var(--background-primary);
 
 	/* Semantic colors */
