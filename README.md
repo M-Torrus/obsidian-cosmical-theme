@@ -81,7 +81,11 @@ For the best experience, install these community plugins:
 
 ## Screenshots
 
-_Screenshots coming soon_
+### Dark Mode
+![Cosmical Dark Theme](images/Cosmical%20theme%20Base%20dark.png)
+
+### Light Mode
+![Cosmical Light Theme](images/Cosmical%20theme%20Base%20light.png)
 
 ## Development
 
