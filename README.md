@@ -5,7 +5,7 @@
 <h1 align="center">Cosmical</h1>
 
 <p align="center">
-A carefully crafted Obsidian theme that balances visual appeal with functional clarity. Cosmical brings a neutral aesthetic with vibrant colors and balanced contrasts designed to be eye-catching without being distracting.
+An Obsidian theme with a neutral aesthetic, vibrant colors, and balanced contrasts. Eye-catching without being distracting.
 </p>
 
 <p align="center">
@@ -23,15 +23,15 @@ A carefully crafted Obsidian theme that balances visual appeal with functional c
 
 Cosmical is built on three core principles:
 
--   **Neutral Foundation**: A clean, neutral background free from blue tints, providing a calm canvas for your thoughts
--   **Vibrant Accents**: Rich, carefully selected colors that bring life to your notes while maintaining excellent readability
--   **Work-Focused Design**: Beautiful enough to enjoy, subtle enough to fade into the background when you're deep in focus
+-   **Neutral Foundation**: A clean background free from blue tints
+-   **Vibrant Accents**: Rich colors that enhance readability instead of hurting it
+-   **Work-Focused Design**: Nice to look at, but stays out of your way when you need to focus
 
 ## Features
 
 ### Dynamic Subtheme System
 
-Choose from five distinct color schemes that adapt intelligently to both light and dark modes:
+Choose from five color schemes that automatically adapt to both light and dark modes:
 
 -   **Ocean** (default): Classic maritime palette with deep blue and warm gold accents
 -   **Forest**: Natural emerald green paired with copper tones
@@ -43,7 +43,7 @@ All subthemes use the OKLCH color space for perceptually uniform luminosity adju
 
 ### Extensive Customization
 
-Powered by the [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) plugin, Cosmical offers granular control over:
+Powered by the [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) plugin, Cosmical lets you customize:
 
 #### Theme Colors
 
@@ -95,9 +95,9 @@ All Style Settings options include English and Spanish (Español) translations.
 
 ## Recommended Setup
 
-For the best experience, install these community plugins:
+These community plugins work well with Cosmical:
 
--   **[Style Settings](https://github.com/mgmeyers/obsidian-style-settings)**: Unlock all customization options
+-   **[Style Settings](https://github.com/mgmeyers/obsidian-style-settings)**: Required for customization options
 -   **Notebook Navigator** (optional): Additional theme compatibility included
 
 ## Development
@@ -136,14 +136,14 @@ Generates individual CSS snippets from features in `src/features/`.
 
 ## Roadmap
 
-Cosmical is designed to grow organically. Planned improvements include:
+Future improvements:
 
--   Expanded plugin compatibility
+-   More plugin compatibility
 -   Additional subthemes
 -   More customization options
--   Enhanced UI refinements
+-   UI refinements
 
-Future projects may include custom Obsidian plugins that complement the Cosmical aesthetic, though these are in early conceptual stages.
+I might create custom Obsidian plugins that fit the Cosmical aesthetic, but that's still just an idea.
 
 ## Contributing
 
