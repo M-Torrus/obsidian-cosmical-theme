@@ -1,6 +1,21 @@
-# Cosmical
+<p align="center">
+  <img src="images/Cosmical-logo.svg" alt="Cosmical Logo" width="160">
+</p>
 
+<h1 align="center">Cosmical</h1>
+
+<p align="center">
 A carefully crafted Obsidian theme that balances visual appeal with functional clarity. Born from a VSCode theme of the same name, Cosmical brings a neutral, GNOME-inspired aesthetic with vibrant colors and balanced contrasts designed to be eye-catching without being distracting.
+</p>
+
+---
+
+### Showcase
+
+<p align="center">
+  <img src="images/obsidian-properties%20light.png" alt="Cosmical Properties Light" width="49%">
+  <img src="images/forest-properties%20dark.png" alt="Cosmical Properties Dark" width="49%">
+</p>
 
 ## Philosophy
 
@@ -81,11 +96,13 @@ For the best experience, install these community plugins:
 
 ## Screenshots
 
-### Dark Mode
-![Cosmical Dark Theme](images/Cosmical%20theme%20Base%20dark.png)
+### Obsidian Base Themes
 
-### Light Mode
-![Cosmical Light Theme](images/Cosmical%20theme%20Base%20light.png)
+#### Dark Mode
+![Cosmical Dark Theme - Obsidian Base](images/Cosmical%20theme%20Base%20dark.png)
+
+#### Light Mode
+![Cosmical Light Theme - Obsidian Base](images/Cosmical%20theme%20Base%20light.png)
 
 ## Development
 
