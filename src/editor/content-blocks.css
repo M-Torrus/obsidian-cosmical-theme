@@ -9,7 +9,7 @@ body {
 		--code-background: var(--color-base-40);
 	}
 	&.theme-light {
-		--code-background: var(--color-base-10);
+		--code-background: var(--color-base-05);
 	}
 }
 
