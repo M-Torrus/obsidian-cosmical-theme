@@ -16,8 +16,3 @@ body {
 .HyperMD-quote {
 	--blockquote-style: italic;
 }
-
-/* hr divider */
-hr {
-	border-top: solid 2px var(--color-base-30);
-}
