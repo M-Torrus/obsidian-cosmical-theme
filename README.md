@@ -5,7 +5,7 @@
 <h1 align="center">Cosmical</h1>
 
 <p align="center">
-A carefully crafted Obsidian theme that balances visual appeal with functional clarity. Born from a VSCode theme of the same name, Cosmical brings a neutral, GNOME-inspired aesthetic with vibrant colors and balanced contrasts designed to be eye-catching without being distracting.
+A carefully crafted Obsidian theme that balances visual appeal with functional clarity. Cosmical brings a neutral aesthetic with vibrant colors and balanced contrasts designed to be eye-catching without being distracting.
 </p>
 
 <p align="center">
@@ -23,9 +23,9 @@ A carefully crafted Obsidian theme that balances visual appeal with functional c
 
 Cosmical is built on three core principles:
 
-- **Neutral Foundation**: A clean, neutral background free from blue tints, providing a calm canvas for your thoughts
-- **Vibrant Accents**: Rich, carefully selected colors that bring life to your notes while maintaining excellent readability
-- **Work-Focused Design**: Beautiful enough to enjoy, subtle enough to fade into the background when you're deep in focus
+-   **Neutral Foundation**: A clean, neutral background free from blue tints, providing a calm canvas for your thoughts
+-   **Vibrant Accents**: Rich, carefully selected colors that bring life to your notes while maintaining excellent readability
+-   **Work-Focused Design**: Beautiful enough to enjoy, subtle enough to fade into the background when you're deep in focus
 
 ## Features
 
@@ -33,11 +33,11 @@ Cosmical is built on three core principles:
 
 Choose from five distinct color schemes that adapt intelligently to both light and dark modes:
 
-- **Ocean** (default): Classic maritime palette with deep blue and warm gold accents
-- **Forest**: Natural emerald green paired with copper tones
-- **Twilight**: Inspired by Obsidian's signature purple with complementary cyan
-- **Sunset**: Warm coral and deep violet combination
-- **Monochrome**: Uses your Obsidian accent color with neutral grays
+-   **Ocean** (default): Classic maritime palette with deep blue and warm gold accents
+-   **Forest**: Natural emerald green paired with copper tones
+-   **Twilight**: Inspired by Obsidian's signature purple with complementary cyan
+-   **Sunset**: Warm coral and deep violet combination
+-   **Monochrome**: Uses your Obsidian accent color with neutral grays
 
 All subthemes use the OKLCH color space for perceptually uniform luminosity adjustments, ensuring perfect readability in any mode.
 
@@ -46,35 +46,39 @@ All subthemes use the OKLCH color space for perceptually uniform luminosity adju
 Powered by the [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) plugin, Cosmical offers granular control over:
 
 #### Theme Colors
-- Subtheme selection
-- Colored headings option
-- Colored tags with optional hollow style
-- Custom caret color matching your subtheme
+
+-   Subtheme selection
+-   Colored headings option
+-   Colored tags with optional hollow style
+-   Custom caret color matching your subtheme
 
 #### Editor
-- Custom font family for headings
-- Optional heading underlines
-- File title customization (default style or hidden)
+
+-   Custom font family for headings
+-   Optional heading underlines
+-   File title customization (default style or hidden)
 
 #### Sidebars
-- Sidebar toggle button visibility controls
+
+-   Sidebar toggle button visibility controls
 
 #### Properties (Metadata)
-- Alternative container styles (dashed separator, outline)
-- Bold property labels toggle
-- Property header visibility
-- Icon visibility control
-- Improved multi-select list UX
+
+-   Alternative container styles (dashed separator, outline)
+-   Bold property labels toggle
+-   Property header visibility
+-   Icon visibility control
+-   Improved multi-select list UX
 
 ### Modern CSS Architecture
 
 Built with a modular PostCSS workflow:
 
-- Automatic light/dark mode adaptation
-- OKLCH color space for perceptual uniformity
-- Clean, maintainable source structure
-- CSS nesting support
-- Snippet-ready features (build individual features as standalone CSS snippets)
+-   Automatic light/dark mode adaptation
+-   OKLCH color space for perceptual uniformity
+-   Clean, maintainable source structure
+-   CSS nesting support
+-   Snippet-ready features (build individual features as standalone CSS snippets)
 
 ### Bilingual Support
 
@@ -93,9 +97,8 @@ All Style Settings options include English and Spanish (Español) translations.
 
 For the best experience, install these community plugins:
 
-- **[Style Settings](https://github.com/mgmeyers/obsidian-style-settings)**: Unlock all customization options
-- **Notebook Navigator** (optional): Additional theme compatibility included
-
+-   **[Style Settings](https://github.com/mgmeyers/obsidian-style-settings)**: Unlock all customization options
+-   **Notebook Navigator** (optional): Additional theme compatibility included
 
 ## Development
 
@@ -135,10 +138,10 @@ Generates individual CSS snippets from features in `src/features/`.
 
 Cosmical is designed to grow organically. Planned improvements include:
 
-- Expanded plugin compatibility
-- Additional subthemes
-- More customization options
-- Enhanced UI refinements
+-   Expanded plugin compatibility
+-   Additional subthemes
+-   More customization options
+-   Enhanced UI refinements
 
 Future projects may include custom Obsidian plugins that complement the Cosmical aesthetic, though these are in early conceptual stages.
 
@@ -146,17 +149,10 @@ Future projects may include custom Obsidian plugins that complement the Cosmical
 
 Found a bug or have a suggestion? Feel free to [open an issue](https://github.com/M-Torrus/cosmical-obsidian/issues).
 
-## Credits
-
-**Author**: Torrus
-**Inspired by**: The Cosmical VSCode theme
-
 ## License
 
 This theme is released under the MIT License. See [LICENSE](LICENSE) for details.
 
----
+## Other
 
-<p align="center">
-  <i>Made with ☕ for focused, beautiful note-taking</i>
-</p>
+Checkout my other theme for Visual Studio Code [VSCode-Cosmical](https://marketplace.visualstudio.com/items?itemName=jorgemrtr.cosmical)
