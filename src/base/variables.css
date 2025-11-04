@@ -53,8 +53,8 @@ body.theme-light {
 	--background-secondary-alt: var(--color-base-05);
 
 	--text-normal: oklch(100% 0 0);
-	--text-muted: oklch(77.5% 0 0);
-	--text-faint: oklch(55% 0 0);
+	--text-muted: oklch(82.5% 0 0);
+	--text-faint: oklch(65% 0 0);
 }
 
 /* Light Theme - Obsidian Essential Variables */

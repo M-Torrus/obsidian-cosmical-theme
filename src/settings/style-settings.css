@@ -104,11 +104,11 @@ settings:
       type: class-toggle
       default: false
   -
-      id: default-file-title
-      title: Use default file title
-      title.es: Usar el título de archivo por defecto
-      description: Restores the file title to Obsidian's default styling
-      description.es: Restaura el estilo por defecto de Obsidian para el título del archivo
+      id: centered-file-title
+      title: Center file title
+      title.es: Centrar título del archivo
+      description: Centers the inline file title instead of left-aligned
+      description.es: Centra el título del archivo en lugar de alinearlo a la izquierda
       type: class-toggle
       default: false
   -
@@ -117,6 +117,14 @@ settings:
       title.es: Ocultar título de archivo en la barra superior
       description: Completely hides the file title from the topbar
       description.es: Oculta completamente el título del archivo de la barra superior
+      type: class-toggle
+      default: false
+  -
+      id: hide-file-title-path
+      title: Hide file path in topbar
+      title.es: Ocultar ruta del archivo en la barra superior
+      description: Hides only the file path (parent folder) from the topbar, keeping the file name visible
+      description.es: Oculta solo la ruta del archivo (carpeta padre) de la barra superior, manteniendo visible el nombre del archivo
       type: class-toggle
       default: false
   -

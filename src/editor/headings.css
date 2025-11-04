@@ -54,19 +54,26 @@ body {
 }
 
 /* FEATURE: File Name */
-body:not(.default-file-title) {
+body {
 	--inline-title-size: 1.625rem;
+	--inline-title-weight: 700;
+	--inline-title-margin-bottom: 1rem;
+	--file-header-justify: left;
+}
 
-	--inline-title-weight: 600;
-	--inline-title-margin-bottom: 1.25rem;
+body.centered-file-title {
 	--file-header-justify: center;
-	--file-header-font-size: 0.9rem;
+}
 
-	.view-header-title-container {
-		.view-header-title-parent {
-			/* Hide file path/name */
-			display: none;
-		}
+.hide-file-title-path .view-header-title-container {
+	.view-header-title-parent {
+		/* Hide file path/name */
+		display: none;
+	}
+}
+.view-header-title-container {
+	.view-header-title-parent {
+		color: var(--text-faint);
 	}
 }
 
