@@ -1,9 +1,6 @@
 /* Tables */
 
 body {
-	--table-header-border-color: var(--color-base-40);
-	--table-header-font: var(--font-interface);
-	--table-border-color: var(--color-base-30);
 	--table-header-size: 0.9em;
 	--table-text-size: 0.85em;
 }
@@ -12,10 +9,6 @@ body {
 	border-bottom: solid 0.15rem var(--table-header-border-color);
 	font-weight: 400;
 	font-size: var(--table-header-size);
-}
-
-tbody > tr > td {
-	font-family: var(--font-interface);
 }
 
 /* Compensar el salto de linea que tiene que haber siempre antes de una tabla markdown */
