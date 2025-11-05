@@ -55,6 +55,14 @@ body.theme-light {
 	--text-normal: oklch(100% 0 0);
 	--text-muted: oklch(82.5% 0 0);
 	--text-faint: oklch(65% 0 0);
+
+	--divider-color: var(--color-base-50);
+	--tab-divider-color: var(--color-base-50);
+	--tab-outline-color: var(--color-base-50);
+	--background-modifier-border: var(--color-base-50);
+	--background-modifier-border-hover: var(--color-base-40);
+	--background-modifier-border-focus: var(--color-base-50);
+	--background-modifier-active-hover: var(--color-base-50);
 }
 
 /* Light Theme - Obsidian Essential Variables */
@@ -81,4 +89,17 @@ body.theme-light {
 
 	--text-accent: hsl(var(--accent-h), var(--accent-s), 40%);
 	--text-accent-hover: hsl(var(--accent-h), var(--accent-s), 42.5%);
+
+	--divider-color: var(--color-base-40);
+	--tab-divider-color: var(--color-base-30);
+	--tab-outline-color: var(--color-base-30);
+	--background-modifier-border: var(--color-base-30);
+	--background-modifier-border-hover: var(--color-base-20);
+	--background-modifier-border-focus: var(--color-base-30);
+	--background-modifier-active-hover: var(--color-base-30);
+}
+
+body {
+	--hr-color: var(--divider-color);
+	--table-border-color: var(--divider-color);
 }
