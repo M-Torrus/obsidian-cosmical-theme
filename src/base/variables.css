@@ -35,7 +35,7 @@ body.theme-light {
 }
 
 /* Dark Theme - Obsidian Essential Variables */
-.theme-dark {
+body.theme-dark {
 	--color-base-00: oklch(18% 0 0);
 	--color-base-05: oklch(21% 0 0);
 	--color-base-10: oklch(24% 0 0);
@@ -53,8 +53,8 @@ body.theme-light {
 	--background-secondary-alt: var(--color-base-05);
 
 	--text-normal: oklch(100% 0 0);
-	--text-muted: oklch(82.5% 0 0);
-	--text-faint: oklch(65% 0 0);
+	--text-muted: oklch(77.5% 0 0);
+	--text-faint: oklch(55% 0 0);
 
 	--divider-color: var(--color-base-50);
 	--tab-divider-color: var(--color-base-50);
@@ -63,10 +63,13 @@ body.theme-light {
 	--background-modifier-border-hover: var(--color-base-40);
 	--background-modifier-border-focus: var(--color-base-50);
 	--background-modifier-active-hover: var(--color-base-50);
+	/* buttons */
+	--interactive-normal: var(--color-base-40);
+	--interactive-hover: var(--color-base-50);
 }
 
 /* Light Theme - Obsidian Essential Variables */
-.theme-light {
+body.theme-light {
 	--color-base-00: oklch(100% 0 0);
 	--color-base-05: oklch(97% 0 0);
 	--color-base-10: oklch(94% 0 0);
@@ -79,9 +82,9 @@ body.theme-light {
 	--color-base-100: oklch(0% 0 0);
 
 	--background-primary: var(--color-base-00);
-	--background-primary-alt: var(--color-base-10);
-	--background-secondary: var(--color-base-20);
-	--background-secondary-alt: var(--color-base-30);
+	--background-primary-alt: var(--color-base-05);
+	--background-secondary: var(--color-base-10);
+	--background-secondary-alt: var(--color-base-20);
 
 	--text-normal: oklch(0% 0 0);
 	--text-muted: oklch(27.5% 0 0);
@@ -94,9 +97,12 @@ body.theme-light {
 	--tab-divider-color: var(--color-base-30);
 	--tab-outline-color: var(--color-base-30);
 	--background-modifier-border: var(--color-base-30);
-	--background-modifier-border-hover: var(--color-base-20);
-	--background-modifier-border-focus: var(--color-base-30);
-	--background-modifier-active-hover: var(--color-base-30);
+	--background-modifier-border-hover: var(--color-base-40);
+	--background-modifier-border-focus: var(--color-base-60);
+	--background-modifier-active-hover: var(--color-base-50);
+	/* buttons */
+	--interactive-normal: var(--background-secondary);
+	--interactive-hover: var(--background-secondary-alt);
 }
 
 body {

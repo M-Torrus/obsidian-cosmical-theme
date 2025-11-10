@@ -13,16 +13,6 @@ body {
 	/* form field */
 	--background-modifier-form-field: var(--background-primary);
 
-	/* buttons */
-	&.theme-dark {
-		--interactive-normal: var(--color-base-50);
-		--interactive-hover: var(--color-base-50);
-	}
-	&.theme-light {
-		--interactive-normal: var(--color-base-10);
-		--interactive-hover: var(--color-base-20);
-	}
-
 	/* code */
 	--code-background: var(--background-primary-alt);
 	--code-radius: var(--radius-m);
