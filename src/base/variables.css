@@ -47,22 +47,33 @@ body.theme-dark {
 	--color-base-70: oklch(42% 0 0);
 	--color-base-100: oklch(100% 0 0);
 
-	--background-primary: var(--color-base-30);
-	--background-primary-alt: var(--color-base-20);
-	--background-secondary: var(--color-base-10);
-	--background-secondary-alt: var(--color-base-05);
+	--color-base-00: oklch(21% 0 0);
+	--color-base-05: oklch(24% 0 0);
+	--color-base-10: oklch(27% 0 0);
+	--color-base-20: oklch(30% 0 0);
+	--color-base-30: oklch(33% 0 0);
+	--color-base-40: oklch(36% 0 0);
+	--color-base-50: oklch(39% 0 0);
+	--color-base-60: oklch(42% 0 0);
+	--color-base-70: oklch(45% 0 0);
+	--color-base-100: oklch(100% 0 0);
+
+	--background-primary: var(--color-base-20);
+	--background-primary-alt: var(--color-base-10);
+	--background-secondary: var(--color-base-05);
+	--background-secondary-alt: var(--color-base-10);
 
 	--text-normal: oklch(100% 0 0);
 	--text-muted: oklch(77.5% 0 0);
 	--text-faint: oklch(55% 0 0);
 
-	--divider-color: var(--color-base-50);
-	--tab-divider-color: var(--color-base-50);
+	--divider-color: var(--color-base-60);
+	--tab-divider-color: var(--color-base-40);
 	--tab-outline-color: var(--color-base-50);
-	--background-modifier-border: var(--color-base-50);
-	--background-modifier-border-hover: var(--color-base-40);
-	--background-modifier-border-focus: var(--color-base-50);
-	--background-modifier-active-hover: var(--color-base-50);
+	--background-modifier-border: var(--color-base-40);
+	--background-modifier-border-hover: var(--color-base-50);
+	--background-modifier-border-focus: var(--color-base-70);
+	--background-modifier-active-hover: var(--color-base-60);
 	/* buttons */
 	--interactive-normal: var(--color-base-40);
 	--interactive-hover: var(--color-base-50);
@@ -93,9 +104,9 @@ body.theme-light {
 	--text-accent: hsl(var(--accent-h), var(--accent-s), 40%);
 	--text-accent-hover: hsl(var(--accent-h), var(--accent-s), 42.5%);
 
-	--divider-color: var(--color-base-40);
+	--divider-color: var(--color-base-50);
 	--tab-divider-color: var(--color-base-30);
-	--tab-outline-color: var(--color-base-30);
+	--tab-outline-color: var(--color-base-40);
 	--background-modifier-border: var(--color-base-30);
 	--background-modifier-border-hover: var(--color-base-40);
 	--background-modifier-border-focus: var(--color-base-60);
@@ -107,5 +118,4 @@ body.theme-light {
 
 body {
 	--hr-color: var(--divider-color);
-	--table-border-color: var(--divider-color);
 }

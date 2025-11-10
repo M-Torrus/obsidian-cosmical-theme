@@ -1,17 +1,11 @@
 /* Tables */
 
 body {
-	--table-header-size: 0.9em;
-	--table-text-size: 0.85em;
+	--table-header-weight: 500;
+	--table-border-color: var(--background-modifier-border-focus);
 }
 
-.table-view-table > thead > tr > th {
-	border-bottom: solid 0.15rem var(--table-header-border-color);
-	font-weight: 400;
-	font-size: var(--table-header-size);
-}
-
-/* Compensar el salto de linea que tiene que haber siempre antes de una tabla markdown */
+/* markdown table line-break */
 .cm-table-widget {
 	padding-top: 0px !important;
 }
