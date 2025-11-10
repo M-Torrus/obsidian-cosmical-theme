@@ -10,10 +10,16 @@ body {
 	/* Status bar */
 	--status-bar-background: var(--background-secondary);
 
-	/* Scrollbar */
-	--scrollbar-thumb-bg: #ffffff15;
-
 	/* Tab */
 	--tab-container-background: var(--background-primary);
-	
+
+	/* SETTINGS WINDOW */
+	.vertical-tab-nav-item {
+		color: var(--text-muted);
+	}
+	.horizontal-tab-nav-item.is-active,
+	.vertical-tab-nav-item.is-active {
+		--interactive-accent: var(--background-modifier-border-focus);
+		--text-on-accent: var(--text-normal);
+	}
 }

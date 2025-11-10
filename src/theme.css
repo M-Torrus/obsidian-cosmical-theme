@@ -13,7 +13,6 @@
 /* Main UI */
 @import "./ui/main-ui.css";
 @import "./ui/secondary-ui.css";
-@import "./ui/settings-window.css";
 
 /* Editor */
 @import "./editor/content-blocks.css";
