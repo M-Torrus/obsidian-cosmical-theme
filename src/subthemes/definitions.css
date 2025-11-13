@@ -26,30 +26,21 @@ body {
 	--interactive-accent-hover: var(--subtheme-color-2-normal);
 }
 
+/* Accent colors derived from subtheme OKLCH colors using relative color syntax */
 body.theme-dark {
-	--text-accent: hsl(var(--accent-h), var(--accent-s), 75%);
-	--text-accent-hover: hsl(var(--accent-h), var(--accent-s), 72.5%);
+	/* Slightly brighter versions of the accent color for text */
+	--text-accent-l: calc(var(--subtheme-2-alt-l) * 0.95);
+	--text-accent-hover-l: calc(var(--subtheme-2-alt-l) * 0.92);
+	--text-accent: oklch(var(--text-accent-l) var(--subtheme-2-c) var(--subtheme-2-h));
+	--text-accent-hover: oklch(var(--text-accent-hover-l) var(--subtheme-2-c) var(--subtheme-2-h));
 }
+
 body.theme-light {
-	--text-accent: hsl(var(--accent-h), var(--accent-s), 40%);
-	--text-accent-hover: hsl(var(--accent-h), var(--accent-s), 42.5%);
-}
-
-/* Accent color for Ocean subtheme - Using Color 2 (Warm Gold) */
-body.theme-dark,
-body.theme-dark.subtheme-ocean,
-.theme-dark.subtheme-ocean {
-	--accent-h: 35;
-	--accent-s: 95%;
-	--accent-l: 76%;
-}
-
-body.theme-light,
-body.theme-light.subtheme-ocean,
-.theme-light.subtheme-ocean {
-	--accent-h: 35;
-	--accent-s: 95%;
-	--accent-l: 50%;
+	/* Use normal variant with slight adjustments for light mode */
+	--text-accent-l: var(--subtheme-2-normal-l);
+	--text-accent-hover-l: calc(var(--subtheme-2-normal-l) * 1.05);
+	--text-accent: oklch(var(--text-accent-l) var(--subtheme-2-c) var(--subtheme-2-h));
+	--text-accent-hover: oklch(var(--text-accent-hover-l) var(--subtheme-2-c) var(--subtheme-2-h));
 }
 
 /* ================================================================
@@ -68,19 +59,6 @@ body.theme-light.subtheme-ocean,
 	--subtheme-2-h: 40;
 }
 
-/* Accent color for Forest subtheme - Using Color 2 (Copper) */
-.theme-dark.subtheme-forest {
-	--accent-h: 25;
-	--accent-s: 70%;
-	--accent-l: 65%;
-}
-
-.theme-light.subtheme-forest {
-	--accent-h: 25;
-	--accent-s: 85%;
-	--accent-l: 45%;
-}
-
 /* ================================================================
    TWILIGHT - Obsidian Purple + Cyan
    Inspired by Obsidian's brand colors - signature purple and complementary cyan
@@ -97,19 +75,6 @@ body.theme-light.subtheme-ocean,
 	--subtheme-2-h: 195;
 }
 
-/* Accent color for Twilight subtheme - Using Color 2 (Cyan) */
-.theme-dark.subtheme-twilight {
-	--accent-h: 180;
-	--accent-s: 65%;
-	--accent-l: 70%;
-}
-
-.theme-light.subtheme-twilight {
-	--accent-h: 180;
-	--accent-s: 80%;
-	--accent-l: 45%;
-}
-
 /* ================================================================
    SUNSET
    Warm palette with peachy coral and pink tones
@@ -124,17 +89,4 @@ body.theme-light.subtheme-ocean,
 	--subtheme-2-l: 0.84;
 	--subtheme-2-c: 0.09;
 	--subtheme-2-h: 355;
-}
-
-/* Accent color for Sunset subtheme - Using Color 2 (Pink) */
-.theme-dark.subtheme-sunset {
-	--accent-h: 345;
-	--accent-s: 75%;
-	--accent-l: 70%;
-}
-
-.theme-light.subtheme-sunset {
-	--accent-h: 345;
-	--accent-s: 85%;
-	--accent-l: 50%;
 }
