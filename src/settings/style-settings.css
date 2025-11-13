@@ -37,6 +37,10 @@ settings:
           label: Sunset
           label.es: Atardecer
           value: subtheme-sunset
+        -
+          label: Night
+          label.es: Noche
+          value: subtheme-night
   -
       id: colored-headings
       title: Use subtheme colors for headings
@@ -68,6 +72,14 @@ settings:
     type: heading
     level: 1
     collapsed: false
+  -
+      id: wider-callouts
+      title: Wider callouts
+      title.es: Callouts más amplios
+      description: Makes callouts wider in the editor
+      description.es: Hace que los callouts sean más amplios en el editor
+      type: class-toggle
+      default: false
   -
       id: custom-caret
       title: Custom caret color
