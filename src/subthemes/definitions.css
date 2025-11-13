@@ -20,6 +20,21 @@ body,
 	--subtheme-2-h: 70;
 }
 
+body {
+	/* accent override */
+	--interactive-accent: var(--subtheme-color-2-alt);
+	--interactive-accent-hover: var(--subtheme-color-2-normal);
+}
+
+body.theme-dark {
+	--text-accent: hsl(var(--accent-h), var(--accent-s), 75%);
+	--text-accent-hover: hsl(var(--accent-h), var(--accent-s), 72.5%);
+}
+body.theme-light {
+	--text-accent: hsl(var(--accent-h), var(--accent-s), 40%);
+	--text-accent-hover: hsl(var(--accent-h), var(--accent-s), 42.5%);
+}
+
 /* Accent color for Ocean subtheme - Using Color 2 (Warm Gold) */
 body.theme-dark,
 body.theme-dark.subtheme-ocean,
@@ -27,8 +42,6 @@ body.theme-dark.subtheme-ocean,
 	--accent-h: 35;
 	--accent-s: 95%;
 	--accent-l: 76%;
-	--interactive-accent: var(--subtheme-color-2-normal);
-	--interactive-accent-hover: var(--subtheme-color-2-high);
 }
 
 body.theme-light,
@@ -37,8 +50,6 @@ body.theme-light.subtheme-ocean,
 	--accent-h: 35;
 	--accent-s: 95%;
 	--accent-l: 50%;
-	--interactive-accent: var(--subtheme-color-2-normal);
-	--interactive-accent-hover: var(--subtheme-color-2-high);
 }
 
 /* ================================================================
@@ -62,16 +73,12 @@ body.theme-light.subtheme-ocean,
 	--accent-h: 25;
 	--accent-s: 70%;
 	--accent-l: 65%;
-	--interactive-accent: var(--subtheme-color-2-normal);
-	--interactive-accent-hover: var(--subtheme-color-2-high);
 }
 
 .theme-light.subtheme-forest {
 	--accent-h: 25;
 	--accent-s: 85%;
 	--accent-l: 45%;
-	--interactive-accent: var(--subtheme-color-2-normal);
-	--interactive-accent-hover: var(--subtheme-color-2-high);
 }
 
 /* ================================================================
@@ -95,16 +102,12 @@ body.theme-light.subtheme-ocean,
 	--accent-h: 180;
 	--accent-s: 65%;
 	--accent-l: 70%;
-	--interactive-accent: var(--subtheme-color-2-normal);
-	--interactive-accent-hover: var(--subtheme-color-2-high);
 }
 
 .theme-light.subtheme-twilight {
 	--accent-h: 180;
 	--accent-s: 80%;
 	--accent-l: 45%;
-	--interactive-accent: var(--subtheme-color-2-normal);
-	--interactive-accent-hover: var(--subtheme-color-2-high);
 }
 
 /* ================================================================
@@ -128,14 +131,10 @@ body.theme-light.subtheme-ocean,
 	--accent-h: 345;
 	--accent-s: 75%;
 	--accent-l: 70%;
-	--interactive-accent: var(--subtheme-color-2-normal);
-	--interactive-accent-hover: var(--subtheme-color-2-high);
 }
 
 .theme-light.subtheme-sunset {
 	--accent-h: 345;
 	--accent-s: 85%;
 	--accent-l: 50%;
-	--interactive-accent: var(--subtheme-color-2-normal);
-	--interactive-accent-hover: var(--subtheme-color-2-high);
 }
