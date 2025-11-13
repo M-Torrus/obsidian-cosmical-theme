@@ -20,21 +20,25 @@ body,
 	--subtheme-2-h: 70;
 }
 
-/* Accent color for Ocean subtheme */
+/* Accent color for Ocean subtheme - Using Color 2 (Warm Gold) */
 body.theme-dark,
 body.theme-dark.subtheme-ocean,
 .theme-dark.subtheme-ocean {
-	--accent-h: 211;
-	--accent-s: 73%;
-	--accent-l: 65%;
+	--accent-h: 35;
+	--accent-s: 95%;
+	--accent-l: 76%;
+	--interactive-accent: var(--subtheme-color-2-normal);
+	--interactive-accent-hover: var(--subtheme-color-2-high);
 }
 
 body.theme-light,
 body.theme-light.subtheme-ocean,
 .theme-light.subtheme-ocean {
-	--accent-h: 211;
-	--accent-s: 100%;
-	--accent-l: 45%;
+	--accent-h: 35;
+	--accent-s: 95%;
+	--accent-l: 50%;
+	--interactive-accent: var(--subtheme-color-2-normal);
+	--interactive-accent-hover: var(--subtheme-color-2-high);
 }
 
 /* ================================================================
@@ -53,17 +57,21 @@ body.theme-light.subtheme-ocean,
 	--subtheme-2-h: 40;
 }
 
-/* Accent color for Forest subtheme */
+/* Accent color for Forest subtheme - Using Color 2 (Copper) */
 .theme-dark.subtheme-forest {
-	--accent-h: 155;
-	--accent-s: 65%;
-	--accent-l: 60%;
+	--accent-h: 25;
+	--accent-s: 70%;
+	--accent-l: 65%;
+	--interactive-accent: var(--subtheme-color-2-normal);
+	--interactive-accent-hover: var(--subtheme-color-2-high);
 }
 
 .theme-light.subtheme-forest {
-	--accent-h: 155;
+	--accent-h: 25;
 	--accent-s: 85%;
-	--accent-l: 40%;
+	--accent-l: 45%;
+	--interactive-accent: var(--subtheme-color-2-normal);
+	--interactive-accent-hover: var(--subtheme-color-2-high);
 }
 
 /* ================================================================
@@ -82,17 +90,21 @@ body.theme-light.subtheme-ocean,
 	--subtheme-2-h: 195;
 }
 
-/* Accent color for Twilight subtheme */
+/* Accent color for Twilight subtheme - Using Color 2 (Cyan) */
 .theme-dark.subtheme-twilight {
-	--accent-h: 270;
-	--accent-s: 70%;
+	--accent-h: 180;
+	--accent-s: 65%;
 	--accent-l: 70%;
+	--interactive-accent: var(--subtheme-color-2-normal);
+	--interactive-accent-hover: var(--subtheme-color-2-high);
 }
 
 .theme-light.subtheme-twilight {
-	--accent-h: 270;
-	--accent-s: 90%;
+	--accent-h: 180;
+	--accent-s: 80%;
 	--accent-l: 45%;
+	--interactive-accent: var(--subtheme-color-2-normal);
+	--interactive-accent-hover: var(--subtheme-color-2-high);
 }
 
 /* ================================================================
@@ -111,15 +123,19 @@ body.theme-light.subtheme-ocean,
 	--subtheme-2-h: 355;
 }
 
-/* Accent color for Sunset subtheme */
+/* Accent color for Sunset subtheme - Using Color 2 (Pink) */
 .theme-dark.subtheme-sunset {
-	--accent-h: 20;
+	--accent-h: 345;
 	--accent-s: 75%;
-	--accent-l: 65%;
+	--accent-l: 70%;
+	--interactive-accent: var(--subtheme-color-2-normal);
+	--interactive-accent-hover: var(--subtheme-color-2-high);
 }
 
 .theme-light.subtheme-sunset {
-	--accent-h: 20;
-	--accent-s: 90%;
-	--accent-l: 45%;
+	--accent-h: 345;
+	--accent-s: 85%;
+	--accent-l: 50%;
+	--interactive-accent: var(--subtheme-color-2-normal);
+	--interactive-accent-hover: var(--subtheme-color-2-high);
 }
