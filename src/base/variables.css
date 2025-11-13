@@ -14,16 +14,16 @@ body.theme-light {
 	--color-yellow-rgb: 228, 220, 129;
 	--color-green-rgb: 160, 223, 139;
 	--color-cyan-rgb: 132, 220, 210;
-	--color-blue-rgb: 108, 153, 255;
+	--color-blue-rgb: 141, 158, 255;
 	--color-purple-rgb: 184, 157, 231;
 	--color-pink-rgb: 223, 170, 192;
 
 	--color-red: rgb(244, 114, 102);
 	--color-orange: hsl(23, 90%, 69%);
-	--color-yellow: hsl(55, 65%, 70%);
-	--color-green: hsl(105, 57%, 71%);
+	--color-yellow: hsl(70, 65%, 70%);
+	--color-green: hsl(145, 57%, 71%);
 	--color-cyan: hsl(173, 56%, 69%);
-	--color-blue: hsl(222, 98%, 64%);
+	--color-blue: hsl(235, 98%, 64%);
 	--color-purple: hsl(262, 60%, 76%);
 	--color-pink: hsl(335, 45%, 77%);
 
