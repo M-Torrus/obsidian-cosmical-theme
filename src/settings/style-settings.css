@@ -210,9 +210,9 @@ settings:
       id: colorful-bases
       title: Colorful Bases tables
       title.es: Tablas Bases con color
-      description: Applies subtheme colors to Bases plugin tables for better visual hierarchy
-      description.es: Aplica colores del subtema a las tablas del plugin Bases para mejor jerarquía visual
+      description: Applies subtheme colors to Bases plugin tables
+      description.es: Aplica colores del subtema a las tablas del plugin Bases
       type: class-toggle
-      default: true
+      default: false
   -
 */
