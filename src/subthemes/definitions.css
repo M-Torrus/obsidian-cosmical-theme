@@ -65,3 +65,18 @@ body,
 	--subtheme-2-c: 0.16;
 	--subtheme-2-h: 25;
 }
+
+/* ================================================================
+   NIGHT
+   ================================================================ */
+.subtheme-night {
+	/* Color 1: faint blue */
+	--subtheme-1-l: 0.92;
+	--subtheme-1-c: 0.06;
+	--subtheme-1-h: 205;
+
+	/* Color 2: green */
+	--subtheme-2-l: 0.95;
+	--subtheme-2-c: 0.2;
+	--subtheme-2-h: 145;
+}
