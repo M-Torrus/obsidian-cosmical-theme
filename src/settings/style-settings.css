@@ -15,8 +15,8 @@ settings:
       id: subtheme
       title: Subtheme
       title.es: Subtema
-      description: Choose a color subtheme that affects properties and other features
-      description.es: Elige un subtema de color que afecta a las propiedades y otras características
+      description: Choose a color subtheme that affects properties, tags, and accent color
+      description.es: Elige un subtema de color que afecta a las propiedades, etiquetas y color de acento
       type: class-select
       allowEmpty: false
       default: Ocean
@@ -37,10 +37,6 @@ settings:
           label: Sunset
           label.es: Atardecer
           value: subtheme-sunset
-        -
-          label: Monochrome
-          label.es: Monocromo
-          value: subtheme-monochrome
   -
       id: colored-headings
       title: Use subtheme colors for headings
@@ -50,11 +46,11 @@ settings:
       type: class-toggle
       default: false
   -
-      id: colored-tags
-      title: Use subtheme colors for tags
-      title.es: Usar colores de subtema en las etiquetas
-      description: Tags will use the primary color (color 1) from the active subtheme
-      description.es: Las etiquetas usarán el color primario (color 1) del subtema activo
+      id: monochrome-tags
+      title: Disable colored tags
+      title.es: Desactivar etiquetas de colores
+      description: Use neutral monochrome style for tags instead of subtheme colors (colored tags are enabled by default)
+      description.es: Usar estilo monocromo neutral para las etiquetas en lugar de colores del subtema (las etiquetas de colores están activadas por defecto)
       type: class-toggle
       default: false
   -

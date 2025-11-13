@@ -20,6 +20,23 @@ body,
 	--subtheme-2-h: 70;
 }
 
+/* Accent color for Ocean subtheme */
+body.theme-dark,
+body.theme-dark.subtheme-ocean,
+.theme-dark.subtheme-ocean {
+	--accent-h: 211;
+	--accent-s: 73%;
+	--accent-l: 65%;
+}
+
+body.theme-light,
+body.theme-light.subtheme-ocean,
+.theme-light.subtheme-ocean {
+	--accent-h: 211;
+	--accent-s: 100%;
+	--accent-l: 45%;
+}
+
 /* ================================================================
    FOREST - Emerald + Copper
    Natural palette with rich green and metallic copper tones
@@ -34,6 +51,19 @@ body,
 	--subtheme-2-l: 0.88;
 	--subtheme-2-c: 0.08;
 	--subtheme-2-h: 40;
+}
+
+/* Accent color for Forest subtheme */
+.theme-dark.subtheme-forest {
+	--accent-h: 155;
+	--accent-s: 65%;
+	--accent-l: 60%;
+}
+
+.theme-light.subtheme-forest {
+	--accent-h: 155;
+	--accent-s: 85%;
+	--accent-l: 40%;
 }
 
 /* ================================================================
@@ -52,6 +82,19 @@ body,
 	--subtheme-2-h: 195;
 }
 
+/* Accent color for Twilight subtheme */
+.theme-dark.subtheme-twilight {
+	--accent-h: 270;
+	--accent-s: 70%;
+	--accent-l: 70%;
+}
+
+.theme-light.subtheme-twilight {
+	--accent-h: 270;
+	--accent-s: 90%;
+	--accent-l: 45%;
+}
+
 /* ================================================================
    SUNSET
    Warm palette with peachy coral and pink tones
@@ -68,19 +111,15 @@ body,
 	--subtheme-2-h: 355;
 }
 
-/* ================================================================
-   MONOCHROME - Use accent color + Gray
-   ================================================================ */
-.subtheme-monochrome {
-	/* Color 1: User accent - convert HSL hue to OKLCH hue with offset adjustment */
-	/* HSL yellow (~60°) needs +30-50° offset to map to OKLCH yellow (~90-110°) */
-	/* HSL blues/purples need less adjustment, reds/oranges need slight adjustment */
-	--subtheme-1-l: 0.88;
-	--subtheme-1-c: 0.11;
-	--subtheme-1-h: calc(var(--accent-h) + 40);
+/* Accent color for Sunset subtheme */
+.theme-dark.subtheme-sunset {
+	--accent-h: 20;
+	--accent-s: 75%;
+	--accent-l: 65%;
+}
 
-	/* Color 2: Gray */
-	--subtheme-2-l: 0.88;
-	--subtheme-2-c: 0;
-	--subtheme-2-h: 50;
+.theme-light.subtheme-sunset {
+	--accent-h: 20;
+	--accent-s: 90%;
+	--accent-l: 45%;
 }
