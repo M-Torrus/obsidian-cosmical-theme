@@ -180,14 +180,6 @@ settings:
       type: class-toggle
       default: false
   -
-      id: hide-properties-icons
-      title: Hide properties icon
-      title.es: Ocultar iconos de propiedades
-      description: Hides the type icons next to property names
-      description.es: Oculta los iconos de tipo junto a los nombres de las propiedades
-      type: class-toggle
-      default: false
-  -
       id: improve-multilist-ux
       title: Improve multi-select list UX
       title.es: Mejorar UX de listas multi-selección

@@ -29,13 +29,6 @@
 	}
 }
 
-/* Hide property icons */
-.hide-properties-icons {
-	.metadata-property-key .metadata-property-icon {
-		display: none;
-	}
-}
-
 /* BOLD PROPERTY LABEL */
 .enable-bold-font-label-properties,
 .enable-bold-font-label-properties {

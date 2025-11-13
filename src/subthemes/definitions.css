@@ -10,35 +10,14 @@
 body,
 .subtheme-ocean {
 	/* Color 1: Ocean Blue - hsl(202, 100%, 85%) for normal, hsl(211, 73%, 65%) for darker */
-	--subtheme-1-l: 0.89;
-	--subtheme-1-c: 0.1;
+	--subtheme-1-l: 0.93;
+	--subtheme-1-c: 0.15;
 	--subtheme-1-h: 262;
 
 	/* Color 2: Warm Gold - hsl(35, 95%, 76%) */
-	--subtheme-2-l: 0.89;
-	--subtheme-2-c: 0.09;
+	--subtheme-2-l: 0.95;
+	--subtheme-2-c: 0.14;
 	--subtheme-2-h: 70;
-}
-
-/* Override Obsidian's default accent colors with subtheme colors */
-/* Using html body for higher specificity to override Obsidian's app.css */
-html body {
-	/* Interactive elements (buttons, inputs, etc.) */
-	--interactive-accent: var(--subtheme-color-2-alt);
-	--interactive-accent-hover: var(--subtheme-color-2-normal);
-}
-
-/* Accent colors derived from subtheme OKLCH colors */
-html body.theme-dark {
-	/* Use normal (bright) for text, high (brighter) for hover */
-	--text-accent: oklch(var(--subtheme-2-normal-l) var(--subtheme-2-c) var(--subtheme-2-h));
-	--text-accent-hover: oklch(var(--subtheme-2-high-l) var(--subtheme-2-c) var(--subtheme-2-h));
-}
-
-html body.theme-light {
-	/* Use normal (dark) for text, high (darker) for hover */
-	--text-accent: oklch(var(--subtheme-2-normal-l) var(--subtheme-2-c) var(--subtheme-2-h));
-	--text-accent-hover: oklch(var(--subtheme-2-high-l) var(--subtheme-2-c) var(--subtheme-2-h));
 }
 
 /* ================================================================
@@ -47,44 +26,42 @@ html body.theme-light {
    ================================================================ */
 .subtheme-forest {
 	/* Color 1: Emerald Green */
-	--subtheme-1-l: 0.86;
-	--subtheme-1-c: 0.08;
+	--subtheme-1-l: 0.94;
+	--subtheme-1-c: 0.14;
 	--subtheme-1-h: 155;
 
 	/* Color 2: Copper */
-	--subtheme-2-l: 0.88;
-	--subtheme-2-c: 0.08;
+	--subtheme-2-l: 0.96;
+	--subtheme-2-c: 0.14;
 	--subtheme-2-h: 40;
 }
 
 /* ================================================================
-   TWILIGHT - Obsidian Purple + Cyan
-   Inspired by Obsidian's brand colors - signature purple and complementary cyan
+   TWILIGHT
    ================================================================ */
 .subtheme-twilight {
-	/* Color 1: Obsidian Purple - rgb(196, 181, 253) */
-	--subtheme-1-l: 0.82;
-	--subtheme-1-c: 0.12;
+	/* Color 1: Obsidian Purple */
+	--subtheme-1-l: 0.95;
+	--subtheme-1-c: 0.16;
 	--subtheme-1-h: 285;
 
-	/* Color 2: Obsidian Cyan - complementary turquoise */
-	--subtheme-2-l: 0.85;
-	--subtheme-2-c: 0.08;
-	--subtheme-2-h: 195;
+	/* Color 2: blue */
+	--subtheme-2-l: 0.95;
+	--subtheme-2-c: 0.13;
+	--subtheme-2-h: 260;
 }
 
 /* ================================================================
    SUNSET
-   Warm palette with peachy coral and pink tones
    ================================================================ */
 .subtheme-sunset {
-	/* Color 1: */
-	--subtheme-1-l: 0.82;
-	--subtheme-1-c: 0.13;
-	--subtheme-1-h: 30;
+	/* Color 1: magenta red*/
+	--subtheme-1-l: 0.95;
+	--subtheme-1-c: 0.18;
+	--subtheme-1-h: 0;
 
-	/* Color 2 */
-	--subtheme-2-l: 0.84;
-	--subtheme-2-c: 0.09;
-	--subtheme-2-h: 355;
+	/* Color 2: red orange*/
+	--subtheme-2-l: 0.94;
+	--subtheme-2-c: 0.16;
+	--subtheme-2-h: 25;
 }
