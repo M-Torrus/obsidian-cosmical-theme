@@ -1,7 +1,11 @@
 /* EDITOR ELEMENTS - Content Blocks */
 
-/* Blockquote */
 body {
+	/* Code */
+	--code-background: var(--background-primary-alt);
+	--code-radius: var(--radius-m);
+
+	/* Blockquote */
 	--blockquote-border-thickness: 0.2em;
 	--blockquote-border-color: var(--subtheme-color-1-alt);
 
@@ -15,4 +19,23 @@ body {
 
 .HyperMD-quote {
 	--blockquote-style: italic;
+}
+
+/* Math Styling */
+
+.math {
+	background-color: var(--code-background);
+	color: var(--code-normal) !important;
+	font-size: calc(var(--code-size) + 0.2em);
+}
+
+.math-block {
+	border-radius: var(--code-radius);
+}
+
+mjx-math .TEX-I {
+	font-family: "STIX Two Text" !important;
+	transform: scale(1.125);
+	transform-origin: center;
+	display: inline-block;
 }

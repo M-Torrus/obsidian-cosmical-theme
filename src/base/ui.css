@@ -1,6 +1,28 @@
-/* OTHER UI ELEMENTS */
-
 body {
+	/* Titlebar */
+	--titlebar-background-focused: var(--background-primary);
+	--titlebar-background: var(--background-primary);
+
+	/* Ribbon */
+	--ribbon-background: var(--background-secondary);
+	--ribbon-background-collapsed: var(--ribbon-background);
+
+	/* Status bar */
+	--status-bar-background: var(--background-secondary);
+
+	/* Tab */
+	--tab-container-background: var(--background-primary);
+
+	/* SETTINGS WINDOW */
+	.vertical-tab-nav-item {
+		color: var(--text-muted);
+	}
+	.horizontal-tab-nav-item.is-active,
+	.vertical-tab-nav-item.is-active {
+		--interactive-accent: var(--background-modifier-border-focus);
+		--text-on-accent: var(--text-normal);
+	}
+	/* OTHER UI ELEMENTS */
 	/* right-click context menu */
 	.menu {
 		background: var(--background-primary-alt);
@@ -12,10 +34,6 @@ body {
 
 	/* form field */
 	--background-modifier-form-field: var(--background-primary);
-
-	/* code */
-	--code-background: var(--background-primary-alt);
-	--code-radius: var(--radius-m);
 
 	.cm-s-obsidian span.cm-inline-code {
 		background-color: var(--background-secondary);

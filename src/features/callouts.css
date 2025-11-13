@@ -1,0 +1,11 @@
+body {
+	--callout-border-width: 2px;
+	--callout-border-opacity: 50%;
+	--callout-padding: 0.75em 1em;
+}
+
+.cm-embed-block.cm-callout {
+	width: calc(var(--file-line-width) + 2em);
+	padding-left: -1em !important;
+	translate: -1em;
+}
