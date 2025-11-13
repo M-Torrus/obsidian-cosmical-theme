@@ -22,8 +22,8 @@ body {
 	h3,
 	.HyperMD-header-4,
 	h4 {
-		text-decoration: underline;
 		text-decoration-color: var(--heading-underline-color);
+		text-decoration-line: underline;
 	}
 	.HyperMD-header + * {
 		padding-top: var(--size-2-2) !important;

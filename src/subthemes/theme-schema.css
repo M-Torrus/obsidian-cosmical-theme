@@ -19,7 +19,7 @@ body {
 	--subtheme-1-c: var(--subtheme-1-c);
 	--subtheme-2-c: var(--subtheme-2-c);
 
-	--luminosity-diff-alt: 0.1;
+	--luminosity-diff-alt: 0.14;
 	--luminosity-diff-light: 0.45;
 }
 
@@ -99,4 +99,17 @@ body {
 	--subtheme-color-2-high: oklch(
 		var(--subtheme-2-high-l) var(--subtheme-2-c) var(--subtheme-2-h)
 	);
+}
+body.theme-dark,
+body.theme-light {
+	--color-accent: var(--subtheme-color-accent-normal);
+	--interactive-accent: var(--subtheme-color-2-alt);
+	--interactive-accent-hover: var(--subtheme-color-2-normal);
+	--text-accent: var(--subtheme-color-2-normal);
+	--text-accent-hover: var(--subtheme-color-2-high);
+}
+
+body.theme-light {
+	--text-on-accent: var(--color-base-00);
+	--text-on-accent-inverted: var(--color-base-00);
 }
