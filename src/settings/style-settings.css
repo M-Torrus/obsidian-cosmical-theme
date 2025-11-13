@@ -50,11 +50,11 @@ settings:
       type: class-toggle
       default: false
   -
-      id: colored-tags
-      title: Use subtheme colors for tags
-      title.es: Usar colores de subtema en las etiquetas
-      description: Tags will use the primary color (color 1) from the active subtheme
-      description.es: Las etiquetas usarán el color primario (color 1) del subtema activo
+      id: monochrome-tags
+      title: Disable colored tags
+      title.es: Desactivar etiquetas de colores
+      description: Use neutral monochrome style for tags instead of subtheme colors (colored tags are enabled by default)
+      description.es: Usar estilo monocromo neutral para las etiquetas en lugar de colores del subtema (las etiquetas de colores están activadas por defecto)
       type: class-toggle
       default: false
   -

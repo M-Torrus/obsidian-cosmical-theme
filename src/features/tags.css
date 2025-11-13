@@ -1,19 +1,7 @@
 /* TAG SETTINGS - BASE */
 
 body {
-	/* Default: neutral tags (monochrome) */
-	--tag-color: var(--text-muted);
-	--tag-color-hover: var(--text-normal);
-	--tag-background: var(--background-modifier-border);
-	--tag-background-hover: var(--background-modifier-hover);
-
-	--tag-padding-x: 0.75em;
-	--tag-padding-y: 0.33em;
-	--tag-radius: var(--radius-l);
-}
-
-/* Colored Tags - Uses subtheme color 1 */
-.colored-tags {
+	/* Default: Colored tags using subtheme color 1 */
 	--tag-color: var(--subtheme-color-1-normal);
 	--tag-color-hover: var(--subtheme-color-1-high);
 	--tag-background: color-mix(
@@ -27,6 +15,19 @@ body {
 		transparent
 	);
 	--graph-node-tag: var(--subtheme-color-1-normal);
+
+	--tag-padding-x: 0.75em;
+	--tag-padding-y: 0.33em;
+	--tag-radius: var(--radius-l);
+}
+
+/* Monochrome Tags - Neutral style without subtheme colors */
+.monochrome-tags {
+	--tag-color: var(--text-muted);
+	--tag-color-hover: var(--text-normal);
+	--tag-background: var(--background-modifier-border);
+	--tag-background-hover: var(--background-modifier-hover);
+	--graph-node-tag: var(--text-muted);
 }
 
 /* Hollow Tags */
