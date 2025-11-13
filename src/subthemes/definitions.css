@@ -20,27 +20,25 @@ body,
 	--subtheme-2-h: 70;
 }
 
-body {
-	/* accent override */
+/* Override Obsidian's default accent colors with subtheme colors */
+/* Using html body for higher specificity to override Obsidian's app.css */
+html body {
+	/* Interactive elements (buttons, inputs, etc.) */
 	--interactive-accent: var(--subtheme-color-2-alt);
 	--interactive-accent-hover: var(--subtheme-color-2-normal);
 }
 
-/* Accent colors derived from subtheme OKLCH colors using relative color syntax */
-body.theme-dark {
-	/* Slightly brighter versions of the accent color for text */
-	--text-accent-l: calc(var(--subtheme-2-alt-l) * 0.95);
-	--text-accent-hover-l: calc(var(--subtheme-2-alt-l) * 0.92);
-	--text-accent: oklch(var(--text-accent-l) var(--subtheme-2-c) var(--subtheme-2-h));
-	--text-accent-hover: oklch(var(--text-accent-hover-l) var(--subtheme-2-c) var(--subtheme-2-h));
+/* Accent colors derived from subtheme OKLCH colors */
+html body.theme-dark {
+	/* Use normal (bright) for text, high (brighter) for hover */
+	--text-accent: oklch(var(--subtheme-2-normal-l) var(--subtheme-2-c) var(--subtheme-2-h));
+	--text-accent-hover: oklch(var(--subtheme-2-high-l) var(--subtheme-2-c) var(--subtheme-2-h));
 }
 
-body.theme-light {
-	/* Use normal variant with slight adjustments for light mode */
-	--text-accent-l: var(--subtheme-2-normal-l);
-	--text-accent-hover-l: calc(var(--subtheme-2-normal-l) * 1.05);
-	--text-accent: oklch(var(--text-accent-l) var(--subtheme-2-c) var(--subtheme-2-h));
-	--text-accent-hover: oklch(var(--text-accent-hover-l) var(--subtheme-2-c) var(--subtheme-2-h));
+html body.theme-light {
+	/* Use normal (dark) for text, high (darker) for hover */
+	--text-accent: oklch(var(--subtheme-2-normal-l) var(--subtheme-2-c) var(--subtheme-2-h));
+	--text-accent-hover: oklch(var(--subtheme-2-high-l) var(--subtheme-2-c) var(--subtheme-2-h));
 }
 
 /* ================================================================
