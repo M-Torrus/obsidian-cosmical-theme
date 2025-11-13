@@ -77,11 +77,6 @@ body.theme-dark {
 	/* buttons */
 	--interactive-normal: var(--color-base-40);
 	--interactive-hover: var(--color-base-50);
-
-	/* Accent color - Ocean subtheme blue for dark mode */
-	--accent-h: 211;
-	--accent-s: 73%;
-	--accent-l: 65%;
 }
 
 /* Light Theme - Obsidian Essential Variables */
@@ -119,11 +114,6 @@ body.theme-light {
 	/* buttons */
 	--interactive-normal: var(--background-secondary);
 	--interactive-hover: var(--background-secondary-alt);
-
-	/* Accent color - Ocean subtheme blue for light mode (darker for contrast) */
-	--accent-h: 211;
-	--accent-s: 100%;
-	--accent-l: 45%;
 }
 
 body {
