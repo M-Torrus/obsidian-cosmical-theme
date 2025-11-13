@@ -3,22 +3,18 @@
 /* Style Settings Configuration */
 @import "./settings/style-settings.css";
 
-/* Base Variables */
+/* Base */
 @import "./base/variables.css";
+@import "./base/ui.css";
 
 /* Subthemes System */
 @import "./subthemes/theme-schema.css";
 @import "./subthemes/definitions.css";
 
-/* Main UI */
-@import "./ui/main-ui.css";
-@import "./ui/secondary-ui.css";
-
 /* Editor */
 @import "./editor/content-blocks.css";
 @import "./editor/lists.css";
 @import "./editor/tables.css";
-@import "./editor/math.css";
 @import "./editor/headings.css";
 
 /* Panels */
@@ -33,3 +29,4 @@
 @import "./features/properties.css";
 @import "./features/tags.css";
 @import "./features/editor.css";
+@import "./features/callouts.css";
