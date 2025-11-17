@@ -8,7 +8,7 @@ body {
 	--nn-theme-file-tag-color: var(--tag-color);
 	--nn-theme-file-selected-bg: var(--background-modifier-border-hover);
 	--nn-theme-file-selected-inactive-bg: var(--background-modifier-border);
-	--nn-theme-file-selected-name-color: var(--text-on-accent);
+	--nn-theme-file-selected-name-color: var(--text-normal);
 	&.hollow-tags {
 		.nn-file-tag {
 			border: 1px solid var(--tag-color);
