@@ -35,9 +35,8 @@ Choose from five color schemes that automatically adapt to both light and dark m
 
 -   **Ocean** (default): Classic maritime palette with deep blue and warm gold accents
 -   **Forest**: Natural emerald green paired with copper tones
--   **Twilight**: Inspired by Obsidian's signature purple with complementary cyan
--   **Sunset**: Warm coral and deep violet combination
--   **Monochrome**: Uses your Obsidian accent color with neutral grays
+-   **Twilight**: Inspired by Obsidian's purple
+-   **Sunset**: Warm theme
 
 All subthemes use the OKLCH color space for perceptually uniform luminosity adjustments, ensuring perfect readability in any mode.
 
