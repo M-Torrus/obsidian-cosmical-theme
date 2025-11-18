@@ -5,7 +5,7 @@
 <h1 align="center">Cosmical</h1>
 
 <p align="center">
-An Obsidian theme with a neutral aesthetic, vibrant colors, and balanced contrasts. Eye-catching without being distracting.
+An Obsidian theme created to enchance the note taking experience. It balances color use inspired by coding editors and a neutral background to keep things balanced
 </p>
 
 <p align="center">
@@ -19,78 +19,57 @@ An Obsidian theme with a neutral aesthetic, vibrant colors, and balanced contras
 
 ---
 
-## Philosophy
+## Theme
 
-Cosmical is built on three core principles:
+Cosmical is my personal take on how Obsidian should look. My main goal is to make Obsidian look more atractive while maintaining focus and not adding distractions.
 
--   **Neutral Foundation**: A clean background free from blue tints
--   **Vibrant Accents**: Rich colors that enhance readability instead of hurting it
--   **Work-Focused Design**: Nice to look at, but stays out of your way when you need to focus
+Two main features:
+- A neutral background inspired by Gnome
+- Rich accents and vibrant colors inspired by coding editors
+
+The plugin [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) is needed to pick a differente subtheme.
 
 ## Features
 
-### Dynamic Subtheme System
+### Main Features
 
-Choose from five color schemes that automatically adapt to both light and dark modes:
+-   **Five color schemes**: Ocean (default), Forest, Twilight, Sunset, and Monochrome. Each one adapts automatically to light and dark mode
+-   **Better properties/metadata**: Alternative container styles (dashed, outline), bold labels, improved multi-select lists, and more control over what shows
+-   **Neutral color palette**: Clean backgrounds without blue tints, vibrant accent colors that actually help readability
+-   **Lots of customization**: Powered by [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) plugin. Change subthemes, colors, fonts, and UI elements
+-   **Automatic light/dark adaptation**: Uses OKLCH color space so everything looks good in both modes
+-   **Custom typography**: Set your own font family for headings
+-   **Plugin compatibility**: Works with Notebook Navigator and more
 
--   **Ocean** (default): Classic maritime palette with deep blue and warm gold accents
--   **Forest**: Natural emerald green paired with copper tones
--   **Twilight**: Inspired by Obsidian's purple
--   **Sunset**: Warm theme
+### Snippet Goodies
 
-All subthemes use the OKLCH color space for perceptually uniform luminosity adjustments, ensuring perfect readability in any mode.
+Small features you can toggle on/off:
 
-### Extensive Customization
-
-Powered by the [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) plugin, Cosmical lets you customize:
-
-#### Theme Colors
-
--   Subtheme selection
--   Colored headings option
--   Colored tags with optional hollow style
--   Custom caret color matching your subtheme
-
-#### Editor
-
--   Custom font family for headings
--   Optional heading underlines
--   File title customization (default style or hidden)
-
-#### Sidebars
-
--   Sidebar toggle button visibility controls
-
-#### Properties (Metadata)
-
--   Alternative container styles (dashed separator, outline)
--   Bold property labels toggle
--   Property header visibility
--   Icon visibility control
+-   Colored headings (with optional underlines)
+-   Colored tags
+-   Hide or customize file titles
+-   Control sidebar toggle button visibility
 -   Improved multi-select list UX
 
-### Modern CSS Architecture
-
-Built with a modular PostCSS workflow:
-
--   Automatic light/dark mode adaptation
--   OKLCH color space for perceptual uniformity
--   Clean, maintainable source structure
--   CSS nesting support
--   Snippet-ready features (build individual features as standalone CSS snippets)
-
-### Bilingual Support
-
-All Style Settings options include English and Spanish (Español) translations.
+Style Settings options available in English and Spanish.
 
 ## Installation
 
-### From Obsidian Community Themes (Coming Soon)
+### Comunity Plugins (soon)
 
 1. Open Obsidian Settings
 2. Navigate to **Appearance** → **Themes**
 3. Click **Browse** and search for "Cosmical"
-4. Click **Install and use**
+4. Click **Install**
+
+### Manual (not recommended)
+
+1. Open your system File explorer
+2. Navigate to the root folder of your vault
+3. Open ".obsidian/themes"
+4. Create new folder "Cosmical" and open it
+5. Copy manifest.json and theme.css
+6. Cosmical should now appear as an installed theme
 
 ## Recommended Setup
 
@@ -99,54 +78,47 @@ These community plugins work well with Cosmical:
 -   **[Style Settings](https://github.com/mgmeyers/obsidian-style-settings)**: Required for customization options
 -   **Notebook Navigator** (optional): Additional theme compatibility included
 
-## Development
+## Development + Contributing
 
-Cosmical uses Vite + PostCSS for a modern development workflow.
+I used Vite + PostCss to help with the development workflow. I created this based on a legacy theme I had and divided it into diferent files to help with the caos.
 
-### Setup
+### Commands
+
+The `theme.css` is minified automatically
+
+Setup
 
 ```bash
 npm install
 ```
 
-### Development Mode
+Automatic rebuilds
 
 ```bash
 npm run dev
 ```
 
-Watches for changes and automatically rebuilds the theme.
-
-### Build for Production
+Build
 
 ```bash
 npm run build
 ```
 
-Creates a minified `theme.css` ready for distribution.
+## Future improvements:
 
-### Build CSS Snippets
+I want refine the UI, fix bugs and inconsistent styles.
 
-```bash
-npm run build:snippets
-```
+The plugin should be compatible with plugins, but some may need for specific css variables
 
-Generates individual CSS snippets from features in `src/features/`.
+Improve and add additional subthemes based on feedback
 
-## Roadmap
+Subtheme affect more parts of the UI, without being to much
 
-Future improvements:
-
--   More plugin compatibility
--   Additional subthemes
--   More customization options
--   UI refinements
-
-I might create custom Obsidian plugins that fit the Cosmical aesthetic, but that's still just an idea.
+More customization options and cool/useful snippets
 
 ## Contributing
 
-Found a bug or have a suggestion? Feel free to [open an issue](https://github.com/M-Torrus/cosmical-obsidian/issues).
+You can send suggestion using [open an issue](https://github.com/M-Torrus/cosmical-obsidian/issues).
 
 ## License
 
