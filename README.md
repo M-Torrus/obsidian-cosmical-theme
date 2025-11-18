@@ -24,8 +24,9 @@ An Obsidian theme created to enchance the note taking experience. It balances co
 Cosmical is my personal take on how Obsidian should look. My main goal is to make Obsidian look more atractive while maintaining focus and not adding distractions.
 
 Two main features:
-- A neutral background inspired by Gnome
-- Rich accents and vibrant colors inspired by coding editors
+
+-   A neutral background inspired by Gnome
+-   Rich accents and vibrant colors inspired by coding editors
 
 The plugin [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) is needed to pick a differente subtheme.
 
@@ -55,7 +56,7 @@ Style Settings options available in English and Spanish.
 
 ## Installation
 
-### Comunity Plugins (soon)
+### Comunity themes (soon)
 
 1. Open Obsidian Settings
 2. Navigate to **Appearance** → **Themes**
@@ -70,13 +71,6 @@ Style Settings options available in English and Spanish.
 4. Create new folder "Cosmical" and open it
 5. Copy manifest.json and theme.css
 6. Cosmical should now appear as an installed theme
-
-## Recommended Setup
-
-These community plugins work well with Cosmical:
-
--   **[Style Settings](https://github.com/mgmeyers/obsidian-style-settings)**: Required for customization options
--   **Notebook Navigator** (optional): Additional theme compatibility included
 
 ## Development + Contributing
 
@@ -108,13 +102,10 @@ npm run build
 
 I want refine the UI, fix bugs and inconsistent styles.
 
-The plugin should be compatible with plugins, but some may need for specific css variables
-
-Improve and add additional subthemes based on feedback
-
-Subtheme affect more parts of the UI, without being to much
-
-More customization options and cool/useful snippets
+- The theme uses obsidian css variables, it should be compatible with plugins, but some may need for specific css variables
+- Improve and add additional subthemes based on feedback
+- Make subtheme affect more parts of the UI, without being to much distraction
+- More customization options and cool/useful snippets
 
 ## Contributing
 
