@@ -113,7 +113,7 @@ You can send suggestion using [open an issue](https://github.com/M-Torrus/cosmic
 
 ## License
 
-This theme is released under the MIT License. See [LICENSE](LICENSE) for details.
+This theme is released under the Apache License 2.0. See [LICENSE](LICENSE) for details.
 
 ## Other
 
