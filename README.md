@@ -5,7 +5,7 @@
 <h1 align="center">Cosmical</h1>
 
 <p align="center">
-An Obsidian theme created to enchance the note taking experience. It balances color use inspired by coding editors and a neutral background to keep things balanced
+An Obsidian theme created to enhance the note taking experience. It balances color use inspired by coding editors and a neutral background to keep things balanced
 </p>
 
 <p align="center">
@@ -28,7 +28,7 @@ Two main features:
 -   A neutral background inspired by Gnome
 -   Rich accents and vibrant colors inspired by coding editors
 
-The plugin [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) is needed to pick a differente subtheme.
+The plugin [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) is needed to pick a different subtheme.
 
 ## Features
 
@@ -56,7 +56,7 @@ Style Settings options available in English and Spanish.
 
 ## Installation
 
-### Comunity themes (soon)
+### Community themes (soon)
 
 1. Open Obsidian Settings
 2. Navigate to **Appearance** → **Themes**
@@ -74,7 +74,7 @@ Style Settings options available in English and Spanish.
 
 ## Development + Contributing
 
-I used Vite + PostCss to help with the development workflow. I created this based on a legacy theme I had and divided it into diferent files to help with the caos.
+I used Vite + PostCss to help with the development workflow. I created this based on a legacy theme I had and divided it into different files to help with the chaos.
 
 ### Commands
 
@@ -100,11 +100,11 @@ npm run build
 
 ## Future improvements:
 
-I want refine the UI, fix bugs and inconsistent styles.
+I want to refine the UI, fix bugs and inconsistent styles.
 
 - The theme uses obsidian css variables, it should be compatible with plugins, but some may need for specific css variables
 - Improve and add additional subthemes based on feedback
-- Make subtheme affect more parts of the UI, without being to much distraction
+- Make subtheme affect more parts of the UI, without being too much distraction
 - More customization options and cool/useful snippets
 
 ## Contributing
