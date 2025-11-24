@@ -9,13 +9,11 @@
    ================================================================ */
 body,
 .subtheme-ocean {
-	/* Color 1: Ocean Blue - hsl(202, 100%, 85%) for normal, hsl(211, 73%, 65%) for darker */
-	--subtheme-1-l: 0.95;
+	/* Color 1: Ocean Blue */
 	--subtheme-1-c: 0.15;
 	--subtheme-1-h: 262;
 
-	/* Color 2: Warm Gold - hsl(35, 95%, 76%) */
-	--subtheme-2-l: 0.95;
+	/* Color 2: Warm Gold */
 	--subtheme-2-c: 0.15;
 	--subtheme-2-h: 70;
 }
@@ -26,12 +24,10 @@ body,
    ================================================================ */
 .subtheme-forest {
 	/* Color 1: Emerald Green */
-	--subtheme-1-l: 0.94;
 	--subtheme-1-c: 0.14;
 	--subtheme-1-h: 155;
 
 	/* Color 2: Copper */
-	--subtheme-2-l: 0.96;
 	--subtheme-2-c: 0.14;
 	--subtheme-2-h: 40;
 }
@@ -41,12 +37,10 @@ body,
    ================================================================ */
 .subtheme-twilight {
 	/* Color 1: Obsidian Purple */
-	--subtheme-1-l: 0.95;
 	--subtheme-1-c: 0.16;
 	--subtheme-1-h: 285;
 
 	/* Color 2: blue */
-	--subtheme-2-l: 0.95;
 	--subtheme-2-c: 0.13;
 	--subtheme-2-h: 260;
 }
@@ -56,12 +50,10 @@ body,
    ================================================================ */
 .subtheme-sunset {
 	/* Color 1: magenta red*/
-	--subtheme-1-l: 0.95;
 	--subtheme-1-c: 0.18;
 	--subtheme-1-h: 0;
 
 	/* Color 2: red orange*/
-	--subtheme-2-l: 0.94;
 	--subtheme-2-c: 0.16;
 	--subtheme-2-h: 25;
 }
@@ -71,12 +63,10 @@ body,
    ================================================================ */
 .subtheme-night {
 	/* Color 1: faint blue */
-	--subtheme-1-l: 0.92;
 	--subtheme-1-c: 0.06;
 	--subtheme-1-h: 205;
 
 	/* Color 2: green */
-	--subtheme-2-l: 0.96;
 	--subtheme-2-c: 0.18;
 	--subtheme-2-h: 145;
 }
