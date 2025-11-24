@@ -4,13 +4,13 @@ body {
 	--base-row-even-bg: var(--background-primary);
 	--base-row-odd-bg: var(--background-primary-alt);
 	--base-row-hover-bg: var(--color-base-50);
-	--bases-table-header-color: var(--subtheme-color-1-alt);
+	--bases-table-header-color: var(--theme-color-1-alt);
 }
 
 .colorful-bases {
 	.bases-table .bases-tbody {
 		--metadata-input-text-color: var(--property-input-color);
-		color: var(--subtheme-color-2-normal);
+		color: var(--theme-color-2-normal);
 	}
 }
 

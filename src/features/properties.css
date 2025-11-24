@@ -38,10 +38,10 @@
 /* PROPERTIES COLOR VARIANTS - Using Centralized Subthemes */
 
 body {
-	/* Map subtheme colors to property variables */
-	--property-label-color: var(--subtheme-color-1-normal);
-	--property-input-color: var(--subtheme-color-2-normal);
-	--property-icon-color: var(--subtheme-color-1-alt);
+	/* Map theme colors to property variables */
+	--property-label-color: var(--theme-color-1-normal);
+	--property-input-color: var(--theme-color-2-normal);
+	--property-icon-color: var(--theme-color-1-alt);
 
 	/* Property elements */
 

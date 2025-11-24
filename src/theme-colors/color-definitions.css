@@ -1,5 +1,5 @@
 /* ================================================================
-   COSMICAL SUBTHEMES - Definitions
+   COSMICAL THEME COLORS - Definitions
    ================================================================ */
 
 /* ================================================================
@@ -10,12 +10,12 @@
 body,
 .subtheme-ocean {
 	/* Color 1: Ocean Blue */
-	--subtheme-1-c: 0.15;
-	--subtheme-1-h: 262;
+	--theme-color-1-chroma: 0.15;
+	--theme-color-1-hue: 262;
 
 	/* Color 2: Warm Gold */
-	--subtheme-2-c: 0.15;
-	--subtheme-2-h: 70;
+	--theme-color-2-chroma: 0.15;
+	--theme-color-2-hue: 70;
 }
 
 /* ================================================================
@@ -24,12 +24,12 @@ body,
    ================================================================ */
 .subtheme-forest {
 	/* Color 1: Emerald Green */
-	--subtheme-1-c: 0.14;
-	--subtheme-1-h: 155;
+	--theme-color-1-chroma: 0.14;
+	--theme-color-1-hue: 155;
 
 	/* Color 2: Copper */
-	--subtheme-2-c: 0.14;
-	--subtheme-2-h: 40;
+	--theme-color-2-chroma: 0.14;
+	--theme-color-2-hue: 40;
 }
 
 /* ================================================================
@@ -37,12 +37,12 @@ body,
    ================================================================ */
 .subtheme-twilight {
 	/* Color 1: Obsidian Purple */
-	--subtheme-1-c: 0.16;
-	--subtheme-1-h: 285;
+	--theme-color-1-chroma: 0.16;
+	--theme-color-1-hue: 285;
 
 	/* Color 2: blue */
-	--subtheme-2-c: 0.13;
-	--subtheme-2-h: 260;
+	--theme-color-2-chroma: 0.13;
+	--theme-color-2-hue: 260;
 }
 
 /* ================================================================
@@ -50,12 +50,12 @@ body,
    ================================================================ */
 .subtheme-sunset {
 	/* Color 1: magenta red*/
-	--subtheme-1-c: 0.18;
-	--subtheme-1-h: 0;
+	--theme-color-1-chroma: 0.18;
+	--theme-color-1-hue: 0;
 
 	/* Color 2: red orange*/
-	--subtheme-2-c: 0.16;
-	--subtheme-2-h: 25;
+	--theme-color-2-chroma: 0.16;
+	--theme-color-2-hue: 25;
 }
 
 /* ================================================================
@@ -63,10 +63,10 @@ body,
    ================================================================ */
 .subtheme-night {
 	/* Color 1: faint blue */
-	--subtheme-1-c: 0.06;
-	--subtheme-1-h: 205;
+	--theme-color-1-chroma: 0.06;
+	--theme-color-1-hue: 205;
 
 	/* Color 2: green */
-	--subtheme-2-c: 0.18;
-	--subtheme-2-h: 145;
+	--theme-color-2-chroma: 0.18;
+	--theme-color-2-hue: 145;
 }

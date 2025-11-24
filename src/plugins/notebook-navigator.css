@@ -16,7 +16,7 @@ body {
 	}
 
 	&.colored-headings {
-		--nn-theme-file-selected-name-color: var(--subtheme-color-1-high);
+		--nn-theme-file-selected-name-color: var(--theme-color-1-high);
 	}
 
 	/* Mobile specific styles */
