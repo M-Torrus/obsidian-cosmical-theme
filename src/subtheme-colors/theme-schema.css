@@ -5,101 +5,52 @@
    This centralized subtheme system provides color schemes that can be
    used across multiple features (properties, headings, etc.)
 
-   Each subtheme defines 2 base colors in OKLCH format that automatically
-   adapt to light/dark modes, generating 4 color variants total.
+   Each subtheme defines only 2 components per color (Chroma & Hue).
+   Luminosity is fixed and adapts automatically to light/dark modes.
 
    ================================================================ */
 
 /* ================================================================
-   CHROMA VALUES (Same for all themes)
+   DARK MODE COLORS
+   Base luminosity: 0.95 (bright colors for dark backgrounds)
+   Variants: ±0.14 for visual hierarchy
    ================================================================ */
 
-body {
-	/* Chroma is preserved across light/dark themes */
-	--subtheme-1-c: var(--subtheme-1-c);
-	--subtheme-2-c: var(--subtheme-2-c);
-
-	--luminosity-diff-alt: 0.14;
-	--luminosity-diff-light: 0.45;
-}
-
-/* ================================================================
-   DYNAMIC LUMINOSITY ADJUSTMENTS
-   ================================================================ */
-
-/* Dark Mode: Use base values with slight variants for visual hierarchy */
 .theme-dark {
-	/* Color 1 variants */
-	--subtheme-1-normal-l: var(--subtheme-1-l);
-	--subtheme-1-alt-l: calc(
-		var(--subtheme-1-normal-l) - var(--luminosity-diff-alt)
-	);
-	--subtheme-1-high-l: calc(
-		var(--subtheme-1-normal-l) + var(--luminosity-diff-alt)
-	);
+	/* Color 1: Primary variants */
+	--subtheme-color-1-normal: oklch(0.95 var(--subtheme-1-c) var(--subtheme-1-h));
+	--subtheme-color-1-alt: oklch(0.81 var(--subtheme-1-c) var(--subtheme-1-h));
+	--subtheme-color-1-high: oklch(1.09 var(--subtheme-1-c) var(--subtheme-1-h));
 
-	/* Color 2 variants */
-	--subtheme-2-normal-l: var(--subtheme-2-l);
-	--subtheme-2-alt-l: calc(
-		var(--subtheme-2-normal-l) - var(--luminosity-diff-alt)
-	);
-	--subtheme-2-high-l: calc(
-		var(--subtheme-2-normal-l) + var(--luminosity-diff-alt)
-	);
-}
-
-/* Light Mode: Darker colors for better readability */
-.theme-light {
-	/* Color 1 variants - Darken significantly for readability */
-	--subtheme-1-normal-l: calc(
-		var(--subtheme-1-l) - var(--luminosity-diff-light)
-	);
-	--subtheme-1-alt-l: calc(
-		var(--subtheme-1-normal-l) + var(--luminosity-diff-alt)
-	);
-	--subtheme-1-high-l: calc(
-		var(--subtheme-1-normal-l) - var(--luminosity-diff-alt)
-	);
-
-	/* Color 2 variants - Darken significantly for readability */
-	--subtheme-2-normal-l: calc(
-		var(--subtheme-2-l) - var(--luminosity-diff-light)
-	);
-	--subtheme-2-alt-l: calc(
-		var(--subtheme-2-normal-l) + var(--luminosity-diff-alt)
-	);
-	--subtheme-2-high-l: calc(
-		var(--subtheme-2-normal-l) - var(--luminosity-diff-alt)
-	);
+	/* Color 2: Accent variants */
+	--subtheme-color-2-normal: oklch(0.95 var(--subtheme-2-c) var(--subtheme-2-h));
+	--subtheme-color-2-alt: oklch(0.81 var(--subtheme-2-c) var(--subtheme-2-h));
+	--subtheme-color-2-high: oklch(1.09 var(--subtheme-2-c) var(--subtheme-2-h));
 }
 
 /* ================================================================
-   COLOR VARIABLES (Final OKLCH colors)
+   LIGHT MODE COLORS
+   Base luminosity: 0.50 (darker colors for light backgrounds)
+   Variants: ±0.14 for visual hierarchy
    ================================================================ */
 
-body {
-	/* Color 1: Primary */
-	--subtheme-color-1-normal: oklch(
-		var(--subtheme-1-normal-l) var(--subtheme-1-c) var(--subtheme-1-h)
-	);
-	--subtheme-color-1-alt: oklch(
-		var(--subtheme-1-alt-l) var(--subtheme-1-c) var(--subtheme-1-h)
-	);
-	--subtheme-color-1-high: oklch(
-		var(--subtheme-1-high-l) var(--subtheme-1-c) var(--subtheme-1-h)
-	);
+.theme-light {
+	/* Color 1: Primary variants */
+	--subtheme-color-1-normal: oklch(0.50 var(--subtheme-1-c) var(--subtheme-1-h));
+	--subtheme-color-1-alt: oklch(0.64 var(--subtheme-1-c) var(--subtheme-1-h));
+	--subtheme-color-1-high: oklch(0.36 var(--subtheme-1-c) var(--subtheme-1-h));
 
-	/* Color 2: Accent */
-	--subtheme-color-2-normal: oklch(
-		var(--subtheme-2-normal-l) var(--subtheme-2-c) var(--subtheme-2-h)
-	);
-	--subtheme-color-2-alt: oklch(
-		var(--subtheme-2-alt-l) var(--subtheme-2-c) var(--subtheme-2-h)
-	);
-	--subtheme-color-2-high: oklch(
-		var(--subtheme-2-high-l) var(--subtheme-2-c) var(--subtheme-2-h)
-	);
+	/* Color 2: Accent variants */
+	--subtheme-color-2-normal: oklch(0.50 var(--subtheme-2-c) var(--subtheme-2-h));
+	--subtheme-color-2-alt: oklch(0.64 var(--subtheme-2-c) var(--subtheme-2-h));
+	--subtheme-color-2-high: oklch(0.36 var(--subtheme-2-c) var(--subtheme-2-h));
 }
+
+/* ================================================================
+   OBSIDIAN COLOR MAPPINGS
+   Maps subtheme colors to Obsidian's standard color variables
+   ================================================================ */
+
 body.theme-dark,
 body.theme-light {
 	--color-accent: var(--subtheme-color-accent-normal);
