@@ -1,12 +1,9 @@
-/* ================================================================
-   COSMICAL THEME COLORS - Definitions
-   ================================================================ */
+/* COSMICAL THEME COLORS - Definitions */
 
-/* ================================================================
+/* 
    OCEAN (Default) - Blue + Gold
    Classic maritime palette with deep blue and warm gold accents
-   Original: label hsl(202, 100%, 85%), icon hsl(211, 73%, 65%), input hsl(35, 95%, 76%)
-   ================================================================ */
+	*/
 body,
 .subtheme-ocean {
 	/* Color 1: Ocean Blue */
@@ -18,10 +15,10 @@ body,
 	--theme-color-2-hue: 70;
 }
 
-/* ================================================================
+/* 
    FOREST - Emerald + Copper
    Natural palette with rich green and metallic copper tones
-   ================================================================ */
+    */
 .subtheme-forest {
 	/* Color 1: Emerald Green */
 	--theme-color-1-chroma: 0.14;
@@ -32,9 +29,7 @@ body,
 	--theme-color-2-hue: 40;
 }
 
-/* ================================================================
-   TWILIGHT
-   ================================================================ */
+/* TWILIGHT */
 .subtheme-twilight {
 	/* Color 1: Obsidian Purple */
 	--theme-color-1-chroma: 0.16;
@@ -45,9 +40,7 @@ body,
 	--theme-color-2-hue: 260;
 }
 
-/* ================================================================
-   SUNSET
-   ================================================================ */
+/* SUNSET */
 .subtheme-sunset {
 	/* Color 1: magenta red*/
 	--theme-color-1-chroma: 0.18;
@@ -58,9 +51,7 @@ body,
 	--theme-color-2-hue: 25;
 }
 
-/* ================================================================
-   NIGHT
-   ================================================================ */
+/* NIGHT */
 .subtheme-night {
 	/* Color 1: faint blue */
 	--theme-color-1-chroma: 0.06;
