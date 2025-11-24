@@ -1,5 +1,8 @@
 name: Release Obsidian theme
 
+permissions:
+  contents: write
+
 on:
   push:
     tags:
