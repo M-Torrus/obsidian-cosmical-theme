@@ -11,11 +11,10 @@
 
    ================================================================ */
 
-/* ================================================================
+/* 
    DARK MODE COLORS
    Base luminosity: 0.95 (bright colors for dark backgrounds)
-   Variants: normal (0.95), alt (0.81), high (1.09)
-   ================================================================ */
+*/
 
 .theme-dark {
 	/* Luminosity variants for dark mode */
@@ -33,8 +32,8 @@
 			var(--theme-color-1-hue)
 	);
 	--theme-color-1-high: oklch(
-		var(--theme-color-luminosity-high) var(--theme-color-1-chroma)
-			var(--theme-color-1-hue)
+		var(--theme-color-luminosity-high)
+			calc(var(--theme-color-1-chroma) - 0.06) var(--theme-color-1-hue)
 	);
 
 	/* Color 2: Accent variants */
@@ -52,11 +51,10 @@
 	);
 }
 
-/* ================================================================
+/* 
    LIGHT MODE COLORS
    Base luminosity: 0.50 (darker colors for light backgrounds)
-   Variants: normal (0.50), alt (0.64), high (0.36)
-   ================================================================ */
+*/
 
 .theme-light {
 	/* Luminosity variants for light mode */
@@ -105,8 +103,8 @@ body.theme-light {
 	--interactive-accent-hover: var(--theme-color-2-normal);
 	--text-accent: var(--theme-color-2-normal);
 	--text-accent-hover: var(--theme-color-2-high);
-	--text-selection: oklch(from var(--theme-color-2-alt) l c h / 0.5);
-	--text-highlight-bg: oklch(from var(--theme-color-1-alt) l c h / 0.5);
+	--text-selection: oklch(from var(--theme-color-1-alt) l c h / 0.33);
+	--text-highlight-bg: oklch(from var(--theme-color-2-alt) l c h / 0.33);
 }
 
 body.theme-light {
