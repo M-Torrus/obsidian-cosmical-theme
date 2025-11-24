@@ -107,6 +107,8 @@ body.theme-light {
 	--interactive-accent-hover: var(--subtheme-color-2-normal);
 	--text-accent: var(--subtheme-color-2-normal);
 	--text-accent-hover: var(--subtheme-color-2-high);
+	--text-selection: oklch(from var(--subtheme-color-2-alt) l c h / 0.5);
+	--text-highlight-bg: oklch(from var(--subtheme-color-1-alt) l c h / 0.5);
 }
 
 body.theme-light {

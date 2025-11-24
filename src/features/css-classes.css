@@ -1,6 +1,93 @@
 /* CSS Classes Utilities */
 
-/* Full width content */
-.full-width {
-  --file-line-width: 100%;
+/* CSS Classes Utilities */
+
+.header-counters {
+	counter-reset: h2-counter;
+
+	:not(
+			.callout,
+			.HyperMD-codeblock,
+			pre,
+			code,
+			.frontmatter,
+			.cm-hmd-frontmatter
+		) {
+		/* === INCREMENTO DE CONTADORES === */
+		& :is(h2, .HyperMD-header-2) {
+			counter-reset: h3-counter;
+			counter-increment: h2-counter;
+		}
+		& :is(h3, .HyperMD-header-3) {
+			counter-reset: h4-counter;
+			counter-increment: h3-counter;
+		}
+		& :is(h4, .HyperMD-header-4) {
+			counter-reset: h5-counter;
+			counter-increment: h4-counter;
+		}
+		& :is(h5, .HyperMD-header-5) {
+			counter-reset: h6-counter;
+			counter-increment: h5-counter;
+		}
+		& :is(h6, .HyperMD-header-6) {
+			counter-increment: h6-counter;
+		}
+
+		/* === DISPLAY DE NÚMEROS === */
+		/* Reading view */
+		& h2::before {
+			content: counter(h2-counter) ". ";
+		}
+		& h3::before {
+			content: counter(h2-counter) "." counter(h3-counter) " ";
+		}
+		& h4::before {
+			content: counter(h2-counter) "." counter(h3-counter) "."
+				counter(h4-counter) " ";
+		}
+		& h5::before {
+			content: counter(h2-counter) "." counter(h3-counter) "."
+				counter(h4-counter) "." counter(h5-counter) " ";
+		}
+		& h6::before {
+			content: counter(h2-counter) "." counter(h3-counter) "."
+				counter(h4-counter) "." counter(h5-counter) "."
+				counter(h6-counter) " ";
+		}
+
+		/* Live preview */
+		& span.cm-header:not(.cm-formatting) {
+			&.cm-header-2::before {
+				content: counter(h2-counter) ". ";
+			}
+			&.cm-header-3::before {
+				content: counter(h2-counter) "." counter(h3-counter) " ";
+			}
+			&.cm-header-4::before {
+				content: counter(h2-counter) "." counter(h3-counter) "."
+					counter(h4-counter) " ";
+			}
+			&.cm-header-5::before {
+				content: counter(h2-counter) "." counter(h3-counter) "."
+					counter(h4-counter) "." counter(h5-counter) " ";
+			}
+			&.cm-header-6::before {
+				content: counter(h2-counter) "." counter(h3-counter) "."
+					counter(h4-counter) "." counter(h5-counter) "."
+					counter(h6-counter) " ";
+			}
+		}
+	}
+
+	/* === FIX PARA READING VIEW === */
+	:is(h2, h3, h4, h5, h6) {
+		display: flex;
+		align-items: center;
+		gap: 0.25em;
+
+		.heading-collapse-indicator {
+			order: -1;
+		}
+	}
 }
