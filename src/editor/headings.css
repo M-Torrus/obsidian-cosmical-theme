@@ -47,10 +47,10 @@ body {
 	h4,
 	h5,
 	h6 {
-		color: var(--subtheme-color-1-high);
+		color: var(--theme-color-1-high);
 	}
-	--inline-title-color: var(--subtheme-color-1-high);
-	--heading-underline-color: var(--subtheme-color-1-alt);
+	--inline-title-color: var(--theme-color-1-high);
+	--heading-underline-color: var(--theme-color-1-alt);
 }
 
 /* FEATURE: File Name */

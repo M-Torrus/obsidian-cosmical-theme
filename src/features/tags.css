@@ -1,20 +1,20 @@
 /* TAG SETTINGS - BASE */
 
 body {
-	/* Default: Colored tags using subtheme color 1 */
-	--tag-color: var(--subtheme-color-1-normal);
-	--tag-color-hover: var(--subtheme-color-1-high);
+	/* Default: Colored tags using theme color 1 */
+	--tag-color: var(--theme-color-1-normal);
+	--tag-color-hover: var(--theme-color-1-high);
 	--tag-background: color-mix(
 		in oklch,
-		var(--subtheme-color-1-normal) 15%,
+		var(--theme-color-1-normal) 15%,
 		transparent
 	);
 	--tag-background-hover: color-mix(
 		in oklch,
-		var(--subtheme-color-1-normal) 30%,
+		var(--theme-color-1-normal) 30%,
 		transparent
 	);
-	--graph-node-tag: var(--subtheme-color-1-normal);
+	--graph-node-tag: var(--theme-color-1-normal);
 
 	--tag-padding-x: 0.75em;
 	--tag-padding-y: 0.33em;

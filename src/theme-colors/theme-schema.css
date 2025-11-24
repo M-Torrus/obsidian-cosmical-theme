@@ -1,0 +1,115 @@
+@import "./color-definitions.css";
+/* ================================================================
+   COSMICAL THEME COLOR SYSTEM - Base Configuration
+   ================================================================
+
+   This centralized theme color system provides color schemes that can be
+   used across multiple features (properties, headings, etc.)
+
+   Each color scheme defines only 2 components per color (Chroma & Hue).
+   Luminosity is fixed and adapts automatically to light/dark modes.
+
+   ================================================================ */
+
+/* ================================================================
+   DARK MODE COLORS
+   Base luminosity: 0.95 (bright colors for dark backgrounds)
+   Variants: normal (0.95), alt (0.81), high (1.09)
+   ================================================================ */
+
+.theme-dark {
+	/* Luminosity variants for dark mode */
+	--theme-color-luminosity-normal: 0.95;
+	--theme-color-luminosity-alt: 0.81;
+	--theme-color-luminosity-high: 1.09;
+
+	/* Color 1: Primary variants */
+	--theme-color-1-normal: oklch(
+		var(--theme-color-luminosity-normal) var(--theme-color-1-chroma)
+			var(--theme-color-1-hue)
+	);
+	--theme-color-1-alt: oklch(
+		var(--theme-color-luminosity-alt) var(--theme-color-1-chroma)
+			var(--theme-color-1-hue)
+	);
+	--theme-color-1-high: oklch(
+		var(--theme-color-luminosity-high) var(--theme-color-1-chroma)
+			var(--theme-color-1-hue)
+	);
+
+	/* Color 2: Accent variants */
+	--theme-color-2-normal: oklch(
+		var(--theme-color-luminosity-normal) var(--theme-color-2-chroma)
+			var(--theme-color-2-hue)
+	);
+	--theme-color-2-alt: oklch(
+		var(--theme-color-luminosity-alt) var(--theme-color-2-chroma)
+			var(--theme-color-2-hue)
+	);
+	--theme-color-2-high: oklch(
+		var(--theme-color-luminosity-high) var(--theme-color-2-chroma)
+			var(--theme-color-2-hue)
+	);
+}
+
+/* ================================================================
+   LIGHT MODE COLORS
+   Base luminosity: 0.50 (darker colors for light backgrounds)
+   Variants: normal (0.50), alt (0.64), high (0.36)
+   ================================================================ */
+
+.theme-light {
+	/* Luminosity variants for light mode */
+	--theme-color-luminosity-normal: 0.5;
+	--theme-color-luminosity-alt: 0.64;
+	--theme-color-luminosity-high: 0.36;
+
+	/* Color 1: Primary variants */
+	--theme-color-1-normal: oklch(
+		var(--theme-color-luminosity-normal) var(--theme-color-1-chroma)
+			var(--theme-color-1-hue)
+	);
+	--theme-color-1-alt: oklch(
+		var(--theme-color-luminosity-alt) var(--theme-color-1-chroma)
+			var(--theme-color-1-hue)
+	);
+	--theme-color-1-high: oklch(
+		var(--theme-color-luminosity-high) var(--theme-color-1-chroma)
+			var(--theme-color-1-hue)
+	);
+
+	/* Color 2: Accent variants */
+	--theme-color-2-normal: oklch(
+		var(--theme-color-luminosity-normal) var(--theme-color-2-chroma)
+			var(--theme-color-2-hue)
+	);
+	--theme-color-2-alt: oklch(
+		var(--theme-color-luminosity-alt) var(--theme-color-2-chroma)
+			var(--theme-color-2-hue)
+	);
+	--theme-color-2-high: oklch(
+		var(--theme-color-luminosity-high) var(--theme-color-2-chroma)
+			var(--theme-color-2-hue)
+	);
+}
+
+/* ================================================================
+   OBSIDIAN COLOR MAPPINGS
+   Maps theme colors to Obsidian's standard color variables
+   ================================================================ */
+
+body.theme-dark,
+body.theme-light {
+	--color-accent: var(--theme-color-accent-normal);
+	--interactive-accent: var(--theme-color-2-alt);
+	--interactive-accent-hover: var(--theme-color-2-normal);
+	--text-accent: var(--theme-color-2-normal);
+	--text-accent-hover: var(--theme-color-2-high);
+	--text-selection: oklch(from var(--theme-color-2-alt) l c h / 0.5);
+	--text-highlight-bg: oklch(from var(--theme-color-1-alt) l c h / 0.5);
+}
+
+body.theme-light {
+	--text-on-accent: var(--color-base-00);
+	--text-on-accent-inverted: var(--color-base-00);
+}

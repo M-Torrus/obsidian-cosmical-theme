@@ -8,8 +8,7 @@
 @import "./base/ui.css";
 
 /* Subthemes System */
-@import "./subtheme-colors/theme-schema.css";
-@import "./subtheme-colors/definitions.css";
+@import "./theme-colors/theme-schema.css";
 
 /* Editor */
 @import "./editor/content-blocks.css";
