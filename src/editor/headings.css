@@ -50,7 +50,7 @@ body {
 		color: var(--theme-color-1-high);
 	}
 	--inline-title-color: var(--theme-color-1-high);
-	--heading-underline-color: var(--theme-color-1-alt);
+	--heading-underline-color: var(--theme-color-1-transparent);
 }
 
 /* FEATURE: File Name */

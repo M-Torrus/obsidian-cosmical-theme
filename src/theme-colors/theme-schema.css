@@ -18,9 +18,9 @@
 
 .theme-dark {
 	/* Luminosity variants for dark mode */
-	--theme-color-luminosity-normal: 0.95;
-	--theme-color-luminosity-alt: 0.81;
-	--theme-color-luminosity-high: 1.09;
+	--theme-color-luminosity-normal: 0.9;
+	--theme-color-luminosity-alt: 0.7;
+	--theme-color-luminosity-high: 1;
 
 	/* Color 1: Primary variants */
 	--theme-color-1-normal: oklch(
@@ -46,21 +46,21 @@
 			var(--theme-color-2-hue)
 	);
 	--theme-color-2-high: oklch(
-		var(--theme-color-luminosity-high) var(--theme-color-2-chroma)
-			var(--theme-color-2-hue)
+		var(--theme-color-luminosity-high)
+			calc(var(--theme-color-2-chroma) - 0.06) var(--theme-color-2-hue)
 	);
 }
 
-/* 
+/*
    LIGHT MODE COLORS
    Base luminosity: 0.50 (darker colors for light backgrounds)
 */
 
 .theme-light {
 	/* Luminosity variants for light mode */
-	--theme-color-luminosity-normal: 0.5;
-	--theme-color-luminosity-alt: 0.64;
-	--theme-color-luminosity-high: 0.36;
+	--theme-color-luminosity-normal: 0.4;
+	--theme-color-luminosity-alt: 0.5;
+	--theme-color-luminosity-high: 0.3;
 
 	/* Color 1: Primary variants */
 	--theme-color-1-normal: oklch(
@@ -91,6 +91,17 @@
 	);
 }
 
+.theme-dark,
+.theme-light {
+	/* Transparent variants with 33% opacity */
+	--theme-color-1-transparent: oklch(
+		from var(--theme-color-1-alt) l c h / 0.33
+	);
+	--theme-color-2-transparent: oklch(
+		from var(--theme-color-2-alt) l c h / 0.33
+	);
+}
+
 /* ================================================================
    OBSIDIAN COLOR MAPPINGS
    Maps theme colors to Obsidian's standard color variables
@@ -103,8 +114,8 @@ body.theme-light {
 	--interactive-accent-hover: var(--theme-color-2-normal);
 	--text-accent: var(--theme-color-2-normal);
 	--text-accent-hover: var(--theme-color-2-high);
-	--text-selection: oklch(from var(--theme-color-1-alt) l c h / 0.33);
-	--text-highlight-bg: oklch(from var(--theme-color-2-alt) l c h / 0.33);
+	--text-selection: var(--theme-color-1-transparent);
+	--text-highlight-bg: var(--theme-color-2-transparent);
 }
 
 body.theme-light {

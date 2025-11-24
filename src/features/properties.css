@@ -110,7 +110,7 @@ body {
 .metadata-container-alt-separator .metadata-container {
 	padding-bottom: var(--size-4-4);
 	margin-bottom: var(--size-4-2);
-	border-bottom: dashed 2px var(--background-modifier-border);
+	border-bottom: dashed 2px var(--theme-color-1-transparent);
 }
 
 .metadata-container-alt-outline .metadata-container {
