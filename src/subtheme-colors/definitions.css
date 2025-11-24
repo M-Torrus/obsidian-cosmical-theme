@@ -10,13 +10,13 @@
 body,
 .subtheme-ocean {
 	/* Color 1: Ocean Blue - hsl(202, 100%, 85%) for normal, hsl(211, 73%, 65%) for darker */
-	--subtheme-1-l: 0.93;
+	--subtheme-1-l: 0.95;
 	--subtheme-1-c: 0.15;
 	--subtheme-1-h: 262;
 
 	/* Color 2: Warm Gold - hsl(35, 95%, 76%) */
 	--subtheme-2-l: 0.95;
-	--subtheme-2-c: 0.14;
+	--subtheme-2-c: 0.15;
 	--subtheme-2-h: 70;
 }
 
