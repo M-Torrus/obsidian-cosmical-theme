@@ -29,12 +29,6 @@
 	}
 }
 
-/* BOLD PROPERTY LABEL */
-.enable-bold-font-label-properties,
-.enable-bold-font-label-properties {
-	--metadata-label-font-weight: 600;
-}
-
 /* PROPERTIES COLOR VARIANTS - Using Centralized Subthemes */
 
 body {
