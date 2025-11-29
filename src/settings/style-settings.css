@@ -50,22 +50,6 @@ settings:
       type: class-toggle
       default: false
   -
-      id: monochrome-tags
-      title: Disable colored tags
-      title.es: Desactivar etiquetas de colores
-      description: Use neutral monochrome style for tags instead of subtheme colors (colored tags are enabled by default)
-      description.es: Usar estilo monocromo neutral para las etiquetas en lugar de colores del subtema (las etiquetas de colores están activadas por defecto)
-      type: class-toggle
-      default: false
-  -
-      id: hollow-tags
-      title: Hollow tags style
-      title.es: Estilo de etiquetas huecas
-      description: Makes tags transparent with only an outline border
-      description.es: Hace las etiquetas transparentes con solo un borde
-      type: class-toggle
-      default: false
-  -
     id: Editor-settings-heading
     title: Editor
     title.es: Editor
@@ -175,14 +159,6 @@ settings:
           label: Outline
           label.es: Contorno
           value: metadata-container-alt-outline
-  -
-      id: enable-bold-font-label-properties
-      title: Enable bold for property labels
-      title.es: Habilitar texto en negrita para el nombre de las propiedades
-      description: Makes property names display in bold font weight
-      description.es: Muestra los nombres de las propiedades en negrita
-      type: class-toggle
-      default: true
   -
       id: show-properties-label
       title: Show "Properties" label
