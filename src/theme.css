@@ -5,19 +5,14 @@
 
 /* Base */
 @import "./base/variables.css";
-@import "./base/ui.css";
+@import "./base/obsidian-ui.css";
 
-/* Subthemes System */
+/* Theme Colors System */
 @import "./theme-colors/theme-schema.css";
 
 /* Editor */
-@import "./editor/content-blocks.css";
-@import "./editor/lists.css";
-@import "./editor/tables.css";
+@import "./editor/content-elements.css";
 @import "./editor/headings.css";
-
-/* Panels */
-@import "./panels/sidebars.css";
 
 /* Plugins */
 @import "./plugins/notebook-navigator.css";
@@ -27,5 +22,4 @@
 @import "./features/css-classes.css";
 @import "./features/properties.css";
 @import "./features/tags.css";
-@import "./features/editor.css";
-@import "./features/callouts.css";
+@import "./features/custom-caret.css";

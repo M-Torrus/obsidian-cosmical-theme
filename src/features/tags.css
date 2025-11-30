@@ -21,28 +21,6 @@ body {
 	--tag-radius: var(--radius-l);
 }
 
-/* Monochrome Tags - Neutral style without subtheme colors */
-.monochrome-tags {
-	--tag-color: var(--text-muted);
-	--tag-color-hover: var(--text-normal);
-	--tag-background: var(--background-modifier-border);
-	--tag-background-hover: var(--background-modifier-hover);
-	--graph-node-tag: var(--text-muted);
-}
-
-/* Hollow Tags */
-.hollow-tags {
-	--tag-background: transparent;
-	--tag-background-hover: transparent;
-	--tag-border-color: color-mix(in oklch, var(--tag-color) 40%, transparent);
-	--tag-border-color-hover: color-mix(
-		in oklch,
-		var(--tag-color) 60%,
-		transparent
-	);
-	--tag-border-width: 1px;
-}
-
 [data-type="tag"].is-active .workspace-tab-header-inner {
 	background-color: var(--tag-background);
 }

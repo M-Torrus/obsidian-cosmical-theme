@@ -9,11 +9,6 @@ body {
 	--nn-theme-file-selected-bg: var(--background-modifier-border-hover);
 	--nn-theme-file-selected-inactive-bg: var(--background-modifier-border);
 	--nn-theme-file-selected-name-color: var(--text-normal);
-	&.hollow-tags {
-		.nn-file-tag {
-			border: 1px solid var(--tag-color);
-		}
-	}
 
 	&.colored-headings {
 		--nn-theme-file-selected-name-color: var(--theme-color-1-high);

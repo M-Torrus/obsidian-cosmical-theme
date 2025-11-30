@@ -1,0 +1,82 @@
+/* EDITOR ELEMENTS - Content Elements */
+
+/* ============================================
+   CODE BLOCKS & BLOCKQUOTES
+   ============================================ */
+
+body {
+	/* Code */
+	--code-background: var(--background-primary-alt);
+	--code-radius: var(--radius-m);
+
+	/* Blockquote */
+	--blockquote-border-thickness: 0.2em;
+	--blockquote-border-color: var(--theme-color-1-alt);
+
+	&.theme-dark {
+		--code-background: var(--color-base-40);
+	}
+	&.theme-light {
+		--code-background: var(--color-base-05);
+	}
+}
+
+.HyperMD-quote {
+	--blockquote-style: italic;
+}
+
+/* Math Styling */
+
+.math {
+	background-color: var(--code-background);
+	color: var(--code-normal) !important;
+	font-size: calc(var(--code-size) + 0.2em);
+}
+
+.math-block {
+	border-radius: var(--code-radius);
+}
+
+/* ============================================
+   LISTS
+   ============================================ */
+
+body {
+	--list-marker-color: var(--text-muted);
+}
+
+.cm-formatting-list {
+	font-size: 1rem;
+}
+
+/* ============================================
+   TABLES
+   ============================================ */
+
+body {
+	--table-header-weight: 500;
+	--table-border-color: var(--background-modifier-border-focus);
+}
+
+/* markdown table line-break */
+.cm-table-widget {
+	padding-top: 0px !important;
+}
+
+/* ============================================
+   CALLOUTS
+   ============================================ */
+
+body {
+	--callout-padding: 0.75em 1em;
+}
+
+.theme-dark.callout {
+	background-color: rgba(var(--callout-color), 0.075);
+}
+
+.wider-callouts .cm-embed-block.cm-callout {
+	width: calc(var(--file-line-width) + 2em);
+	padding-left: -1em !important;
+	translate: -1em;
+}

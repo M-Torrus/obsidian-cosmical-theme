@@ -1,0 +1,121 @@
+/* OBSIDIAN UI OVERRIDES */
+
+/* ============================================
+   MAIN UI COMPONENTS
+   ============================================ */
+
+body {
+	/* Titlebar */
+	--titlebar-background-focused: var(--background-primary);
+	--titlebar-background: var(--background-primary);
+
+	/* Ribbon */
+	--ribbon-background: var(--background-secondary);
+	--ribbon-background-collapsed: var(--ribbon-background);
+
+	/* Status bar */
+	--status-bar-background: var(--background-secondary);
+
+	/* Tab */
+	--tab-container-background: var(--background-primary);
+
+	/* SETTINGS WINDOW */
+	.vertical-tab-nav-item {
+		color: var(--text-muted);
+	}
+	.horizontal-tab-nav-item.is-active,
+	.vertical-tab-nav-item.is-active {
+		--interactive-accent: var(--background-modifier-border-focus);
+		--text-on-accent: var(--text-normal);
+	}
+	/* OTHER UI ELEMENTS */
+	/* right-click context menu */
+	.menu {
+		background: var(--background-primary-alt);
+		border: 1px solid var(--color-base-30);
+		.menu-separator {
+			margin: var(--size-2-1) calc(var(--size-2-1) * -1);
+		}
+	}
+
+	/* form field */
+	--background-modifier-form-field: var(--background-primary);
+
+	.cm-s-obsidian span.cm-inline-code {
+		background-color: var(--background-secondary);
+	}
+
+	/* modal */
+	--modal-border-color: var(--background-modifier-border);
+
+	/* prompt */
+	--prompt-border-color: var(--background-modifier-border);
+	.prompt {
+		background-color: var(--background-primary);
+		.prompt-input-container .prompt-input {
+			background-color: var(--background-primary);
+			border-bottom: 1px var(--prompt-border-color) solid;
+		}
+	}
+}
+
+/* ============================================
+   SIDEBARS & PANELS
+   ============================================ */
+
+.workspace-tabs .workspace-leaf {
+	background-color: var(--background-primary);
+}
+
+/* MAIN SIDEBAR */
+.workspace-split.mod-sidedock.mod-left-split {
+	--titlebar-background: var(--background-secondary);
+	--titlebar-background-focused: var(--background-secondary);
+	.workspace-tabs .workspace-leaf {
+		background-color: var(--background-secondary);
+	}
+}
+
+.nav-buttons-container {
+	justify-content: left;
+}
+
+/* Hide right sidebar toggle button */
+.hide-right-sidebar-toggle div.sidebar-toggle-button.mod-right {
+	display: none;
+}
+
+/* ============================================
+   FILE HEADER & TITLE
+   ============================================ */
+
+body {
+	--inline-title-size: 1.625rem;
+	--inline-title-weight: 700;
+	--inline-title-margin-bottom: 1rem;
+	--file-header-justify: left;
+}
+
+body.centered-file-title {
+	--file-header-justify: center;
+}
+
+.hide-file-title-path .view-header-title-container {
+	.view-header-title-parent {
+		/* Hide file path/name */
+		display: none;
+	}
+}
+
+.view-header-title-container {
+	.view-header-title-parent {
+		color: var(--text-faint);
+	}
+}
+
+.hide-file-title .view-header-title-container {
+	.view-header-title-parent,
+	.view-header-title {
+		display: none;
+	}
+}
