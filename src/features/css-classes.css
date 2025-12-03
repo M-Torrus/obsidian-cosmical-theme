@@ -1,6 +1,7 @@
 /* CSS Classes Utilities */
-
-/* CSS Classes Utilities */
+.full-width {
+	--file-line-width: 100%;
+}
 
 .header-counters {
 	counter-reset: h2-counter;
