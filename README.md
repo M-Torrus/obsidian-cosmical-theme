@@ -8,20 +8,19 @@
 An Obsidian theme created to enhance the note taking experience. It balances color use inspired by coding editors and a neutral background to keep things balanced
 </p>
 
-<p align="center">
-  <img src="images/obsidian-properties%20light.png" alt="Cosmical Properties Light" width="49%">
-  <img src="images/forest-properties%20dark.png" alt="Cosmical Properties Dark" width="49%">
-</p>
+![Cosmical Dark Theme 1](images/properties-dark.png)
 
-![Cosmical Dark Theme](images/Cosmical%20theme%20Base%20dark.png)
+![Cosmical Light Theme 1](images/properties-light.png)
 
-![Cosmical Light Theme](images/Cosmical%20theme%20Base%20light.png)
+![Cosmical Dark Theme 2](images/bases-dark.png)
 
----
+![Cosmical Light Theme 2](images/bases-light.png)
+
+> **Important**: Cosmical ignores the user accent color and uses it's own color-scheme, you need to install the "[Style Settings](https://github.com/mgmeyers/obsidian-style-settings)" community plugin in order to select a diferent color-scheme.
 
 ## Theme
 
-Cosmical is my personal take on how Obsidian should look. My main goal is to make Obsidian look more atractive while maintaining focus and not adding distractions.
+My main goal with Cosmical is to make Obsidian look more atractive while maintaining focus and not adding distractions.
 
 Two main features:
 
@@ -30,40 +29,52 @@ Two main features:
 
 The plugin [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) is needed to pick a different subtheme.
 
-## Features
+## Color Schemes
 
-### Main Features
+### Ocean (Default)
 
--   **Five color schemes**: Ocean (default), Forest, Twilight, Sunset, and Monochrome. Each one adapts automatically to light and dark mode
--   **Better properties/metadata**: Alternative container styles (dashed, outline), bold labels, improved multi-select lists, and more control over what shows
--   **Neutral color palette**: Clean backgrounds without blue tints, vibrant accent colors that actually help readability
--   **Lots of customization**: Powered by [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) plugin. Change subthemes, colors, fonts, and UI elements
--   **Automatic light/dark adaptation**: Uses OKLCH color space so everything looks good in both modes
--   **Custom typography**: Set your own font family for headings
--   **Plugin compatibility**: Works with Notebook Navigator and more
+![Theme Ocean](images/theme-ocean-dark.png)
+![Theme Ocean](images/theme-ocean-light.png)
 
-### Snippet Goodies
+### Forest
+
+![Theme Forest](images/theme-forest-dark.png)
+![Theme Forest](images/theme-forest-light.png)
+
+### Twilight
+
+![Theme Twilight](images/theme-twilight-dark.png)
+![Theme Twilight](images/theme-twilight-light.png)
+
+### Sunset
+
+![Theme Sunset](images/theme-sunset-dark.png)
+![Theme Sunset](images/theme-sunset-light.png)
+
+### Night
+
+![Theme Night](images/theme-night-dark.png)
+![Theme Night](images/theme-night-light.png)
+
+## Snippets
 
 Small features you can toggle on/off:
 
 -   Colored headings (with optional underlines)
--   Colored tags
 -   Hide or customize file titles
 -   Control sidebar toggle button visibility
 -   Improved multi-select list UX
 
-Style Settings options available in English and Spanish.
-
 ## Installation
 
-### Community themes (soon)
+### Community themes (recommended)
 
 1. Open Obsidian Settings
 2. Navigate to **Appearance** → **Themes**
 3. Click **Browse** and search for "Cosmical"
 4. Click **Install**
 
-### Manual (not recommended)
+### Manual
 
 1. Open your system File explorer
 2. Navigate to the root folder of your vault
@@ -72,7 +83,7 @@ Style Settings options available in English and Spanish.
 5. Copy manifest.json and theme.css
 6. Cosmical should now appear as an installed theme
 
-## Development + Contributing
+## Development
 
 I used Vite + PostCss to help with the development workflow. I created this based on a legacy theme I had and divided it into different files to help with the chaos.
 
@@ -97,15 +108,6 @@ Build
 ```bash
 npm run build
 ```
-
-## Future improvements:
-
-I want to refine the UI, fix bugs and inconsistent styles.
-
-- The theme uses obsidian css variables, it should be compatible with plugins, but some may need for specific css variables
-- Improve and add additional subthemes based on feedback
-- Make subtheme affect more parts of the UI, without being too much distraction
-- More customization options and cool/useful snippets
 
 ## Contributing
 
