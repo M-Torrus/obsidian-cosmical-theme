@@ -8,9 +8,9 @@
 An Obsidian theme created to enhance the note taking experience. It balances color use inspired by coding editors and a neutral background to keep things balanced
 </p>
 
-![Cosmical Dark Theme 1](images/properties-dark.png)
+![Cosmical Dark Theme 1](images/theme-ocean-dark.png)
 
-![Cosmical Light Theme 1](images/properties-light.png)
+![Cosmical Light Theme 1](images/theme-ocean-light.png)
 
 ![Cosmical Dark Theme 2](images/bases-dark.png)
 
