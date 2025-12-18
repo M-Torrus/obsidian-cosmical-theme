@@ -1,10 +1,6 @@
-/* OBSIDIAN UI OVERRIDES */
-
-/* ============================================
-   MAIN UI COMPONENTS
-   ============================================ */
-
 body {
+	/* MAIN UI COMPONENTS */
+
 	/* Titlebar */
 	--titlebar-background-focused: var(--background-primary);
 	--titlebar-background: var(--background-primary);
@@ -18,6 +14,49 @@ body {
 
 	/* Tab */
 	--tab-container-background: var(--background-primary);
+	&.theme-dark {
+		--tab-divider-color: var(--color-base-40);
+		--tab-outline-color: var(--color-base-50);
+	}
+	&.theme-light {
+		--tab-divider-color: var(--color-base-30);
+		--tab-outline-color: var(--color-base-40);
+	}
+
+	/* Icon */
+	--icon-color: var(--text-faint);
+	--icon-color-hover: var(--text-muted);
+	--icon-color-active: var(--text-muted);
+	--icon-color-focused: var(--text-normal);
+
+	/* Border */
+	&.theme-dark {
+		--background-modifier-border: var(--color-base-40);
+		--background-modifier-border-hover: var(--color-base-50);
+		--background-modifier-border-focus: var(--color-base-70);
+		--background-modifier-active-hover: var(--color-base-60);
+
+		--divider-color: var(--color-base-60);
+	}
+	&.theme-light {
+		--background-modifier-border: var(--color-base-30);
+		--background-modifier-border-hover: var(--color-base-40);
+		--background-modifier-border-focus: var(--color-base-60);
+		--background-modifier-active-hover: var(--color-base-50);
+
+		--divider-color: var(--color-base-50);
+	}
+	--hr-color: var(--divider-color);
+
+	/* Button */
+	&.theme-dark {
+		--interactive-normal: var(--color-base-40);
+		--interactive-hover: var(--color-base-50);
+	}
+	&.theme-light {
+		--interactive-normal: var(--color-base-10);
+		--interactive-hover: var(--color-base-20);
+	}
 
 	/* SETTINGS WINDOW */
 	.vertical-tab-nav-item {
@@ -78,11 +117,6 @@ body {
 
 .nav-buttons-container {
 	justify-content: left;
-}
-
-/* Hide right sidebar toggle button */
-.hide-right-sidebar-toggle div.sidebar-toggle-button.mod-right {
-	display: none;
 }
 
 /* ============================================

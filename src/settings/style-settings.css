@@ -120,21 +120,6 @@ settings:
       type: class-toggle
       default: false
   -
-    id: Sidebars-settings-heading
-    title: Sidebars
-    title.es: Paneles laterales
-    type: heading
-    level: 1
-    collapsed: false
-  -
-      id: hide-right-sidebar-toggle
-      title: Hide right sidebar toggle button
-      title.es: Ocultar botón de alternar panel lateral derecho
-      description: Hides the right sidebar toggle button
-      description.es: Oculta el botón de alternar del panel lateral derecho
-      type: class-toggle
-      default: false
-  -
     id: Properties-settings-heading
     title: Properties settings (Metadata)
     title.es: Ajustes de propiedades (Metadata)
@@ -173,21 +158,6 @@ settings:
       title.es: Mejorar UX de listas multi-selección
       description: Hides the remove button on multi-select pills until focused for a cleaner appearance
       description.es: Oculta el botón de eliminar en las píldoras de multi-selección hasta que se enfoquen para una apariencia más limpia
-      type: class-toggle
-      default: true
-  -
-    id: Plugins-settings-heading
-    title: Community Plugins
-    title.es: Plugins Comunitarios
-    type: heading
-    level: 1
-    collapsed: false
-  -
-      id: colorful-bases
-      title: Colorful Bases tables
-      title.es: Tablas Bases con color
-      description: Applies subtheme colors to Bases plugin tables
-      description.es: Aplica colores del subtema a las tablas del plugin Bases
       type: class-toggle
       default: false
   -

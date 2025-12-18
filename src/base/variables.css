@@ -1,11 +1,3 @@
-/* Base Variables */
-
-:root {
-	--font-monospace-theme: IOSenda;
-}
-
-/* Base Color Variables */
-
 body,
 body.theme-dark,
 body.theme-light {
@@ -26,27 +18,10 @@ body.theme-light {
 	--color-blue: hsl(235, 98%, 64%);
 	--color-purple: hsl(262, 60%, 76%);
 	--color-pink: hsl(335, 45%, 77%);
-
-	/* Obsidian icons */
-	--icon-color: var(--text-muted);
-	--icon-color-hover: var(--text-normal);
-	--icon-color-active: var(--text-normal);
-	--icon-color-focused: var(--text-normal);
 }
 
 /* Dark Theme - Obsidian Essential Variables */
 body.theme-dark {
-	--color-base-00: oklch(18% 0 0);
-	--color-base-05: oklch(21% 0 0);
-	--color-base-10: oklch(24% 0 0);
-	--color-base-20: oklch(27% 0 0);
-	--color-base-30: oklch(30% 0 0);
-	--color-base-40: oklch(33% 0 0);
-	--color-base-50: oklch(36% 0 0);
-	--color-base-60: oklch(39% 0 0);
-	--color-base-70: oklch(42% 0 0);
-	--color-base-100: oklch(100% 0 0);
-
 	--color-base-00: oklch(21% 0 0);
 	--color-base-05: oklch(24% 0 0);
 	--color-base-10: oklch(27% 0 0);
@@ -65,18 +40,7 @@ body.theme-dark {
 
 	--text-normal: oklch(100% 0 0);
 	--text-muted: oklch(77.5% 0 0);
-	--text-faint: oklch(55% 0 0);
-
-	--divider-color: var(--color-base-60);
-	--tab-divider-color: var(--color-base-40);
-	--tab-outline-color: var(--color-base-50);
-	--background-modifier-border: var(--color-base-40);
-	--background-modifier-border-hover: var(--color-base-50);
-	--background-modifier-border-focus: var(--color-base-70);
-	--background-modifier-active-hover: var(--color-base-60);
-	/* buttons */
-	--interactive-normal: var(--color-base-40);
-	--interactive-hover: var(--color-base-50);
+	--text-faint: oklch(58% 0 0);
 }
 
 /* Light Theme - Obsidian Essential Variables */
@@ -100,19 +64,4 @@ body.theme-light {
 	--text-normal: oklch(0% 0 0);
 	--text-muted: oklch(27.5% 0 0);
 	--text-faint: oklch(45% 0 0);
-
-	--divider-color: var(--color-base-50);
-	--tab-divider-color: var(--color-base-30);
-	--tab-outline-color: var(--color-base-40);
-	--background-modifier-border: var(--color-base-30);
-	--background-modifier-border-hover: var(--color-base-40);
-	--background-modifier-border-focus: var(--color-base-60);
-	--background-modifier-active-hover: var(--color-base-50);
-	/* buttons */
-	--interactive-normal: var(--background-secondary);
-	--interactive-hover: var(--background-secondary-alt);
-}
-
-body {
-	--hr-color: var(--divider-color);
 }

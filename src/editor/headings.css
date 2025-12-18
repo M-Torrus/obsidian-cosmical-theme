@@ -29,11 +29,11 @@ body {
 		padding-top: var(--size-2-2) !important;
 	}
 }
-
-/* FEATURE: colored headings */
 body {
 	--heading-underline-color: var(--color-base-40);
 }
+
+/* FEATURE: colored headings */
 .colored-headings {
 	.HyperMD-header-1,
 	.HyperMD-header-2,
@@ -52,4 +52,3 @@ body {
 	--inline-title-color: var(--theme-color-1-high);
 	--heading-underline-color: var(--theme-color-1-transparent);
 }
-

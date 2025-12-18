@@ -55,7 +55,7 @@ body {
 
 body {
 	--table-header-weight: 500;
-	--table-border-color: var(--background-modifier-border-focus);
+	--table-border-color: var(--divider-color);
 }
 
 /* markdown table line-break */
@@ -67,16 +67,15 @@ body {
    CALLOUTS
    ============================================ */
 
-body {
-	--callout-padding: 0.75em 1em;
-}
-
-.theme-dark.callout {
+.theme-dark .callout {
 	background-color: rgba(var(--callout-color), 0.075);
 }
+.wider-callouts {
+	--callout-padding: 0.75em;
 
-.wider-callouts .cm-embed-block.cm-callout {
-	width: calc(var(--file-line-width) + 2em);
-	padding-left: -1em !important;
-	translate: -1em;
+	.cm-embed-block.cm-callout {
+		width: calc(var(--file-line-width) + 1.5em);
+		padding-left: -0.75em !important;
+		translate: -0.75em;
+	}
 }

@@ -1,6 +1,6 @@
 /* Cosmical Theme - Main Entry Point */
 
-/* Style Settings Configuration */
+/* Style Settings Community Plugin Configuration */
 @import "./settings/style-settings.css";
 
 /* Base */
@@ -22,4 +22,4 @@
 @import "./features/css-classes.css";
 @import "./features/properties.css";
 @import "./features/tags.css";
-@import "./features/custom-caret.css";
+@import "./features/themed-ui.css";
