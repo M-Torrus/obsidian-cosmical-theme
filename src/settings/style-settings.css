@@ -120,6 +120,21 @@ settings:
       type: class-toggle
       default: false
   -
+    id: Bases-settings-heading
+    title: Obsidian Bases settings
+    title.es: Ajustes de Obsidian Bases
+    type: heading
+    level: 1
+    collapsed: false
+  -
+      id: disable-row-alternating-bg
+      title: Disable alternating row background color for bases
+      title.es: Deshabilitar alternar fondo de cada fila en bases
+      description: Disable alternating background color for row in Obsidian Bases
+      description.es: Deshabilitar alternar color de fondo para las filas en Obsidian Bases
+      type: class-toggle
+      default: false
+  -
     id: Properties-settings-heading
     title: Properties settings (Metadata)
     title.es: Ajustes de propiedades (Metadata)

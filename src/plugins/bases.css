@@ -1,8 +1,6 @@
 body {
 	--bases-embed-border-color: var(--divider-color);
 	--bases-embed-border-radius: var(--radius-s);
-	--base-row-even-bg: var(--background-primary);
-	--base-row-odd-bg: var(--background-primary-alt);
 	--base-row-hover-bg: var(--color-base-50);
 	--bases-table-header-color: var(--theme-color-1-normal);
 }
@@ -43,7 +41,7 @@ body {
 				color: var(--text-normal) !important;
 				background-color: var(--base-row-odd-bg);
 			}
-			.bases-tr:nth-child(even) {
+			:not(.disable-row-alternating-bg) .bases-tr:nth-child(even) {
 				background-color: var(--base-row-even-bg);
 			}
 			.bases-tr:hover,
