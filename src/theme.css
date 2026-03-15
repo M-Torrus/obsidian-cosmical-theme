@@ -11,6 +11,7 @@
 @import "./theme-colors/theme-schema.css";
 
 /* Editor */
+@import "./editor/code.css";
 @import "./editor/content-elements.css";
 @import "./editor/headings.css";
 
