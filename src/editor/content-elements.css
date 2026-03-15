@@ -5,20 +5,9 @@
    ============================================ */
 
 body {
-	/* Code */
-	--code-background: var(--background-primary-alt);
-	--code-radius: var(--radius-m);
-
 	/* Blockquote */
 	--blockquote-border-thickness: 0.2em;
 	--blockquote-border-color: var(--theme-color-1-alt);
-
-	&.theme-dark {
-		--code-background: var(--color-base-40);
-	}
-	&.theme-light {
-		--code-background: var(--color-base-05);
-	}
 }
 
 .HyperMD-quote {
