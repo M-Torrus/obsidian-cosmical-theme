@@ -109,6 +109,13 @@ Build
 npm run build
 ```
 
+Release
+
+```bash
+git tag <version>
+git push origin main --tags
+```
+
 ## Contributing
 
 You can send suggestion using [open an issue](https://github.com/M-Torrus/cosmical-obsidian/issues).
