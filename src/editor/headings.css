@@ -1,13 +1,12 @@
 /* FEATURE: CUSTOM FONTS */
 body {
-	--font-headings: var(--font-text);
-	--h1-font: var(--font-headings);
-	--h2-font: var(--font-headings);
-	--h3-font: var(--font-headings);
-	--h4-font: var(--font-headings);
-	--h5-font: var(--font-headings);
-	--h6-font: var(--font-headings);
-	--inline-title-font: var(--font-headings) !important;
+	--h1-font: var(--font-headings), var(--font-text);
+	--h3-font: var(--font-headings), var(--font-text);
+	--h2-font: var(--font-headings), var(--font-text);
+	--h4-font: var(--font-headings), var(--font-text);
+	--h5-font: var(--font-headings), var(--font-text);
+	--h6-font: var(--font-headings), var(--font-text);
+	--inline-title-font: var(--font-headings), var(--font-text) !important;
 }
 
 /* FEATURE: HEADINGS UNDERLINE */
