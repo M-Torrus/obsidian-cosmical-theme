@@ -6,7 +6,7 @@ body {
 	--h4-font: var(--font-headings), var(--font-text);
 	--h5-font: var(--font-headings), var(--font-text);
 	--h6-font: var(--font-headings), var(--font-text);
-	--inline-title-font: var(--font-headings), var(--font-text) !important;
+	--inline-title-font: var(--font-headings), var(--font-text);
 }
 
 /* FEATURE: HEADINGS UNDERLINE */

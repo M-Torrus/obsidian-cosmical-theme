@@ -52,10 +52,7 @@ body {
    ============================================ */
 
 .callout {
-	.callout-title {
-		/* color: ; */
-	}
-	background-color: rgba(var(--callout-color), var(--dimmed-color-alpha));
+	background-color: rgba(var(--callout-color), 0.15);
 }
 .wider-callouts {
 	--callout-padding: 0.75em;

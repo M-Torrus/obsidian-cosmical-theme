@@ -18,8 +18,6 @@ body.theme-light {
 	--color-blue:   rgb(var(--color-blue-rgb));
 	--color-purple: rgb(var(--color-purple-rgb));
 	--color-pink:   rgb(var(--color-pink-rgb));
-	/* For callouts */
-	--dimmed-color-alpha: 0.15;
 }
 
 /* Dark Theme - Obsidian Essential Variables */
@@ -43,8 +41,6 @@ body.theme-dark {
 	--text-normal: oklch(100% 0 0);
 	--text-muted: oklch(77.5% 0 0);
 	--text-faint: oklch(58% 0 0);
-	/* For callouts */
-	--dimmed-color-alpha: 0.15;
 }
 
 /* Light Theme - Obsidian Essential Variables */
