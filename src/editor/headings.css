@@ -7,6 +7,7 @@ body {
 	--h5-font: var(--font-headings), var(--font-text);
 	--h6-font: var(--font-headings), var(--font-text);
 	--inline-title-font: var(--font-headings), var(--font-text);
+	--heading-underline-color: var(--color-base-40);
 }
 
 /* FEATURE: HEADINGS UNDERLINE */
@@ -21,12 +22,8 @@ body {
 	h3,
 	.HyperMD-header-4,
 	h4 {
-		text-decoration-color: var(--heading-underline-color);
-		text-decoration-line: underline;
+		text-decoration: underline var(--heading-underline-color);
 	}
-}
-body {
-	--heading-underline-color: var(--color-base-40);
 }
 
 /* FEATURE: colored headings */
