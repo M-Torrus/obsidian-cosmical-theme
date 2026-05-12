@@ -123,7 +123,7 @@ body {
 	--file-header-justify: left;
 }
 
-body.centered-file-title {
+.centered-file-title {
 	--file-header-justify: center;
 }
 

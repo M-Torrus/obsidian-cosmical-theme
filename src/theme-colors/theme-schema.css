@@ -107,8 +107,8 @@
    Maps theme colors to Obsidian's standard color variables
    ================================================================ */
 
-body.theme-dark,
-body.theme-light {
+.theme-dark,
+.theme-light {
 	--color-accent: var(--theme-color-accent-normal);
 	--interactive-accent: var(--theme-color-2-alt);
 	--interactive-accent-hover: var(--theme-color-2-normal);
@@ -118,7 +118,7 @@ body.theme-light {
 	--text-highlight-bg: var(--theme-color-2-transparent);
 }
 
-body.theme-light {
+.theme-light {
 	--text-on-accent: var(--color-base-00);
 	--text-on-accent-inverted: var(--color-base-00);
 }

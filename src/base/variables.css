@@ -1,6 +1,6 @@
 body,
-body.theme-dark,
-body.theme-light {
+.theme-dark,
+.theme-light {
 	--color-red-rgb:    220, 70, 70;
 	--color-orange-rgb: 205, 125, 60;
 	--color-yellow-rgb: 220, 210, 50;
@@ -21,7 +21,7 @@ body.theme-light {
 }
 
 /* Dark Theme - Obsidian Essential Variables */
-body.theme-dark {
+.theme-dark {
 	--color-base-00: oklch(21% 0 0);
 	--color-base-05: oklch(24% 0 0);
 	--color-base-10: oklch(27% 0 0);
@@ -47,7 +47,7 @@ body.theme-dark {
 }
 
 /* Light Theme - Obsidian Essential Variables */
-body.theme-light {
+.theme-light {
 	--color-base-00: oklch(100% 0 0);
 	--color-base-05: oklch(97% 0 0);
 	--color-base-10: oklch(94% 0 0);

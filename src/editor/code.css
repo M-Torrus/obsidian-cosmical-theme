@@ -4,7 +4,7 @@ body {
 	--code-radius: var(--radius-m);
 }
 
-body.theme-dark {
+.theme-dark {
 	--code-background: var(--color-base-10);
 	--code-normal: oklch(95% 0 0);
 	--code-operator: var(--code-normal);
@@ -26,7 +26,7 @@ body.theme-dark {
 	}
 }
 
-body.theme-light {
+.theme-light {
 	--code-background: var(--color-base-05);
 	--code-normal: oklch(0% 0 0);
 	--code-operator: var(--code-normal);
