@@ -115,18 +115,11 @@ body {
 	}
 }
 
-.nav-buttons-container {
-	justify-content: left;
-}
-
 /* ============================================
    FILE HEADER & TITLE
    ============================================ */
 
 body {
-	--inline-title-size: 1.625rem;
-	--inline-title-weight: 700;
-	--inline-title-margin-bottom: 1rem;
 	--file-header-justify: left;
 }
 

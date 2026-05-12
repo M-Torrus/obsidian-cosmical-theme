@@ -26,5 +26,5 @@ body {
 }
 
 [data-type="tag"] .workspace-tab-header-inner-icon svg {
-	color: var(--tag-color) !important;
+	color: var(--tag-color);
 }

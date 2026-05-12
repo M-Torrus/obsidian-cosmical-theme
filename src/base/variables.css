@@ -41,6 +41,9 @@ body.theme-dark {
 	--text-normal: oklch(100% 0 0);
 	--text-muted: oklch(77.5% 0 0);
 	--text-faint: oklch(58% 0 0);
+
+	--base-row-even-bg: var(--color-base-30);
+	--base-row-odd-bg: var(--color-base-20);
 }
 
 /* Light Theme - Obsidian Essential Variables */
@@ -64,4 +67,7 @@ body.theme-light {
 	--text-normal: oklch(0% 0 0);
 	--text-muted: oklch(27.5% 0 0);
 	--text-faint: oklch(45% 0 0);
+
+	--base-row-even-bg: var(--color-base-00);
+	--base-row-odd-bg: var(--color-base-05);
 }

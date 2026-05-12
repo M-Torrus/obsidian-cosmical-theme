@@ -24,9 +24,6 @@ body {
 		text-decoration-color: var(--heading-underline-color);
 		text-decoration-line: underline;
 	}
-	.HyperMD-header + * {
-		padding-top: var(--size-2-2) !important;
-	}
 }
 body {
 	--heading-underline-color: var(--color-base-40);
