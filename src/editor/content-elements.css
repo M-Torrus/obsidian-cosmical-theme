@@ -8,6 +8,11 @@ body {
 	/* Blockquote */
 	--blockquote-border-thickness: 0.2em;
 	--blockquote-border-color: var(--theme-color-1-alt);
+	/* Lists */
+	--list-marker-color: var(--text-muted);
+	/* Tables */
+	--table-header-weight: 500;
+	--table-border-color: var(--divider-color);
 }
 
 .HyperMD-quote {
@@ -30,10 +35,6 @@ body {
    LISTS
    ============================================ */
 
-body {
-	--list-marker-color: var(--text-muted);
-}
-
 .cm-formatting-list {
 	font-size: 1rem;
 }
@@ -41,11 +42,6 @@ body {
 /* ============================================
    TABLES
    ============================================ */
-
-body {
-	--table-header-weight: 500;
-	--table-border-color: var(--divider-color);
-}
 
 /* ============================================
    CALLOUTS
@@ -59,7 +55,6 @@ body {
 
 	.cm-embed-block.cm-callout {
 		width: calc(var(--file-line-width) + 1.5em);
-		padding-left: -0.75em;
 		translate: -0.75em;
 	}
 }
