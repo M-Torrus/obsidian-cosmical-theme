@@ -1,23 +1,25 @@
 body,
 body.theme-dark,
 body.theme-light {
-	--color-red-rgb: 244, 114, 102;
-	--color-orange-rgb: 247, 159, 105;
-	--color-yellow-rgb: 228, 220, 129;
-	--color-green-rgb: 160, 223, 139;
-	--color-cyan-rgb: 132, 220, 210;
-	--color-blue-rgb: 141, 158, 255;
-	--color-purple-rgb: 184, 157, 231;
-	--color-pink-rgb: 223, 170, 192;
+	--color-red-rgb:    220, 70, 70;
+	--color-orange-rgb: 205, 125, 60;
+	--color-yellow-rgb: 220, 210, 50;
+	--color-green-rgb:  115, 250, 60;
+	--color-cyan-rgb:   60, 250, 230;
+	--color-blue-rgb:   60, 160, 230;
+	--color-purple-rgb: 100, 80, 210;
+	--color-pink-rgb:   213, 60, 200;
 
-	--color-red: rgb(244, 114, 102);
-	--color-orange: hsl(23, 90%, 69%);
-	--color-yellow: hsl(70, 65%, 70%);
-	--color-green: hsl(145, 57%, 71%);
-	--color-cyan: hsl(173, 56%, 69%);
-	--color-blue: hsl(235, 98%, 64%);
-	--color-purple: hsl(262, 60%, 76%);
-	--color-pink: hsl(335, 45%, 77%);
+	--color-red:    rgb(var(--color-red-rgb));
+	--color-orange: rgb(var(--color-orange-rgb));
+	--color-yellow: rgb(var(--color-yellow-rgb));
+	--color-green:  rgb(var(--color-green-rgb));
+	--color-cyan:   rgb(var(--color-cyan-rgb));
+	--color-blue:   rgb(var(--color-blue-rgb));
+	--color-purple: rgb(var(--color-purple-rgb));
+	--color-pink:   rgb(var(--color-pink-rgb));
+	/* For callouts */
+	--dimmed-color-alpha: 0.15;
 }
 
 /* Dark Theme - Obsidian Essential Variables */
@@ -41,6 +43,8 @@ body.theme-dark {
 	--text-normal: oklch(100% 0 0);
 	--text-muted: oklch(77.5% 0 0);
 	--text-faint: oklch(58% 0 0);
+	/* For callouts */
+	--dimmed-color-alpha: 0.15;
 }
 
 /* Light Theme - Obsidian Essential Variables */
