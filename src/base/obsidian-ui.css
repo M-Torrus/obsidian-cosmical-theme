@@ -96,6 +96,9 @@ body {
 			border-bottom: 1px var(--prompt-border-color) solid;
 		}
 	}
+
+	/* File header */
+	--file-header-justify: left;
 }
 
 /* ============================================
@@ -118,10 +121,6 @@ body {
 /* ============================================
    FILE HEADER & TITLE
    ============================================ */
-
-body {
-	--file-header-justify: left;
-}
 
 .centered-file-title {
 	--file-header-justify: center;
