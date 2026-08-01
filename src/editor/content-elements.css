@@ -48,7 +48,7 @@ body {
    ============================================ */
 
 .callout {
-	background-color: rgba(var(--callout-color), 0.15);
+	background-color: color-mix(in srgb, var(--callout-color) 15%, transparent);
 }
 .wider-callouts {
 	--callout-padding: 0.75em;
